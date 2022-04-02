@@ -6,7 +6,7 @@ import createEmotionCache from '../src/createEmotionCache';
 
 export default class MyDocument extends Document {
   render() {
-    const theme = getTheme();
+    const theme = getTheme('dark');
     return (
       <Html lang="en">
         <Head>
