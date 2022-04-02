@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><meta name="theme-color" content="#1976d2"/><title class="jsx-cbfd42e26539136">Typescript and JSS</title><link rel="icon" href="/zdns.svg" class="jsx-cbfd42e26539136"/><meta name="next-head-count" content="5"/><meta name="theme-color" content="#90caf9"/><link rel="preload" href="/_next/static/css/ef46db3751d8e999.css" as="style"/><link rel="stylesheet" href="/_next/static/css/ef46db3751d8e999.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-fcec467324f41dbb.js" defer=""></script><script src="/_next/static/chunks/framework-e70c6273bfe3f237.js" defer=""></script><script src="/_next/static/chunks/main-7c9e8fd8226b6573.js" defer=""></script><script src="/_next/static/chunks/pages/_app-0617cd64ea924586.js" defer=""></script><script src="/_next/static/chunks/505-0c2bccf53cd8dae5.js" defer=""></script><script src="/_next/static/chunks/pages/%5Brule%5D-b74fec192cf33e56.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_buildManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_ssgManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_middlewareManifest.js" defer=""></script><style id="__jsx-4ab09977da39fd03">.container.jsx-cbfd42e26539136{min-height:100vh;padding:0 .5rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main.jsx-cbfd42e26539136{padding:5rem 0;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136{width:100%;height:100px;border-top:1px solid#eaeaea;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136 img.jsx-cbfd42e26539136{margin-left:.5rem}footer.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}a.jsx-cbfd42e26539136{color:inherit;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{color:#0070f3;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:hover,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:focus,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:active{text-decoration:underline}.title.jsx-cbfd42e26539136{margin:0;line-height:1.15;font-size:4rem}.title.jsx-cbfd42e26539136,.description.jsx-cbfd42e26539136{text-align:center}.description.jsx-cbfd42e26539136{line-height:1.5;font-size:1.5rem}code.jsx-cbfd42e26539136{background:#fafafa;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:.75rem;font-size:1.1rem;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}.grid.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:800px;margin-top:3rem}.card.jsx-cbfd42e26539136{margin:1rem;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;padding:1.5rem;text-align:left;color:inherit;text-decoration:none;border:1px solid#eaeaea;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-transition:color.15s ease,border-color.15s ease;-moz-transition:color.15s ease,border-color.15s ease;-o-transition:color.15s ease,border-color.15s ease;transition:color.15s ease,border-color.15s ease}.card.jsx-cbfd42e26539136:hover,.card.jsx-cbfd42e26539136:focus,.card.jsx-cbfd42e26539136:active{color:#0070f3;border-color:#0070f3}.card.jsx-cbfd42e26539136 h3.jsx-cbfd42e26539136{margin:0 0 1rem 0;font-size:1.5rem}.card.jsx-cbfd42e26539136 p.jsx-cbfd42e26539136{margin:0;font-size:1.25rem;line-height:1.5}.logo.jsx-cbfd42e26539136{height:1em}@media(max-width:600px){.grid.jsx-cbfd42e26539136{width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}}</style><style id="__jsx-5750d7069672f50d">html,body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}</style><style data-emotion="css "></style></head><body><div id="__next" data-reactroot=""><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><div class="jsx-cbfd42e26539136 container"><main class="jsx-cbfd42e26539136"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-aoeo82"><h1><code>explicit-function-return-type</code></h1>
+<p>Require explicit return types on functions and class methods.</p>
+<p>Explicit types for function return values makes it clear to any calling code what type is returned.
+This ensures that the return value is assigned to a variable of the correct type; or in the case
+where there is no return value, that the calling code doesn&#x27;t try to use the undefined value when it
+shouldn&#x27;t.</p>
+<h2>Rule Details</h2>
+<p>This rule aims to ensure that the values returned from functions are of the expected type.</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h3>❌ Incorrect</h3>
+<pre><code class="language-ts">// Should indicate that no value is returned (void)
+function test() {
+  return;
+}
+
+// Should indicate that a number is returned
+var fn = function () {
+  return 1;
+};
+
+// Should indicate that a string is returned
+var arrowFn = () =&gt; &#x27;test&#x27;;
+
+class Test {
+  // Should indicate that no value is returned (void)
+  method() {
+    return;
+  }
+}
+</code></pre>
+<h3>✅ Correct</h3>
+<pre><code class="language-ts">// No return value should be expected (void)
+function test(): void {
+  return;
+}
+
+// A return value of type number
+var fn = function (): number {
+  return 1;
+};
+
+// A return value of type string
+var arrowFn = (): string =&gt; &#x27;test&#x27;;
+
+class Test {
+  // No return value should be expected (void)
+  method(): void {
+    return;
+  }
+}
+</code></pre>
+<h2>Options</h2>
+<p>The rule accepts an options object with the following properties:</p>
+<pre><code class="language-ts">type Options = {
+  // if true, only functions which are part of a declaration will be checked
+  allowExpressions?: boolean;
+  // if true, type annotations are also allowed on the variable of a function expression rather than on the function directly
+  allowTypedFunctionExpressions?: boolean;
+  // if true, functions immediately returning another function expression will not be checked
+  allowHigherOrderFunctions?: boolean;
+  // if true, arrow functions immediately returning a `as const` value will not be checked
+  allowDirectConstAssertionInArrowFunctions?: boolean;
+  // if true, concise arrow functions that start with the void keyword will not be checked
+  allowConciseArrowFunctionExpressionsStartingWithVoid?: boolean;
+  /**
+   * An array of function/method names that will not have their arguments or their return values checked.
+   */
+  allowedNames?: string[];
+};
+
+const defaults = {
+  allowExpressions: false,
+  allowTypedFunctionExpressions: true,
+  allowHigherOrderFunctions: true,
+  allowDirectConstAssertionInArrowFunctions: true,
+  allowConciseArrowFunctionExpressionsStartingWithVoid: false,
+  allowedNames: [],
+};
+</code></pre>
+<h3>Configuring in a mixed JS/TS codebase</h3>
+<p>If you are working on a codebase within which you lint non-TypeScript code (i.e. <code>.js</code>/<code>.jsx</code>), you should ensure that you should use <a href="https://eslint.org/docs/user-guide/configuring#disabling-rules-only-for-a-group-of-files">ESLint <code>overrides</code></a> to only enable the rule on <code>.ts</code>/<code>.tsx</code> files. If you don&#x27;t, then you will get unfixable lint errors reported within <code>.js</code>/<code>.jsx</code> files.</p>
+<pre><code class="language-jsonc">{
+  &quot;rules&quot;: {
+    // disable the rule for all files
+    &quot;@typescript-eslint/explicit-function-return-type&quot;: &quot;off&quot;
+  },
+  &quot;overrides&quot;: [
+    {
+      // enable the rule specifically for TypeScript files
+      &quot;files&quot;: [&quot;*.ts&quot;, &quot;*.tsx&quot;],
+      &quot;rules&quot;: {
+        &quot;@typescript-eslint/explicit-function-return-type&quot;: [&quot;error&quot;]
+      }
+    }
+  ]
+}
+</code></pre>
+<h3><code>allowExpressions</code></h3>
+<p>Examples of code for this rule with <code>{ allowExpressions: true }</code>:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h4>❌ Incorrect</h4>
+<pre><code class="language-ts">function test() {}
+
+const fn = () =&gt; {};
+
+export default () =&gt; {};
+</code></pre>
+<h4>✅ Correct</h4>
+<pre><code class="language-ts">node.addEventListener(&#x27;click&#x27;, () =&gt; {});
+
+node.addEventListener(&#x27;click&#x27;, function () {});
+
+const foo = arr.map(i =&gt; i * i);
+</code></pre>
+<h3><code>allowTypedFunctionExpressions</code></h3>
+<p>Examples of code for this rule with <code>{ allowTypedFunctionExpressions: true }</code>:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h4>❌ Incorrect</h4>
+<pre><code class="language-ts">let arrowFn = () =&gt; &#x27;test&#x27;;
+
+let funcExpr = function () {
+  return &#x27;test&#x27;;
+};
+
+let objectProp = {
+  foo: () =&gt; 1,
+};
+</code></pre>
+<h4>✅ Correct</h4>
+<pre><code class="language-ts">type FuncType = () =&gt; string;
+
+let arrowFn: FuncType = () =&gt; &#x27;test&#x27;;
+
+let funcExpr: FuncType = function() {
+  return &#x27;test&#x27;;
+};
+
+let asTyped = (() =&gt; &#x27;&#x27;) as () =&gt; string;
+let castTyped = &lt;() =&gt; string&gt;(() =&gt; &#x27;&#x27;);
+
+interface ObjectType {
+  foo(): number;
+}
+let objectProp: ObjectType = {
+  foo: () =&gt; 1,
+};
+let objectPropAs = {
+  foo: () =&gt; 1,
+} as ObjectType;
+let objectPropCast = &lt;ObjectType&gt;{
+  foo: () =&gt; 1,
+};
+
+declare functionWithArg(arg: () =&gt; number);
+functionWithArg(() =&gt; 1);
+
+declare functionWithObjectArg(arg: { method: () =&gt; number });
+functionWithObjectArg({
+  method() {
+    return 1;
+  },
+});
+</code></pre>
+<h3><code>allowHigherOrderFunctions</code></h3>
+<p>Examples of code for this rule with <code>{ allowHigherOrderFunctions: true }</code>:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h4>❌ Incorrect</h4>
+<pre><code class="language-ts">var arrowFn = () =&gt; () =&gt; {};
+
+function fn() {
+  return function () {};
+}
+</code></pre>
+<h4>✅ Correct</h4>
+<pre><code class="language-ts">var arrowFn = () =&gt; (): void =&gt; {};
+
+function fn() {
+  return function (): void {};
+}
+</code></pre>
+<h3><code>allowDirectConstAssertionInArrowFunctions</code></h3>
+<p>Examples of code for this rule with <code>{ allowDirectConstAssertionInArrowFunctions: true }</code>:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h4>❌ Incorrect</h4>
+<pre><code class="language-ts">const func = (value: number) =&gt; ({ type: &#x27;X&#x27;, value } as any);
+const func = (value: number) =&gt; ({ type: &#x27;X&#x27;, value } as Action);
+</code></pre>
+<h4>✅ Correct</h4>
+<pre><code class="language-ts">const func = (value: number) =&gt; ({ foo: &#x27;bar&#x27;, value } as const);
+const func = () =&gt; x as const;
+</code></pre>
+<h3><code>allowConciseArrowFunctionExpressionsStartingWithVoid</code></h3>
+<p>Examples of code for this rule with <code>{ allowConciseArrowFunctionExpressionsStartingWithVoid: true }</code>:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h4>❌ Incorrect</h4>
+<pre><code class="language-ts">var join = (a: string, b: string) =&gt; `${a}${b}`;
+
+const log = (message: string) =&gt; {
+  console.log(message);
+};
+</code></pre>
+<h4>✅ Correct</h4>
+<pre><code class="language-ts">var log = (message: string) =&gt; void console.log(message);
+</code></pre>
+<h3><code>allowedNames</code></h3>
+<p>You may pass function/method names you would like this rule to ignore, like so:</p>
+<pre><code class="language-json">{
+  &quot;@typescript-eslint/explicit-function-return-type&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;allowedNames&quot;: [&quot;ignoredFunctionName&quot;, &quot;ignoredMethodName&quot;]
+    }
+  ]
+}
+</code></pre>
+<h2>When Not To Use It</h2>
+<p>If you don&#x27;t wish to prevent calling code from using function return values in unexpected ways, then
+you will not need this rule.</p>
+<h2>Further Reading</h2>
+<ul>
+<li>TypeScript <a href="https://www.typescriptlang.org/docs/handbook/functions.html#function-types">Functions</a></li>
+</ul>
+<h2>Attributes</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->✅ Recommended</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->🔧 Fixable</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->💭 Requires type information</li>
+</ul></div></main><footer class="jsx-cbfd42e26539136"><a href="https://cloud.zdns.cn" target="_blank" rel="noopener noreferrer" class="jsx-cbfd42e26539136">Powered by <img src="/zdns.svg" alt="zdns" class="jsx-cbfd42e26539136 logo"/></a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"rule":"# `explicit-function-return-type`\n\nRequire explicit return types on functions and class methods.\n\nExplicit types for function return values makes it clear to any calling code what type is returned.\nThis ensures that the return value is assigned to a variable of the correct type; or in the case\nwhere there is no return value, that the calling code doesn't try to use the undefined value when it\nshouldn't.\n\n## Rule Details\n\nThis rule aims to ensure that the values returned from functions are of the expected type.\n\n\u003c!--tabs--\u003e\n\n### ❌ Incorrect\n\n```ts\n// Should indicate that no value is returned (void)\nfunction test() {\n  return;\n}\n\n// Should indicate that a number is returned\nvar fn = function () {\n  return 1;\n};\n\n// Should indicate that a string is returned\nvar arrowFn = () =\u003e 'test';\n\nclass Test {\n  // Should indicate that no value is returned (void)\n  method() {\n    return;\n  }\n}\n```\n\n### ✅ Correct\n\n```ts\n// No return value should be expected (void)\nfunction test(): void {\n  return;\n}\n\n// A return value of type number\nvar fn = function (): number {\n  return 1;\n};\n\n// A return value of type string\nvar arrowFn = (): string =\u003e 'test';\n\nclass Test {\n  // No return value should be expected (void)\n  method(): void {\n    return;\n  }\n}\n```\n\n## Options\n\nThe rule accepts an options object with the following properties:\n\n```ts\ntype Options = {\n  // if true, only functions which are part of a declaration will be checked\n  allowExpressions?: boolean;\n  // if true, type annotations are also allowed on the variable of a function expression rather than on the function directly\n  allowTypedFunctionExpressions?: boolean;\n  // if true, functions immediately returning another function expression will not be checked\n  allowHigherOrderFunctions?: boolean;\n  // if true, arrow functions immediately returning a `as const` value will not be checked\n  allowDirectConstAssertionInArrowFunctions?: boolean;\n  // if true, concise arrow functions that start with the void keyword will not be checked\n  allowConciseArrowFunctionExpressionsStartingWithVoid?: boolean;\n  /**\n   * An array of function/method names that will not have their arguments or their return values checked.\n   */\n  allowedNames?: string[];\n};\n\nconst defaults = {\n  allowExpressions: false,\n  allowTypedFunctionExpressions: true,\n  allowHigherOrderFunctions: true,\n  allowDirectConstAssertionInArrowFunctions: true,\n  allowConciseArrowFunctionExpressionsStartingWithVoid: false,\n  allowedNames: [],\n};\n```\n\n### Configuring in a mixed JS/TS codebase\n\nIf you are working on a codebase within which you lint non-TypeScript code (i.e. `.js`/`.jsx`), you should ensure that you should use [ESLint `overrides`](https://eslint.org/docs/user-guide/configuring#disabling-rules-only-for-a-group-of-files) to only enable the rule on `.ts`/`.tsx` files. If you don't, then you will get unfixable lint errors reported within `.js`/`.jsx` files.\n\n```jsonc\n{\n  \"rules\": {\n    // disable the rule for all files\n    \"@typescript-eslint/explicit-function-return-type\": \"off\"\n  },\n  \"overrides\": [\n    {\n      // enable the rule specifically for TypeScript files\n      \"files\": [\"*.ts\", \"*.tsx\"],\n      \"rules\": {\n        \"@typescript-eslint/explicit-function-return-type\": [\"error\"]\n      }\n    }\n  ]\n}\n```\n\n### `allowExpressions`\n\nExamples of code for this rule with `{ allowExpressions: true }`:\n\n\u003c!--tabs--\u003e\n\n#### ❌ Incorrect\n\n```ts\nfunction test() {}\n\nconst fn = () =\u003e {};\n\nexport default () =\u003e {};\n```\n\n#### ✅ Correct\n\n```ts\nnode.addEventListener('click', () =\u003e {});\n\nnode.addEventListener('click', function () {});\n\nconst foo = arr.map(i =\u003e i * i);\n```\n\n### `allowTypedFunctionExpressions`\n\nExamples of code for this rule with `{ allowTypedFunctionExpressions: true }`:\n\n\u003c!--tabs--\u003e\n\n#### ❌ Incorrect\n\n```ts\nlet arrowFn = () =\u003e 'test';\n\nlet funcExpr = function () {\n  return 'test';\n};\n\nlet objectProp = {\n  foo: () =\u003e 1,\n};\n```\n\n#### ✅ Correct\n\n```ts\ntype FuncType = () =\u003e string;\n\nlet arrowFn: FuncType = () =\u003e 'test';\n\nlet funcExpr: FuncType = function() {\n  return 'test';\n};\n\nlet asTyped = (() =\u003e '') as () =\u003e string;\nlet castTyped = \u003c() =\u003e string\u003e(() =\u003e '');\n\ninterface ObjectType {\n  foo(): number;\n}\nlet objectProp: ObjectType = {\n  foo: () =\u003e 1,\n};\nlet objectPropAs = {\n  foo: () =\u003e 1,\n} as ObjectType;\nlet objectPropCast = \u003cObjectType\u003e{\n  foo: () =\u003e 1,\n};\n\ndeclare functionWithArg(arg: () =\u003e number);\nfunctionWithArg(() =\u003e 1);\n\ndeclare functionWithObjectArg(arg: { method: () =\u003e number });\nfunctionWithObjectArg({\n  method() {\n    return 1;\n  },\n});\n```\n\n### `allowHigherOrderFunctions`\n\nExamples of code for this rule with `{ allowHigherOrderFunctions: true }`:\n\n\u003c!--tabs--\u003e\n\n#### ❌ Incorrect\n\n```ts\nvar arrowFn = () =\u003e () =\u003e {};\n\nfunction fn() {\n  return function () {};\n}\n```\n\n#### ✅ Correct\n\n```ts\nvar arrowFn = () =\u003e (): void =\u003e {};\n\nfunction fn() {\n  return function (): void {};\n}\n```\n\n### `allowDirectConstAssertionInArrowFunctions`\n\nExamples of code for this rule with `{ allowDirectConstAssertionInArrowFunctions: true }`:\n\n\u003c!--tabs--\u003e\n\n#### ❌ Incorrect\n\n```ts\nconst func = (value: number) =\u003e ({ type: 'X', value } as any);\nconst func = (value: number) =\u003e ({ type: 'X', value } as Action);\n```\n\n#### ✅ Correct\n\n```ts\nconst func = (value: number) =\u003e ({ foo: 'bar', value } as const);\nconst func = () =\u003e x as const;\n```\n\n### `allowConciseArrowFunctionExpressionsStartingWithVoid`\n\nExamples of code for this rule with `{ allowConciseArrowFunctionExpressionsStartingWithVoid: true }`:\n\n\u003c!--tabs--\u003e\n\n#### ❌ Incorrect\n\n```ts\nvar join = (a: string, b: string) =\u003e `${a}${b}`;\n\nconst log = (message: string) =\u003e {\n  console.log(message);\n};\n```\n\n#### ✅ Correct\n\n```ts\nvar log = (message: string) =\u003e void console.log(message);\n```\n\n### `allowedNames`\n\nYou may pass function/method names you would like this rule to ignore, like so:\n\n```json\n{\n  \"@typescript-eslint/explicit-function-return-type\": [\n    \"error\",\n    {\n      \"allowedNames\": [\"ignoredFunctionName\", \"ignoredMethodName\"]\n    }\n  ]\n}\n```\n\n## When Not To Use It\n\nIf you don't wish to prevent calling code from using function return values in unexpected ways, then\nyou will not need this rule.\n\n## Further Reading\n\n- TypeScript [Functions](https://www.typescriptlang.org/docs/handbook/functions.html#function-types)\n\n## Attributes\n\n- [ ] ✅ Recommended\n- [ ] 🔧 Fixable\n- [ ] 💭 Requires type information\n"},"__N_SSG":true},"page":"/[rule]","query":{"rule":"explicit-function-return-type.md"},"buildId":"V190Mxkh11cN1_jT2mDz7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

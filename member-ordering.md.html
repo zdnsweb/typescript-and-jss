@@ -1,0 +1,931 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><meta name="theme-color" content="#1976d2"/><title class="jsx-cbfd42e26539136">Typescript and JSS</title><link rel="icon" href="/zdns.svg" class="jsx-cbfd42e26539136"/><meta name="next-head-count" content="5"/><meta name="theme-color" content="#90caf9"/><link rel="preload" href="/_next/static/css/ef46db3751d8e999.css" as="style"/><link rel="stylesheet" href="/_next/static/css/ef46db3751d8e999.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-fcec467324f41dbb.js" defer=""></script><script src="/_next/static/chunks/framework-e70c6273bfe3f237.js" defer=""></script><script src="/_next/static/chunks/main-7c9e8fd8226b6573.js" defer=""></script><script src="/_next/static/chunks/pages/_app-0617cd64ea924586.js" defer=""></script><script src="/_next/static/chunks/505-0c2bccf53cd8dae5.js" defer=""></script><script src="/_next/static/chunks/pages/%5Brule%5D-b74fec192cf33e56.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_buildManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_ssgManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_middlewareManifest.js" defer=""></script><style id="__jsx-4ab09977da39fd03">.container.jsx-cbfd42e26539136{min-height:100vh;padding:0 .5rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main.jsx-cbfd42e26539136{padding:5rem 0;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136{width:100%;height:100px;border-top:1px solid#eaeaea;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136 img.jsx-cbfd42e26539136{margin-left:.5rem}footer.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}a.jsx-cbfd42e26539136{color:inherit;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{color:#0070f3;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:hover,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:focus,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:active{text-decoration:underline}.title.jsx-cbfd42e26539136{margin:0;line-height:1.15;font-size:4rem}.title.jsx-cbfd42e26539136,.description.jsx-cbfd42e26539136{text-align:center}.description.jsx-cbfd42e26539136{line-height:1.5;font-size:1.5rem}code.jsx-cbfd42e26539136{background:#fafafa;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:.75rem;font-size:1.1rem;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}.grid.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:800px;margin-top:3rem}.card.jsx-cbfd42e26539136{margin:1rem;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;padding:1.5rem;text-align:left;color:inherit;text-decoration:none;border:1px solid#eaeaea;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-transition:color.15s ease,border-color.15s ease;-moz-transition:color.15s ease,border-color.15s ease;-o-transition:color.15s ease,border-color.15s ease;transition:color.15s ease,border-color.15s ease}.card.jsx-cbfd42e26539136:hover,.card.jsx-cbfd42e26539136:focus,.card.jsx-cbfd42e26539136:active{color:#0070f3;border-color:#0070f3}.card.jsx-cbfd42e26539136 h3.jsx-cbfd42e26539136{margin:0 0 1rem 0;font-size:1.5rem}.card.jsx-cbfd42e26539136 p.jsx-cbfd42e26539136{margin:0;font-size:1.25rem;line-height:1.5}.logo.jsx-cbfd42e26539136{height:1em}@media(max-width:600px){.grid.jsx-cbfd42e26539136{width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}}</style><style id="__jsx-5750d7069672f50d">html,body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}</style><style data-emotion="css "></style></head><body><div id="__next" data-reactroot=""><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><div class="jsx-cbfd42e26539136 container"><main class="jsx-cbfd42e26539136"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-aoeo82"><h1><code>member-ordering</code></h1>
+<p>Require a consistent member declaration order.</p>
+<p>A consistent ordering of fields, methods and constructors can make interfaces, type literals, classes and class expressions easier to read, navigate and edit.</p>
+<h2>Rule Details</h2>
+<p>This rule aims to standardize the way class declarations, class expressions, interfaces and type literals are structured and ordered.</p>
+<h3>Grouping and sorting member groups</h3>
+<p>It allows to group members by their type (e.g. <code>public-static-field</code>, <code>protected-static-field</code>, <code>private-static-field</code>, <code>public-instance-field</code>, ...) and enforce a certain order for these groups. By default, their order is the same inside <code>classes</code>, <code>classExpressions</code>, <code>interfaces</code> and <code>typeLiterals</code> (note: not all member types apply to <code>interfaces</code> and <code>typeLiterals</code>). It is possible to define the order for any of those individually or to change the default order for all of them by setting the <code>default</code> option.</p>
+<h3>Sorting members</h3>
+<p>Besides grouping the members and sorting their groups, this rule also allows to sort the members themselves (e.g. <code>a</code>, <code>b</code>, <code>c</code>, ...). You have 2 options: Sort all of them while ignoring their type or sort them while respecting their types (e.g. sort all fields in an interface alphabetically).</p>
+<h2>Options</h2>
+<p>These options allow to specify how to group the members and sort their groups.</p>
+<ul>
+<li>Sort groups, don&#x27;t enforce member order: Use <code>memberTypes</code></li>
+<li>Sort members, don&#x27;t enforce group order: Use <code>order</code></li>
+<li>Sort members within groups: Use <code>memberTypes</code> and <code>order</code></li>
+</ul>
+<pre><code class="language-ts">type SortedOrderConfig = {
+  memberTypes?: MemberType[] | &#x27;never&#x27;;
+  order: &#x27;alphabetically&#x27; | &#x27;alphabetically-case-insensitive&#x27; | &#x27;as-written&#x27;;
+};
+
+type OrderConfig = MemberType[] | SortedOrderConfig | &#x27;never&#x27;;
+
+type Options = {
+  default?: OrderConfig;
+  classes?: OrderConfig;
+  classExpressions?: OrderConfig;
+  interfaces?: OrderConfig;
+  typeLiterals?: OrderConfig;
+};
+</code></pre>
+<p>See below for the possible definitions of <code>MemberType</code>.</p>
+<h3>Deprecated syntax</h3>
+<p>Note: There is a deprecated syntax to specify the member types as an array.</p>
+<h3>Member types (granular form)</h3>
+<p>There are multiple ways to specify the member types. The most explicit and granular form is the following:</p>
+<pre><code class="language-jsonc">[
+  // Index signature
+  &quot;signature&quot;,
+
+  // Fields
+  &quot;public-static-field&quot;,
+  &quot;protected-static-field&quot;,
+  &quot;private-static-field&quot;,
+  &quot;public-decorated-field&quot;,
+  &quot;protected-decorated-field&quot;,
+  &quot;private-decorated-field&quot;,
+  &quot;public-instance-field&quot;,
+  &quot;protected-instance-field&quot;,
+  &quot;private-instance-field&quot;,
+  &quot;public-abstract-field&quot;,
+  &quot;protected-abstract-field&quot;,
+  &quot;private-abstract-field&quot;,
+
+  // Constructors
+  &quot;public-constructor&quot;,
+  &quot;protected-constructor&quot;,
+  &quot;private-constructor&quot;,
+
+  // Getters
+  &quot;public-static-get&quot;,
+  &quot;protected-static-get&quot;,
+  &quot;private-static-get&quot;,
+
+  &quot;public-decorated-get&quot;,
+  &quot;protected-decorated-get&quot;,
+  &quot;private-decorated-get&quot;,
+
+  &quot;public-instance-get&quot;,
+  &quot;protected-instance-get&quot;,
+  &quot;private-instance-get&quot;,
+
+  &quot;public-abstract-get&quot;,
+  &quot;protected-abstract-get&quot;,
+  &quot;private-abstract-get&quot;,
+
+  &quot;public-get&quot;,
+  &quot;protected-get&quot;,
+  &quot;private-get&quot;,
+
+  &quot;static-get&quot;,
+  &quot;instance-get&quot;,
+  &quot;abstract-get&quot;,
+
+  &quot;decorated-get&quot;,
+
+  &quot;get&quot;,
+
+  // Setters
+  &quot;public-static-set&quot;,
+  &quot;protected-static-set&quot;,
+  &quot;private-static-set&quot;,
+
+  &quot;public-decorated-set&quot;,
+  &quot;protected-decorated-set&quot;,
+  &quot;private-decorated-set&quot;,
+
+  &quot;public-instance-set&quot;,
+  &quot;protected-instance-set&quot;,
+  &quot;private-instance-set&quot;,
+
+  &quot;public-abstract-set&quot;,
+  &quot;protected-abstract-set&quot;,
+  &quot;private-abstract-set&quot;,
+
+  &quot;public-set&quot;,
+  &quot;protected-set&quot;,
+  &quot;private-set&quot;,
+
+  &quot;static-set&quot;,
+  &quot;instance-set&quot;,
+  &quot;abstract-set&quot;,
+
+  &quot;decorated-set&quot;,
+
+  &quot;set&quot;,
+
+  // Methods
+  &quot;public-static-method&quot;,
+  &quot;protected-static-method&quot;,
+  &quot;private-static-method&quot;,
+  &quot;public-decorated-method&quot;,
+  &quot;protected-decorated-method&quot;,
+  &quot;private-decorated-method&quot;,
+  &quot;public-instance-method&quot;,
+  &quot;protected-instance-method&quot;,
+  &quot;private-instance-method&quot;,
+  &quot;public-abstract-method&quot;,
+  &quot;protected-abstract-method&quot;,
+  &quot;private-abstract-method&quot;
+]
+</code></pre>
+<p>Note: If you only specify some of the possible types, the non-specified ones can have any particular order. This means that they can be placed before, within or after the specified types and the linter won&#x27;t complain about it.</p>
+<h3>Member group types (with accessibility, ignoring scope)</h3>
+<p>It is also possible to group member types by their accessibility (<code>static</code>, <code>instance</code>, <code>abstract</code>), ignoring their scope.</p>
+<pre><code class="language-jsonc">[
+  // Index signature
+  // No accessibility for index signature. See above.
+
+  // Fields
+  &quot;public-field&quot;, // = [&quot;public-static-field&quot;, &quot;public-instance-field&quot;]
+  &quot;protected-field&quot;, // = [&quot;protected-static-field&quot;, &quot;protected-instance-field&quot;]
+  &quot;private-field&quot;, // = [&quot;private-static-field&quot;, &quot;private-instance-field&quot;]
+
+  // Constructors
+  // Only the accessibility of constructors is configurable. See below.
+
+  // Getters
+  &quot;public-get&quot;, // = [&quot;public-static-get&quot;, &quot;public-instance-get&quot;]
+  &quot;protected-get&quot;, // = [&quot;protected-static-get&quot;, &quot;protected-instance-get&quot;]
+  &quot;private-get&quot;, // = [&quot;private-static-get&quot;, &quot;private-instance-get&quot;]
+
+  // Setters
+  &quot;public-set&quot;, // = [&quot;public-static-set&quot;, &quot;public-instance-set&quot;]
+  &quot;protected-set&quot;, // = [&quot;protected-static-set&quot;, &quot;protected-instance-set&quot;]
+  &quot;private-set&quot;, // = [&quot;private-static-set&quot;, &quot;private-instance-set&quot;]
+
+  // Methods
+  &quot;public-method&quot;, // = [&quot;public-static-method&quot;, &quot;public-instance-method&quot;]
+  &quot;protected-method&quot;, // = [&quot;protected-static-method&quot;, &quot;protected-instance-method&quot;]
+  &quot;private-method&quot; // = [&quot;private-static-method&quot;, &quot;private-instance-method&quot;]
+]
+</code></pre>
+<h3>Member group types (with accessibility and a decorator)</h3>
+<p>It is also possible to group methods or fields with a decorator separately, optionally specifying
+their accessibility.</p>
+<pre><code class="language-jsonc">[
+  // Index signature
+  // No decorators for index signature.
+
+  // Fields
+  &quot;public-decorated-field&quot;,
+  &quot;protected-decorated-field&quot;,
+  &quot;private-decorated-field&quot;,
+
+  &quot;decorated-field&quot;, // = [&quot;public-decorated-field&quot;, &quot;protected-decorated-field&quot;, &quot;private-decorated-field&quot;]
+
+  // Constructors
+  // There are no decorators for constructors.
+
+  // Getters
+  &quot;public-decorated-get&quot;,
+  &quot;protected-decorated-get&quot;,
+  &quot;private-decorated-get&quot;,
+
+  &quot;decorated-get&quot; // = [&quot;public-decorated-get&quot;, &quot;protected-decorated-get&quot;, &quot;private-decorated-get&quot;]
+
+  // Setters
+  &quot;public-decorated-set&quot;,
+  &quot;protected-decorated-set&quot;,
+  &quot;private-decorated-set&quot;,
+
+  &quot;decorated-set&quot; // = [&quot;public-decorated-set&quot;, &quot;protected-decorated-set&quot;, &quot;private-decorated-set&quot;]
+
+  // Methods
+  &quot;public-decorated-method&quot;,
+  &quot;protected-decorated-method&quot;,
+  &quot;private-decorated-method&quot;,
+
+  &quot;decorated-method&quot; // = [&quot;public-decorated-method&quot;, &quot;protected-decorated-method&quot;, &quot;private-decorated-method&quot;]
+]
+</code></pre>
+<h3>Member group types (with scope, ignoring accessibility)</h3>
+<p>Another option is to group the member types by their scope (<code>public</code>, <code>protected</code>, <code>private</code>), ignoring their accessibility.</p>
+<pre><code class="language-jsonc">[
+  // Index signature
+  // No scope for index signature. See above.
+
+  // Fields
+  &quot;static-field&quot;, // = [&quot;public-static-field&quot;, &quot;protected-static-field&quot;, &quot;private-static-field&quot;]
+  &quot;instance-field&quot;, // = [&quot;public-instance-field&quot;, &quot;protected-instance-field&quot;, &quot;private-instance-field&quot;]
+  &quot;abstract-field&quot;, // = [&quot;public-abstract-field&quot;, &quot;protected-abstract-field&quot;, &quot;private-abstract-field&quot;]
+
+  // Constructors
+  &quot;constructor&quot;, // = [&quot;public-constructor&quot;, &quot;protected-constructor&quot;, &quot;private-constructor&quot;]
+
+  // Getters
+  &quot;static-get&quot;, // = [&quot;public-static-get&quot;, &quot;protected-static-get&quot;, &quot;private-static-get&quot;]
+  &quot;instance-get&quot;, // = [&quot;public-instance-get&quot;, &quot;protected-instance-get&quot;, &quot;private-instance-get&quot;]
+  &quot;abstract-get&quot; // = [&quot;public-abstract-get&quot;, &quot;protected-abstract-get&quot;, &quot;private-abstract-get&quot;]
+
+  // Setters
+  &quot;static-set&quot;, // = [&quot;public-static-set&quot;, &quot;protected-static-set&quot;, &quot;private-static-set&quot;]
+  &quot;instance-set&quot;, // = [&quot;public-instance-set&quot;, &quot;protected-instance-set&quot;, &quot;private-instance-set&quot;]
+  &quot;abstract-set&quot; // = [&quot;public-abstract-set&quot;, &quot;protected-abstract-set&quot;, &quot;private-abstract-set&quot;]
+
+  // Methods
+  &quot;static-method&quot;, // = [&quot;public-static-method&quot;, &quot;protected-static-method&quot;, &quot;private-static-method&quot;]
+  &quot;instance-method&quot;, // = [&quot;public-instance-method&quot;, &quot;protected-instance-method&quot;, &quot;private-instance-method&quot;]
+  &quot;abstract-method&quot; // = [&quot;public-abstract-method&quot;, &quot;protected-abstract-method&quot;, &quot;private-abstract-method&quot;]
+]
+</code></pre>
+<h3>Member group types (with scope and accessibility)</h3>
+<p>The third grouping option is to ignore both scope and accessibility.</p>
+<pre><code class="language-jsonc">[
+  // Index signature
+  // No grouping for index signature. See above.
+
+  // Fields
+  &quot;field&quot;, // = [&quot;public-static-field&quot;, &quot;protected-static-field&quot;, &quot;private-static-field&quot;, &quot;public-instance-field&quot;, &quot;protected-instance-field&quot;, &quot;private-instance-field&quot;,
+  //              &quot;public-abstract-field&quot;, &quot;protected-abstract-field&quot;, private-abstract-field&quot;]
+
+  // Constructors
+  // Only the accessibility of constructors is configurable. See above.
+
+  // Getters
+  &quot;get&quot; // = [&quot;public-static-get&quot;, &quot;protected-static-get&quot;, &quot;private-static-get&quot;, &quot;public-instance-get&quot;, &quot;protected-instance-get&quot;, &quot;private-instance-get&quot;,
+  //                &quot;public-abstract-get&quot;, &quot;protected-abstract-get&quot;, &quot;private-abstract-get&quot;]
+
+  // Setters
+  &quot;set&quot; // = [&quot;public-static-set&quot;, &quot;protected-static-set&quot;, &quot;private-static-set&quot;, &quot;public-instance-set&quot;, &quot;protected-instance-set&quot;, &quot;private-instance-set&quot;,
+  //                &quot;public-abstract-set&quot;, &quot;protected-abstract-set&quot;, &quot;private-abstract-set&quot;]
+
+  // Methods
+  &quot;method&quot; // = [&quot;public-static-method&quot;, &quot;protected-static-method&quot;, &quot;private-static-method&quot;, &quot;public-instance-method&quot;, &quot;protected-instance-method&quot;, &quot;private-instance-method&quot;,
+  //                &quot;public-abstract-method&quot;, &quot;protected-abstract-method&quot;, &quot;private-abstract-method&quot;]
+]
+</code></pre>
+<h3>Grouping different member types at the same rank</h3>
+<p>It is also possible to group different member types at the same rank.</p>
+<pre><code class="language-jsonc">[
+  // Index signature
+  &quot;signature&quot;,
+
+  // Fields
+  &quot;field&quot;,
+
+  // Constructors
+  &quot;constructor&quot;,
+
+  // Getters and Setters at the same rank
+  [&quot;get&quot;, &quot;set&quot;],
+
+  // Methods
+  &quot;method&quot;
+]
+</code></pre>
+<h3>Default configuration</h3>
+<p>The default configuration looks as follows:</p>
+<pre><code class="language-jsonc">{
+  &quot;default&quot;: [
+    // Index signature
+    &quot;signature&quot;,
+
+    // Fields
+    &quot;public-static-field&quot;,
+    &quot;protected-static-field&quot;,
+    &quot;private-static-field&quot;,
+
+    &quot;public-decorated-field&quot;,
+    &quot;protected-decorated-field&quot;,
+    &quot;private-decorated-field&quot;,
+
+    &quot;public-instance-field&quot;,
+    &quot;protected-instance-field&quot;,
+    &quot;private-instance-field&quot;,
+
+    &quot;public-abstract-field&quot;,
+    &quot;protected-abstract-field&quot;,
+    &quot;private-abstract-field&quot;,
+
+    &quot;public-field&quot;,
+    &quot;protected-field&quot;,
+    &quot;private-field&quot;,
+
+    &quot;static-field&quot;,
+    &quot;instance-field&quot;,
+    &quot;abstract-field&quot;,
+
+    &quot;decorated-field&quot;,
+
+    &quot;field&quot;,
+
+    // Constructors
+    &quot;public-constructor&quot;,
+    &quot;protected-constructor&quot;,
+    &quot;private-constructor&quot;,
+
+    &quot;constructor&quot;,
+
+    // Getters
+    &quot;public-static-get&quot;,
+    &quot;protected-static-get&quot;,
+    &quot;private-static-get&quot;,
+
+    &quot;public-decorated-get&quot;,
+    &quot;protected-decorated-get&quot;,
+    &quot;private-decorated-get&quot;,
+
+    &quot;public-instance-get&quot;,
+    &quot;protected-instance-get&quot;,
+    &quot;private-instance-get&quot;,
+
+    &quot;public-abstract-get&quot;,
+    &quot;protected-abstract-get&quot;,
+    &quot;private-abstract-get&quot;,
+
+    &quot;public-get&quot;,
+    &quot;protected-get&quot;,
+    &quot;private-get&quot;,
+
+    &quot;static-get&quot;,
+    &quot;instance-get&quot;,
+    &quot;abstract-get&quot;,
+
+    &quot;decorated-get&quot;,
+
+    &quot;get&quot;,
+
+    // Setters
+    &quot;public-static-set&quot;,
+    &quot;protected-static-set&quot;,
+    &quot;private-static-set&quot;,
+
+    &quot;public-decorated-set&quot;,
+    &quot;protected-decorated-set&quot;,
+    &quot;private-decorated-set&quot;,
+
+    &quot;public-instance-set&quot;,
+    &quot;protected-instance-set&quot;,
+    &quot;private-instance-set&quot;,
+
+    &quot;public-abstract-set&quot;,
+    &quot;protected-abstract-set&quot;,
+    &quot;private-abstract-set&quot;,
+
+    &quot;public-set&quot;,
+    &quot;protected-set&quot;,
+    &quot;private-set&quot;,
+
+    &quot;static-set&quot;,
+    &quot;instance-set&quot;,
+    &quot;abstract-set&quot;,
+
+    &quot;decorated-set&quot;,
+
+    &quot;set&quot;,
+
+    // Methods
+    &quot;public-static-method&quot;,
+    &quot;protected-static-method&quot;,
+    &quot;private-static-method&quot;,
+
+    &quot;public-decorated-method&quot;,
+    &quot;protected-decorated-method&quot;,
+    &quot;private-decorated-method&quot;,
+
+    &quot;public-instance-method&quot;,
+    &quot;protected-instance-method&quot;,
+    &quot;private-instance-method&quot;,
+
+    &quot;public-abstract-method&quot;,
+    &quot;protected-abstract-method&quot;,
+    &quot;private-abstract-method&quot;,
+
+    &quot;public-method&quot;,
+    &quot;protected-method&quot;,
+    &quot;private-method&quot;,
+
+    &quot;static-method&quot;,
+    &quot;instance-method&quot;,
+    &quot;abstract-method&quot;,
+
+    &quot;decorated-method&quot;,
+
+    &quot;method&quot;
+  ]
+}
+</code></pre>
+<p>Note: The default configuration contains member group types which contain other member types (see above). This is intentional to provide better error messages.</p>
+<p>Note: By default, the members are not sorted. If you want to sort them alphabetically, you have to provide a custom configuration.</p>
+<h2>Examples</h2>
+<h3>Custom <code>default</code> configuration</h3>
+<p>Note: The <code>default</code> options are overwritten in these examples.</p>
+<h4>Configuration: <code>{ &quot;default&quot;: [&quot;signature&quot;, &quot;method&quot;, &quot;constructor&quot;, &quot;field&quot;] }</code></h4>
+<h5>Incorrect examples</h5>
+<pre><code class="language-ts">interface Foo {
+  B: string; // -&gt; field
+
+  new (); // -&gt; constructor
+
+  A(): void; // -&gt; method
+
+  [Z: string]: any; // -&gt; signature
+}
+</code></pre>
+<p>Note: Wrong order.</p>
+<pre><code class="language-ts">type Foo = {
+  B: string; // -&gt; field
+
+  // no constructor
+
+  A(): void; // -&gt; method
+
+  // no signature
+};
+</code></pre>
+<p>Note: Not all specified member types have to exist.</p>
+<pre><code class="language-ts">class Foo {
+  private C: string; // -&gt; field
+  public D: string; // -&gt; field
+  protected static E: string; // -&gt; field
+
+  constructor() {} // -&gt; constructor
+
+  public static A(): void {} // -&gt; method
+  public B(): void {} // -&gt; method
+
+  [Z: string]: any; // -&gt; signature
+}
+</code></pre>
+<p>Note: Accessibility or scope are ignored with this configuration.</p>
+<pre><code class="language-ts">const Foo = class {
+  private C: string; // -&gt; field
+  public D: string; // -&gt; field
+
+  constructor() {} // -&gt; constructor
+
+  public static A(): void {} // -&gt; method
+  public B(): void {} // -&gt; method
+
+  [Z: string]: any; // -&gt; signature
+
+  protected static E: string; // -&gt; field
+};
+</code></pre>
+<p>Note: Not all members have to be grouped to find rule violations.</p>
+<h5>Correct examples</h5>
+<pre><code class="language-ts">interface Foo {
+  [Z: string]: any; // -&gt; signature
+
+  A(): void; // -&gt; method
+
+  new (); // -&gt; constructor
+
+  B: string; // -&gt; field
+}
+</code></pre>
+<pre><code class="language-ts">type Foo = {
+  // no signature
+
+  A(): void; // -&gt; method
+
+  // no constructor
+
+  B: string; // -&gt; field
+};
+</code></pre>
+<pre><code class="language-ts">class Foo {
+  [Z: string]: any; // -&gt; signature
+
+  public static A(): void {} // -&gt; method
+  public B(): void {} // -&gt; method
+
+  constructor() {} // -&gt; constructor
+
+  private C: string; // -&gt; field
+  public D: string; // -&gt; field
+  protected static E: string; // -&gt; field
+}
+</code></pre>
+<pre><code class="language-ts">const Foo = class {
+  [Z: string]: any; // -&gt; signature
+
+  public static A(): void {} // -&gt; method
+  public B(): void {} // -&gt; method
+
+  constructor() {} // -&gt; constructor
+
+  private C: string; // -&gt; field
+  public D: string; // -&gt; field
+  protected static E: string; // -&gt; field
+};
+</code></pre>
+<h4>Configuration: <code>{ &quot;default&quot;: [&quot;public-instance-method&quot;, &quot;public-static-field&quot;] }</code></h4>
+<p>Note: This configuration does not apply to interfaces/type literals as accessibility and scope are not part of interfaces/type literals.</p>
+<h5>Incorrect examples</h5>
+<pre><code class="language-ts">class Foo {
+  private C: string; // (irrelevant)
+
+  public D: string; // (irrelevant)
+
+  public static E: string; // -&gt; public static field
+
+  constructor() {} // (irrelevant)
+
+  public static A(): void {} // (irrelevant)
+
+  [Z: string]: any; // (irrelevant)
+
+  public B(): void {} // -&gt; public instance method
+}
+</code></pre>
+<p>Note: Public instance methods should come first before public static fields. Everything else can be placed anywhere.</p>
+<pre><code class="language-ts">const Foo = class {
+  private C: string; // (irrelevant)
+
+  [Z: string]: any; // (irrelevant)
+
+  public static E: string; // -&gt; public static field
+
+  public D: string; // (irrelevant)
+
+  constructor() {} // (irrelevant)
+
+  public static A(): void {} // (irrelevant)
+
+  public B(): void {} // -&gt; public instance method
+};
+</code></pre>
+<p>Note: Public instance methods should come first before public static fields. Everything else can be placed anywhere.</p>
+<h5>Correct examples</h5>
+<pre><code class="language-ts">class Foo {
+  public B(): void {} // -&gt; public instance method
+
+  private C: string; // (irrelevant)
+
+  public D: string; // (irrelevant)
+
+  public static E: string; // -&gt; public static field
+
+  constructor() {} // (irrelevant)
+
+  public static A(): void {} // (irrelevant)
+
+  [Z: string]: any; // (irrelevant)
+}
+</code></pre>
+<pre><code class="language-ts">const Foo = class {
+  public B(): void {} // -&gt; public instance method
+
+  private C: string; // (irrelevant)
+
+  [Z: string]: any; // (irrelevant)
+
+  public D: string; // (irrelevant)
+
+  constructor() {} // (irrelevant)
+
+  public static A(): void {} // (irrelevant)
+
+  public static E: string; // -&gt; public static field
+};
+</code></pre>
+<h4>Configuration: <code>{ &quot;default&quot;: [&quot;public-static-field&quot;, &quot;static-field&quot;, &quot;instance-field&quot;] }</code></h4>
+<p>Note: This configuration does not apply to interfaces/type literals as accessibility and scope are not part of interfaces/type literals.</p>
+<h5>Incorrect examples</h5>
+<pre><code class="language-ts">class Foo {
+  private E: string; // -&gt; instance field
+
+  private static B: string; // -&gt; static field
+  protected static C: string; // -&gt; static field
+  private static D: string; // -&gt; static field
+
+  public static A: string; // -&gt; public static field
+
+  [Z: string]: any; // (irrelevant)
+}
+</code></pre>
+<p>Note: Public static fields should come first, followed by static fields and instance fields.</p>
+<pre><code class="language-ts">const foo = class {
+  public T(): void {} // (irrelevant)
+
+  private static B: string; // -&gt; static field
+
+  constructor() {} // (irrelevant)
+
+  private E: string; // -&gt; instance field
+
+  protected static C: string; // -&gt; static field
+  private static D: string; // -&gt; static field
+
+  [Z: string]: any; // (irrelevant)
+
+  public static A: string; // -&gt; public static field
+};
+</code></pre>
+<p>Note: Public static fields should come first, followed by static fields and instance fields.</p>
+<h5>Correct examples</h5>
+<pre><code class="language-ts">class Foo {
+  public static A: string; // -&gt; public static field
+
+  private static B: string; // -&gt; static field
+  protected static C: string; // -&gt; static field
+  private static D: string; // -&gt; static field
+
+  private E: string; // -&gt; instance field
+}
+</code></pre>
+<pre><code class="language-ts">const foo = class {
+  [Z: string]: any; // -&gt; signature
+
+  public static A: string; // -&gt; public static field
+
+  constructor() {} // -&gt; constructor
+
+  private static B: string; // -&gt; static field
+  protected static C: string; // -&gt; static field
+  private static D: string; // -&gt; static field
+
+  private E: string; // -&gt; instance field
+
+  public T(): void {} // -&gt; method
+};
+</code></pre>
+<h3>Custom <code>classes</code> configuration</h3>
+<p>Note: If this is not set, the <code>default</code> will automatically be applied to classes as well. If a <code>classes</code> configuration is provided, only this configuration will be used for <code>classes</code> (i.e. nothing will be merged with <code>default</code>).</p>
+<p>Note: The configuration for <code>classes</code> does not apply to class expressions (use <code>classExpressions</code> for them).</p>
+<h4>Configuration: <code>{ &quot;classes&quot;: [&quot;method&quot;, &quot;constructor&quot;, &quot;field&quot;] }</code></h4>
+<h5>Incorrect example</h5>
+<pre><code class="language-ts">class Foo {
+  private C: string; // -&gt; field
+  public D: string; // -&gt; field
+  protected static E: string; // -&gt; field
+
+  constructor() {} // -&gt; constructor
+
+  public static A(): void {} // -&gt; method
+  public B(): void {} // -&gt; method
+}
+</code></pre>
+<h5>Correct example</h5>
+<pre><code class="language-ts">class Foo {
+  public static A(): void {} // -&gt; method
+  public B(): void {} // -&gt; method
+
+  constructor() {} // -&gt; constructor
+
+  private C: string; // -&gt; field
+  public D: string; // -&gt; field
+  protected static E: string; // -&gt; field
+}
+</code></pre>
+<h4>Configuration: <code>{ &quot;classes&quot;: [&quot;public-instance-method&quot;, &quot;public-static-field&quot;] }</code></h4>
+<h5>Incorrect example</h5>
+<pre><code class="language-ts">class Foo {
+  private C: string; // (irrelevant)
+
+  public D: string; // (irrelevant)
+
+  public static E: string; // -&gt; public static field
+
+  constructor() {} // (irrelevant)
+
+  public static A(): void {} // (irrelevant)
+
+  public B(): void {} // -&gt; public instance method
+}
+</code></pre>
+<h5>Correct example</h5>
+<pre><code class="language-ts">class Foo {
+  private C: string; // (irrelevant)
+
+  public D: string; // (irrelevant)
+
+  public B(): void {} // -&gt; public instance method
+
+  constructor() {} // (irrelevant)
+
+  public static A(): void {} // (irrelevant)
+
+  public static E: string; // -&gt; public static field
+}
+</code></pre>
+<h3>Custom <code>classExpressions</code> configuration</h3>
+<p>Note: If this is not set, the <code>default</code> will automatically be applied to classes expressions as well. If a <code>classExpressions</code> configuration is provided, only this configuration will be used for <code>classExpressions</code> (i.e. nothing will be merged with <code>default</code>).</p>
+<p>Note: The configuration for <code>classExpressions</code> does not apply to classes (use <code>classes</code> for them).</p>
+<h4>Configuration: <code>{ &quot;classExpressions&quot;: [&quot;method&quot;, &quot;constructor&quot;, &quot;field&quot;] }</code></h4>
+<h5>Incorrect example</h5>
+<pre><code class="language-ts">const foo = class {
+  private C: string; // -&gt; field
+  public D: string; // -&gt; field
+  protected static E: string; // -&gt; field
+
+  constructor() {} // -&gt; constructor
+
+  public static A(): void {} // -&gt; method
+  public B(): void {} // -&gt; method
+};
+</code></pre>
+<h5>Correct example</h5>
+<pre><code class="language-ts">const foo = class {
+  public static A(): void {} // -&gt; method
+  public B(): void {} // -&gt; method
+
+  constructor() {} // -&gt; constructor
+
+  private C: string; // -&gt; field
+  public D: string; // -&gt; field
+  protected static E: string; // -&gt; field
+};
+</code></pre>
+<h4>Configuration: <code>{ &quot;classExpressions&quot;: [&quot;public-instance-method&quot;, &quot;public-static-field&quot;] }</code></h4>
+<h5>Incorrect example</h5>
+<pre><code class="language-ts">const foo = class {
+  private C: string; // (irrelevant)
+
+  public D: string; // (irrelevant)
+
+  public static E: string; // -&gt; public static field
+
+  constructor() {} // (irrelevant)
+
+  public static A(): void {} // (irrelevant)
+
+  public B(): void {} // -&gt; public instance method
+};
+</code></pre>
+<h5>Correct example</h5>
+<pre><code class="language-ts">const foo = class {
+  private C: string; // (irrelevant)
+
+  public D: string; // (irrelevant)
+
+  public B(): void {} // -&gt; public instance method
+
+  public static E: string; // -&gt; public static field
+
+  constructor() {} // (irrelevant)
+
+  public static A(): void {} // (irrelevant)
+};
+</code></pre>
+<h3>Custom <code>interfaces</code> configuration</h3>
+<p>Note: If this is not set, the <code>default</code> will automatically be applied to classes expressions as well. If a <code>interfaces</code> configuration is provided, only this configuration will be used for <code>interfaces</code> (i.e. nothing will be merged with <code>default</code>).</p>
+<p>Note: The configuration for <code>interfaces</code> only allows a limited set of member types: <code>signature</code>, <code>field</code>, <code>constructor</code> and <code>method</code>.</p>
+<p>Note: The configuration for <code>interfaces</code> does not apply to type literals (use <code>typeLiterals</code> for them).</p>
+<h4>Configuration: <code>{ &quot;interfaces&quot;: [&quot;signature&quot;, &quot;method&quot;, &quot;constructor&quot;, &quot;field&quot;] }</code></h4>
+<h5>Incorrect example</h5>
+<pre><code class="language-ts">interface Foo {
+  B: string; // -&gt; field
+
+  new (); // -&gt; constructor
+
+  A(): void; // -&gt; method
+
+  [Z: string]: any; // -&gt; signature
+}
+</code></pre>
+<h5>Correct example</h5>
+<pre><code class="language-ts">interface Foo {
+  [Z: string]: any; // -&gt; signature
+
+  A(): void; // -&gt; method
+
+  new (); // -&gt; constructor
+
+  B: string; // -&gt; field
+}
+</code></pre>
+<h3>Custom <code>typeLiterals</code> configuration</h3>
+<p>Note: If this is not set, the <code>default</code> will automatically be applied to classes expressions as well. If a <code>typeLiterals</code> configuration is provided, only this configuration will be used for <code>typeLiterals</code> (i.e. nothing will be merged with <code>default</code>).</p>
+<p>Note: The configuration for <code>typeLiterals</code> only allows a limited set of member types: <code>signature</code>, <code>field</code>, <code>constructor</code> and <code>method</code>.</p>
+<p>Note: The configuration for <code>typeLiterals</code> does not apply to interfaces (use <code>interfaces</code> for them).</p>
+<h4>Configuration: <code>{ &quot;typeLiterals&quot;: [&quot;signature&quot;, &quot;method&quot;, &quot;constructor&quot;, &quot;field&quot;] }</code></h4>
+<h5>Incorrect example</h5>
+<pre><code class="language-ts">type Foo = {
+  B: string; // -&gt; field
+
+  A(): void; // -&gt; method
+
+  new (); // -&gt; constructor
+
+  [Z: string]: any; // -&gt; signature
+};
+</code></pre>
+<h5>Correct example</h5>
+<pre><code class="language-ts">type Foo = {
+  [Z: string]: any; // -&gt; signature
+
+  A(): void; // -&gt; method
+
+  new (); // -&gt; constructor
+
+  B: string; // -&gt; field
+};
+</code></pre>
+<h3>Sorting alphabetically within member groups</h3>
+<p>It is possible to sort all members within a group alphabetically.</p>
+<h4>Configuration: <code>{ &quot;default&quot;: { &quot;memberTypes&quot;: &lt;Default Order&gt;, &quot;order&quot;: &quot;alphabetically&quot; } }</code></h4>
+<p>This will apply the default order (see above) and enforce an alphabetic case-sensitive order within each group.</p>
+<h5>Incorrect examples</h5>
+<pre><code class="language-ts">interface Foo {
+  B: x;
+  a: x;
+  c: x;
+
+  new (): Bar;
+  (): Baz;
+
+  B(): void;
+  a(): void;
+  c(): void;
+
+  // Wrong group order, should be placed before all field definitions
+  [a: string]: number;
+}
+</code></pre>
+<pre><code class="language-ts">interface Foo {
+  [a: string]: number;
+
+  B: x;
+  a: x;
+  c: x;
+
+  new (): Bar;
+  (): Baz;
+
+  // Wrong alphabetic order within group
+  c(): void;
+  B(): void;
+  a(): void;
+}
+</code></pre>
+<h3>Sorting alphabetically while ignoring member groups</h3>
+<p>It is also possible to sort all members and ignore the member groups completely.</p>
+<h4>Configuration: <code>{ &quot;default&quot;: { &quot;memberTypes&quot;: &quot;never&quot;, &quot;order&quot;: &quot;alphabetically&quot; } }</code></h4>
+<h5>Incorrect example</h5>
+<pre><code class="language-ts">interface Foo {
+  b(): void;
+  a: b;
+
+  [a: string]: number; // Order doesn&#x27;t matter (no sortable identifier)
+  new (): Bar; // Order doesn&#x27;t matter (no sortable identifier)
+  (): Baz; // Order doesn&#x27;t matter (no sortable identifier)
+}
+</code></pre>
+<p>Note: Wrong alphabetic order <code>b(): void</code> should come after <code>a: b</code>.</p>
+<h3>Sorting alphabetically case-insensitive within member groups</h3>
+<p>It is possible to sort all members within a group alphabetically with case insensitivity.</p>
+<h4>Configuration: <code>{ &quot;default&quot;: { &quot;memberTypes&quot;: &lt;Default Order&gt;, &quot;order&quot;: &quot;alphabetically-case-insensitive&quot; } }</code></h4>
+<p>This will apply the default order (see above) and enforce an alphabetic case-insensitive order within each group.</p>
+<h5>Incorrect examples</h5>
+<pre><code class="language-ts">interface Foo {
+  a: x;
+  B: x;
+  c: x;
+
+  new (): Bar;
+  (): Baz;
+
+  a(): void;
+  b(): void;
+  C(): void;
+
+  // Wrong group order, should be placed before all field definitions
+  [a: string]: number;
+}
+</code></pre>
+<pre><code class="language-ts">interface Foo {
+  [a: string]: number;
+
+  a: x;
+  B: x;
+  c: x;
+
+  new (): Bar;
+  (): Baz;
+
+  // Wrong alphabetic order within group
+  C(): void;
+  b(): void;
+  a(): void;
+}
+</code></pre>
+<h3>Sorting alphabetically case-insensitive while ignoring member groups</h3>
+<p>It is also possible to sort all members with case insensitivity and ignore the member groups completely.</p>
+<h4>Configuration: <code>{ &quot;default&quot;: { &quot;memberTypes&quot;: &quot;never&quot;, &quot;order&quot;: &quot;alphabetically-case-insensitive&quot; } }</code></h4>
+<h5>Incorrect example</h5>
+<pre><code class="language-ts">interface Foo {
+  B(): void;
+  a: number;
+
+  [a: string]: number; // Order doesn&#x27;t matter (no sortable identifier)
+  new (): Bar; // Order doesn&#x27;t matter (no sortable identifier)
+  (): Baz; // Order doesn&#x27;t matter (no sortable identifier)
+}
+</code></pre>
+<p>Note: Wrong alphabetic order <code>B(): void</code> should come after <code>a: number</code>.</p>
+<h2>When Not To Use It</h2>
+<p>If you don&#x27;t care about the general structure of your classes and interfaces, then you will not need this rule.</p>
+<h2>Related To</h2>
+<ul>
+<li>TSLint: <a href="https://palantir.github.io/tslint/rules/member-ordering/">member-ordering</a></li>
+</ul>
+<h2>Attributes</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->✅ Recommended</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->🔧 Fixable</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->💭 Requires type information</li>
+</ul></div></main><footer class="jsx-cbfd42e26539136"><a href="https://cloud.zdns.cn" target="_blank" rel="noopener noreferrer" class="jsx-cbfd42e26539136">Powered by <img src="/zdns.svg" alt="zdns" class="jsx-cbfd42e26539136 logo"/></a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"rule":"# `member-ordering`\n\nRequire a consistent member declaration order.\n\nA consistent ordering of fields, methods and constructors can make interfaces, type literals, classes and class expressions easier to read, navigate and edit.\n\n## Rule Details\n\nThis rule aims to standardize the way class declarations, class expressions, interfaces and type literals are structured and ordered.\n\n### Grouping and sorting member groups\n\nIt allows to group members by their type (e.g. `public-static-field`, `protected-static-field`, `private-static-field`, `public-instance-field`, ...) and enforce a certain order for these groups. By default, their order is the same inside `classes`, `classExpressions`, `interfaces` and `typeLiterals` (note: not all member types apply to `interfaces` and `typeLiterals`). It is possible to define the order for any of those individually or to change the default order for all of them by setting the `default` option.\n\n### Sorting members\n\nBesides grouping the members and sorting their groups, this rule also allows to sort the members themselves (e.g. `a`, `b`, `c`, ...). You have 2 options: Sort all of them while ignoring their type or sort them while respecting their types (e.g. sort all fields in an interface alphabetically).\n\n## Options\n\nThese options allow to specify how to group the members and sort their groups.\n\n- Sort groups, don't enforce member order: Use `memberTypes`\n- Sort members, don't enforce group order: Use `order`\n- Sort members within groups: Use `memberTypes` and `order`\n\n```ts\ntype SortedOrderConfig = {\n  memberTypes?: MemberType[] | 'never';\n  order: 'alphabetically' | 'alphabetically-case-insensitive' | 'as-written';\n};\n\ntype OrderConfig = MemberType[] | SortedOrderConfig | 'never';\n\ntype Options = {\n  default?: OrderConfig;\n  classes?: OrderConfig;\n  classExpressions?: OrderConfig;\n  interfaces?: OrderConfig;\n  typeLiterals?: OrderConfig;\n};\n```\n\nSee below for the possible definitions of `MemberType`.\n\n### Deprecated syntax\n\nNote: There is a deprecated syntax to specify the member types as an array.\n\n### Member types (granular form)\n\nThere are multiple ways to specify the member types. The most explicit and granular form is the following:\n\n```jsonc\n[\n  // Index signature\n  \"signature\",\n\n  // Fields\n  \"public-static-field\",\n  \"protected-static-field\",\n  \"private-static-field\",\n  \"public-decorated-field\",\n  \"protected-decorated-field\",\n  \"private-decorated-field\",\n  \"public-instance-field\",\n  \"protected-instance-field\",\n  \"private-instance-field\",\n  \"public-abstract-field\",\n  \"protected-abstract-field\",\n  \"private-abstract-field\",\n\n  // Constructors\n  \"public-constructor\",\n  \"protected-constructor\",\n  \"private-constructor\",\n\n  // Getters\n  \"public-static-get\",\n  \"protected-static-get\",\n  \"private-static-get\",\n\n  \"public-decorated-get\",\n  \"protected-decorated-get\",\n  \"private-decorated-get\",\n\n  \"public-instance-get\",\n  \"protected-instance-get\",\n  \"private-instance-get\",\n\n  \"public-abstract-get\",\n  \"protected-abstract-get\",\n  \"private-abstract-get\",\n\n  \"public-get\",\n  \"protected-get\",\n  \"private-get\",\n\n  \"static-get\",\n  \"instance-get\",\n  \"abstract-get\",\n\n  \"decorated-get\",\n\n  \"get\",\n\n  // Setters\n  \"public-static-set\",\n  \"protected-static-set\",\n  \"private-static-set\",\n\n  \"public-decorated-set\",\n  \"protected-decorated-set\",\n  \"private-decorated-set\",\n\n  \"public-instance-set\",\n  \"protected-instance-set\",\n  \"private-instance-set\",\n\n  \"public-abstract-set\",\n  \"protected-abstract-set\",\n  \"private-abstract-set\",\n\n  \"public-set\",\n  \"protected-set\",\n  \"private-set\",\n\n  \"static-set\",\n  \"instance-set\",\n  \"abstract-set\",\n\n  \"decorated-set\",\n\n  \"set\",\n\n  // Methods\n  \"public-static-method\",\n  \"protected-static-method\",\n  \"private-static-method\",\n  \"public-decorated-method\",\n  \"protected-decorated-method\",\n  \"private-decorated-method\",\n  \"public-instance-method\",\n  \"protected-instance-method\",\n  \"private-instance-method\",\n  \"public-abstract-method\",\n  \"protected-abstract-method\",\n  \"private-abstract-method\"\n]\n```\n\nNote: If you only specify some of the possible types, the non-specified ones can have any particular order. This means that they can be placed before, within or after the specified types and the linter won't complain about it.\n\n### Member group types (with accessibility, ignoring scope)\n\nIt is also possible to group member types by their accessibility (`static`, `instance`, `abstract`), ignoring their scope.\n\n```jsonc\n[\n  // Index signature\n  // No accessibility for index signature. See above.\n\n  // Fields\n  \"public-field\", // = [\"public-static-field\", \"public-instance-field\"]\n  \"protected-field\", // = [\"protected-static-field\", \"protected-instance-field\"]\n  \"private-field\", // = [\"private-static-field\", \"private-instance-field\"]\n\n  // Constructors\n  // Only the accessibility of constructors is configurable. See below.\n\n  // Getters\n  \"public-get\", // = [\"public-static-get\", \"public-instance-get\"]\n  \"protected-get\", // = [\"protected-static-get\", \"protected-instance-get\"]\n  \"private-get\", // = [\"private-static-get\", \"private-instance-get\"]\n\n  // Setters\n  \"public-set\", // = [\"public-static-set\", \"public-instance-set\"]\n  \"protected-set\", // = [\"protected-static-set\", \"protected-instance-set\"]\n  \"private-set\", // = [\"private-static-set\", \"private-instance-set\"]\n\n  // Methods\n  \"public-method\", // = [\"public-static-method\", \"public-instance-method\"]\n  \"protected-method\", // = [\"protected-static-method\", \"protected-instance-method\"]\n  \"private-method\" // = [\"private-static-method\", \"private-instance-method\"]\n]\n```\n\n### Member group types (with accessibility and a decorator)\n\nIt is also possible to group methods or fields with a decorator separately, optionally specifying\ntheir accessibility.\n\n```jsonc\n[\n  // Index signature\n  // No decorators for index signature.\n\n  // Fields\n  \"public-decorated-field\",\n  \"protected-decorated-field\",\n  \"private-decorated-field\",\n\n  \"decorated-field\", // = [\"public-decorated-field\", \"protected-decorated-field\", \"private-decorated-field\"]\n\n  // Constructors\n  // There are no decorators for constructors.\n\n  // Getters\n  \"public-decorated-get\",\n  \"protected-decorated-get\",\n  \"private-decorated-get\",\n\n  \"decorated-get\" // = [\"public-decorated-get\", \"protected-decorated-get\", \"private-decorated-get\"]\n\n  // Setters\n  \"public-decorated-set\",\n  \"protected-decorated-set\",\n  \"private-decorated-set\",\n\n  \"decorated-set\" // = [\"public-decorated-set\", \"protected-decorated-set\", \"private-decorated-set\"]\n\n  // Methods\n  \"public-decorated-method\",\n  \"protected-decorated-method\",\n  \"private-decorated-method\",\n\n  \"decorated-method\" // = [\"public-decorated-method\", \"protected-decorated-method\", \"private-decorated-method\"]\n]\n```\n\n### Member group types (with scope, ignoring accessibility)\n\nAnother option is to group the member types by their scope (`public`, `protected`, `private`), ignoring their accessibility.\n\n```jsonc\n[\n  // Index signature\n  // No scope for index signature. See above.\n\n  // Fields\n  \"static-field\", // = [\"public-static-field\", \"protected-static-field\", \"private-static-field\"]\n  \"instance-field\", // = [\"public-instance-field\", \"protected-instance-field\", \"private-instance-field\"]\n  \"abstract-field\", // = [\"public-abstract-field\", \"protected-abstract-field\", \"private-abstract-field\"]\n\n  // Constructors\n  \"constructor\", // = [\"public-constructor\", \"protected-constructor\", \"private-constructor\"]\n\n  // Getters\n  \"static-get\", // = [\"public-static-get\", \"protected-static-get\", \"private-static-get\"]\n  \"instance-get\", // = [\"public-instance-get\", \"protected-instance-get\", \"private-instance-get\"]\n  \"abstract-get\" // = [\"public-abstract-get\", \"protected-abstract-get\", \"private-abstract-get\"]\n\n  // Setters\n  \"static-set\", // = [\"public-static-set\", \"protected-static-set\", \"private-static-set\"]\n  \"instance-set\", // = [\"public-instance-set\", \"protected-instance-set\", \"private-instance-set\"]\n  \"abstract-set\" // = [\"public-abstract-set\", \"protected-abstract-set\", \"private-abstract-set\"]\n\n  // Methods\n  \"static-method\", // = [\"public-static-method\", \"protected-static-method\", \"private-static-method\"]\n  \"instance-method\", // = [\"public-instance-method\", \"protected-instance-method\", \"private-instance-method\"]\n  \"abstract-method\" // = [\"public-abstract-method\", \"protected-abstract-method\", \"private-abstract-method\"]\n]\n```\n\n### Member group types (with scope and accessibility)\n\nThe third grouping option is to ignore both scope and accessibility.\n\n```jsonc\n[\n  // Index signature\n  // No grouping for index signature. See above.\n\n  // Fields\n  \"field\", // = [\"public-static-field\", \"protected-static-field\", \"private-static-field\", \"public-instance-field\", \"protected-instance-field\", \"private-instance-field\",\n  //              \"public-abstract-field\", \"protected-abstract-field\", private-abstract-field\"]\n\n  // Constructors\n  // Only the accessibility of constructors is configurable. See above.\n\n  // Getters\n  \"get\" // = [\"public-static-get\", \"protected-static-get\", \"private-static-get\", \"public-instance-get\", \"protected-instance-get\", \"private-instance-get\",\n  //                \"public-abstract-get\", \"protected-abstract-get\", \"private-abstract-get\"]\n\n  // Setters\n  \"set\" // = [\"public-static-set\", \"protected-static-set\", \"private-static-set\", \"public-instance-set\", \"protected-instance-set\", \"private-instance-set\",\n  //                \"public-abstract-set\", \"protected-abstract-set\", \"private-abstract-set\"]\n\n  // Methods\n  \"method\" // = [\"public-static-method\", \"protected-static-method\", \"private-static-method\", \"public-instance-method\", \"protected-instance-method\", \"private-instance-method\",\n  //                \"public-abstract-method\", \"protected-abstract-method\", \"private-abstract-method\"]\n]\n```\n\n### Grouping different member types at the same rank\n\nIt is also possible to group different member types at the same rank.\n\n```jsonc\n[\n  // Index signature\n  \"signature\",\n\n  // Fields\n  \"field\",\n\n  // Constructors\n  \"constructor\",\n\n  // Getters and Setters at the same rank\n  [\"get\", \"set\"],\n\n  // Methods\n  \"method\"\n]\n```\n\n### Default configuration\n\nThe default configuration looks as follows:\n\n```jsonc\n{\n  \"default\": [\n    // Index signature\n    \"signature\",\n\n    // Fields\n    \"public-static-field\",\n    \"protected-static-field\",\n    \"private-static-field\",\n\n    \"public-decorated-field\",\n    \"protected-decorated-field\",\n    \"private-decorated-field\",\n\n    \"public-instance-field\",\n    \"protected-instance-field\",\n    \"private-instance-field\",\n\n    \"public-abstract-field\",\n    \"protected-abstract-field\",\n    \"private-abstract-field\",\n\n    \"public-field\",\n    \"protected-field\",\n    \"private-field\",\n\n    \"static-field\",\n    \"instance-field\",\n    \"abstract-field\",\n\n    \"decorated-field\",\n\n    \"field\",\n\n    // Constructors\n    \"public-constructor\",\n    \"protected-constructor\",\n    \"private-constructor\",\n\n    \"constructor\",\n\n    // Getters\n    \"public-static-get\",\n    \"protected-static-get\",\n    \"private-static-get\",\n\n    \"public-decorated-get\",\n    \"protected-decorated-get\",\n    \"private-decorated-get\",\n\n    \"public-instance-get\",\n    \"protected-instance-get\",\n    \"private-instance-get\",\n\n    \"public-abstract-get\",\n    \"protected-abstract-get\",\n    \"private-abstract-get\",\n\n    \"public-get\",\n    \"protected-get\",\n    \"private-get\",\n\n    \"static-get\",\n    \"instance-get\",\n    \"abstract-get\",\n\n    \"decorated-get\",\n\n    \"get\",\n\n    // Setters\n    \"public-static-set\",\n    \"protected-static-set\",\n    \"private-static-set\",\n\n    \"public-decorated-set\",\n    \"protected-decorated-set\",\n    \"private-decorated-set\",\n\n    \"public-instance-set\",\n    \"protected-instance-set\",\n    \"private-instance-set\",\n\n    \"public-abstract-set\",\n    \"protected-abstract-set\",\n    \"private-abstract-set\",\n\n    \"public-set\",\n    \"protected-set\",\n    \"private-set\",\n\n    \"static-set\",\n    \"instance-set\",\n    \"abstract-set\",\n\n    \"decorated-set\",\n\n    \"set\",\n\n    // Methods\n    \"public-static-method\",\n    \"protected-static-method\",\n    \"private-static-method\",\n\n    \"public-decorated-method\",\n    \"protected-decorated-method\",\n    \"private-decorated-method\",\n\n    \"public-instance-method\",\n    \"protected-instance-method\",\n    \"private-instance-method\",\n\n    \"public-abstract-method\",\n    \"protected-abstract-method\",\n    \"private-abstract-method\",\n\n    \"public-method\",\n    \"protected-method\",\n    \"private-method\",\n\n    \"static-method\",\n    \"instance-method\",\n    \"abstract-method\",\n\n    \"decorated-method\",\n\n    \"method\"\n  ]\n}\n```\n\nNote: The default configuration contains member group types which contain other member types (see above). This is intentional to provide better error messages.\n\nNote: By default, the members are not sorted. If you want to sort them alphabetically, you have to provide a custom configuration.\n\n## Examples\n\n### Custom `default` configuration\n\nNote: The `default` options are overwritten in these examples.\n\n#### Configuration: `{ \"default\": [\"signature\", \"method\", \"constructor\", \"field\"] }`\n\n##### Incorrect examples\n\n```ts\ninterface Foo {\n  B: string; // -\u003e field\n\n  new (); // -\u003e constructor\n\n  A(): void; // -\u003e method\n\n  [Z: string]: any; // -\u003e signature\n}\n```\n\nNote: Wrong order.\n\n```ts\ntype Foo = {\n  B: string; // -\u003e field\n\n  // no constructor\n\n  A(): void; // -\u003e method\n\n  // no signature\n};\n```\n\nNote: Not all specified member types have to exist.\n\n```ts\nclass Foo {\n  private C: string; // -\u003e field\n  public D: string; // -\u003e field\n  protected static E: string; // -\u003e field\n\n  constructor() {} // -\u003e constructor\n\n  public static A(): void {} // -\u003e method\n  public B(): void {} // -\u003e method\n\n  [Z: string]: any; // -\u003e signature\n}\n```\n\nNote: Accessibility or scope are ignored with this configuration.\n\n```ts\nconst Foo = class {\n  private C: string; // -\u003e field\n  public D: string; // -\u003e field\n\n  constructor() {} // -\u003e constructor\n\n  public static A(): void {} // -\u003e method\n  public B(): void {} // -\u003e method\n\n  [Z: string]: any; // -\u003e signature\n\n  protected static E: string; // -\u003e field\n};\n```\n\nNote: Not all members have to be grouped to find rule violations.\n\n##### Correct examples\n\n```ts\ninterface Foo {\n  [Z: string]: any; // -\u003e signature\n\n  A(): void; // -\u003e method\n\n  new (); // -\u003e constructor\n\n  B: string; // -\u003e field\n}\n```\n\n```ts\ntype Foo = {\n  // no signature\n\n  A(): void; // -\u003e method\n\n  // no constructor\n\n  B: string; // -\u003e field\n};\n```\n\n```ts\nclass Foo {\n  [Z: string]: any; // -\u003e signature\n\n  public static A(): void {} // -\u003e method\n  public B(): void {} // -\u003e method\n\n  constructor() {} // -\u003e constructor\n\n  private C: string; // -\u003e field\n  public D: string; // -\u003e field\n  protected static E: string; // -\u003e field\n}\n```\n\n```ts\nconst Foo = class {\n  [Z: string]: any; // -\u003e signature\n\n  public static A(): void {} // -\u003e method\n  public B(): void {} // -\u003e method\n\n  constructor() {} // -\u003e constructor\n\n  private C: string; // -\u003e field\n  public D: string; // -\u003e field\n  protected static E: string; // -\u003e field\n};\n```\n\n#### Configuration: `{ \"default\": [\"public-instance-method\", \"public-static-field\"] }`\n\nNote: This configuration does not apply to interfaces/type literals as accessibility and scope are not part of interfaces/type literals.\n\n##### Incorrect examples\n\n```ts\nclass Foo {\n  private C: string; // (irrelevant)\n\n  public D: string; // (irrelevant)\n\n  public static E: string; // -\u003e public static field\n\n  constructor() {} // (irrelevant)\n\n  public static A(): void {} // (irrelevant)\n\n  [Z: string]: any; // (irrelevant)\n\n  public B(): void {} // -\u003e public instance method\n}\n```\n\nNote: Public instance methods should come first before public static fields. Everything else can be placed anywhere.\n\n```ts\nconst Foo = class {\n  private C: string; // (irrelevant)\n\n  [Z: string]: any; // (irrelevant)\n\n  public static E: string; // -\u003e public static field\n\n  public D: string; // (irrelevant)\n\n  constructor() {} // (irrelevant)\n\n  public static A(): void {} // (irrelevant)\n\n  public B(): void {} // -\u003e public instance method\n};\n```\n\nNote: Public instance methods should come first before public static fields. Everything else can be placed anywhere.\n\n##### Correct examples\n\n```ts\nclass Foo {\n  public B(): void {} // -\u003e public instance method\n\n  private C: string; // (irrelevant)\n\n  public D: string; // (irrelevant)\n\n  public static E: string; // -\u003e public static field\n\n  constructor() {} // (irrelevant)\n\n  public static A(): void {} // (irrelevant)\n\n  [Z: string]: any; // (irrelevant)\n}\n```\n\n```ts\nconst Foo = class {\n  public B(): void {} // -\u003e public instance method\n\n  private C: string; // (irrelevant)\n\n  [Z: string]: any; // (irrelevant)\n\n  public D: string; // (irrelevant)\n\n  constructor() {} // (irrelevant)\n\n  public static A(): void {} // (irrelevant)\n\n  public static E: string; // -\u003e public static field\n};\n```\n\n#### Configuration: `{ \"default\": [\"public-static-field\", \"static-field\", \"instance-field\"] }`\n\nNote: This configuration does not apply to interfaces/type literals as accessibility and scope are not part of interfaces/type literals.\n\n##### Incorrect examples\n\n```ts\nclass Foo {\n  private E: string; // -\u003e instance field\n\n  private static B: string; // -\u003e static field\n  protected static C: string; // -\u003e static field\n  private static D: string; // -\u003e static field\n\n  public static A: string; // -\u003e public static field\n\n  [Z: string]: any; // (irrelevant)\n}\n```\n\nNote: Public static fields should come first, followed by static fields and instance fields.\n\n```ts\nconst foo = class {\n  public T(): void {} // (irrelevant)\n\n  private static B: string; // -\u003e static field\n\n  constructor() {} // (irrelevant)\n\n  private E: string; // -\u003e instance field\n\n  protected static C: string; // -\u003e static field\n  private static D: string; // -\u003e static field\n\n  [Z: string]: any; // (irrelevant)\n\n  public static A: string; // -\u003e public static field\n};\n```\n\nNote: Public static fields should come first, followed by static fields and instance fields.\n\n##### Correct examples\n\n```ts\nclass Foo {\n  public static A: string; // -\u003e public static field\n\n  private static B: string; // -\u003e static field\n  protected static C: string; // -\u003e static field\n  private static D: string; // -\u003e static field\n\n  private E: string; // -\u003e instance field\n}\n```\n\n```ts\nconst foo = class {\n  [Z: string]: any; // -\u003e signature\n\n  public static A: string; // -\u003e public static field\n\n  constructor() {} // -\u003e constructor\n\n  private static B: string; // -\u003e static field\n  protected static C: string; // -\u003e static field\n  private static D: string; // -\u003e static field\n\n  private E: string; // -\u003e instance field\n\n  public T(): void {} // -\u003e method\n};\n```\n\n### Custom `classes` configuration\n\nNote: If this is not set, the `default` will automatically be applied to classes as well. If a `classes` configuration is provided, only this configuration will be used for `classes` (i.e. nothing will be merged with `default`).\n\nNote: The configuration for `classes` does not apply to class expressions (use `classExpressions` for them).\n\n#### Configuration: `{ \"classes\": [\"method\", \"constructor\", \"field\"] }`\n\n##### Incorrect example\n\n```ts\nclass Foo {\n  private C: string; // -\u003e field\n  public D: string; // -\u003e field\n  protected static E: string; // -\u003e field\n\n  constructor() {} // -\u003e constructor\n\n  public static A(): void {} // -\u003e method\n  public B(): void {} // -\u003e method\n}\n```\n\n##### Correct example\n\n```ts\nclass Foo {\n  public static A(): void {} // -\u003e method\n  public B(): void {} // -\u003e method\n\n  constructor() {} // -\u003e constructor\n\n  private C: string; // -\u003e field\n  public D: string; // -\u003e field\n  protected static E: string; // -\u003e field\n}\n```\n\n#### Configuration: `{ \"classes\": [\"public-instance-method\", \"public-static-field\"] }`\n\n##### Incorrect example\n\n```ts\nclass Foo {\n  private C: string; // (irrelevant)\n\n  public D: string; // (irrelevant)\n\n  public static E: string; // -\u003e public static field\n\n  constructor() {} // (irrelevant)\n\n  public static A(): void {} // (irrelevant)\n\n  public B(): void {} // -\u003e public instance method\n}\n```\n\n##### Correct example\n\n```ts\nclass Foo {\n  private C: string; // (irrelevant)\n\n  public D: string; // (irrelevant)\n\n  public B(): void {} // -\u003e public instance method\n\n  constructor() {} // (irrelevant)\n\n  public static A(): void {} // (irrelevant)\n\n  public static E: string; // -\u003e public static field\n}\n```\n\n### Custom `classExpressions` configuration\n\nNote: If this is not set, the `default` will automatically be applied to classes expressions as well. If a `classExpressions` configuration is provided, only this configuration will be used for `classExpressions` (i.e. nothing will be merged with `default`).\n\nNote: The configuration for `classExpressions` does not apply to classes (use `classes` for them).\n\n#### Configuration: `{ \"classExpressions\": [\"method\", \"constructor\", \"field\"] }`\n\n##### Incorrect example\n\n```ts\nconst foo = class {\n  private C: string; // -\u003e field\n  public D: string; // -\u003e field\n  protected static E: string; // -\u003e field\n\n  constructor() {} // -\u003e constructor\n\n  public static A(): void {} // -\u003e method\n  public B(): void {} // -\u003e method\n};\n```\n\n##### Correct example\n\n```ts\nconst foo = class {\n  public static A(): void {} // -\u003e method\n  public B(): void {} // -\u003e method\n\n  constructor() {} // -\u003e constructor\n\n  private C: string; // -\u003e field\n  public D: string; // -\u003e field\n  protected static E: string; // -\u003e field\n};\n```\n\n#### Configuration: `{ \"classExpressions\": [\"public-instance-method\", \"public-static-field\"] }`\n\n##### Incorrect example\n\n```ts\nconst foo = class {\n  private C: string; // (irrelevant)\n\n  public D: string; // (irrelevant)\n\n  public static E: string; // -\u003e public static field\n\n  constructor() {} // (irrelevant)\n\n  public static A(): void {} // (irrelevant)\n\n  public B(): void {} // -\u003e public instance method\n};\n```\n\n##### Correct example\n\n```ts\nconst foo = class {\n  private C: string; // (irrelevant)\n\n  public D: string; // (irrelevant)\n\n  public B(): void {} // -\u003e public instance method\n\n  public static E: string; // -\u003e public static field\n\n  constructor() {} // (irrelevant)\n\n  public static A(): void {} // (irrelevant)\n};\n```\n\n### Custom `interfaces` configuration\n\nNote: If this is not set, the `default` will automatically be applied to classes expressions as well. If a `interfaces` configuration is provided, only this configuration will be used for `interfaces` (i.e. nothing will be merged with `default`).\n\nNote: The configuration for `interfaces` only allows a limited set of member types: `signature`, `field`, `constructor` and `method`.\n\nNote: The configuration for `interfaces` does not apply to type literals (use `typeLiterals` for them).\n\n#### Configuration: `{ \"interfaces\": [\"signature\", \"method\", \"constructor\", \"field\"] }`\n\n##### Incorrect example\n\n```ts\ninterface Foo {\n  B: string; // -\u003e field\n\n  new (); // -\u003e constructor\n\n  A(): void; // -\u003e method\n\n  [Z: string]: any; // -\u003e signature\n}\n```\n\n##### Correct example\n\n```ts\ninterface Foo {\n  [Z: string]: any; // -\u003e signature\n\n  A(): void; // -\u003e method\n\n  new (); // -\u003e constructor\n\n  B: string; // -\u003e field\n}\n```\n\n### Custom `typeLiterals` configuration\n\nNote: If this is not set, the `default` will automatically be applied to classes expressions as well. If a `typeLiterals` configuration is provided, only this configuration will be used for `typeLiterals` (i.e. nothing will be merged with `default`).\n\nNote: The configuration for `typeLiterals` only allows a limited set of member types: `signature`, `field`, `constructor` and `method`.\n\nNote: The configuration for `typeLiterals` does not apply to interfaces (use `interfaces` for them).\n\n#### Configuration: `{ \"typeLiterals\": [\"signature\", \"method\", \"constructor\", \"field\"] }`\n\n##### Incorrect example\n\n```ts\ntype Foo = {\n  B: string; // -\u003e field\n\n  A(): void; // -\u003e method\n\n  new (); // -\u003e constructor\n\n  [Z: string]: any; // -\u003e signature\n};\n```\n\n##### Correct example\n\n```ts\ntype Foo = {\n  [Z: string]: any; // -\u003e signature\n\n  A(): void; // -\u003e method\n\n  new (); // -\u003e constructor\n\n  B: string; // -\u003e field\n};\n```\n\n### Sorting alphabetically within member groups\n\nIt is possible to sort all members within a group alphabetically.\n\n#### Configuration: `{ \"default\": { \"memberTypes\": \u003cDefault Order\u003e, \"order\": \"alphabetically\" } }`\n\nThis will apply the default order (see above) and enforce an alphabetic case-sensitive order within each group.\n\n##### Incorrect examples\n\n```ts\ninterface Foo {\n  B: x;\n  a: x;\n  c: x;\n\n  new (): Bar;\n  (): Baz;\n\n  B(): void;\n  a(): void;\n  c(): void;\n\n  // Wrong group order, should be placed before all field definitions\n  [a: string]: number;\n}\n```\n\n```ts\ninterface Foo {\n  [a: string]: number;\n\n  B: x;\n  a: x;\n  c: x;\n\n  new (): Bar;\n  (): Baz;\n\n  // Wrong alphabetic order within group\n  c(): void;\n  B(): void;\n  a(): void;\n}\n```\n\n### Sorting alphabetically while ignoring member groups\n\nIt is also possible to sort all members and ignore the member groups completely.\n\n#### Configuration: `{ \"default\": { \"memberTypes\": \"never\", \"order\": \"alphabetically\" } }`\n\n##### Incorrect example\n\n```ts\ninterface Foo {\n  b(): void;\n  a: b;\n\n  [a: string]: number; // Order doesn't matter (no sortable identifier)\n  new (): Bar; // Order doesn't matter (no sortable identifier)\n  (): Baz; // Order doesn't matter (no sortable identifier)\n}\n```\n\nNote: Wrong alphabetic order `b(): void` should come after `a: b`.\n\n### Sorting alphabetically case-insensitive within member groups\n\nIt is possible to sort all members within a group alphabetically with case insensitivity.\n\n#### Configuration: `{ \"default\": { \"memberTypes\": \u003cDefault Order\u003e, \"order\": \"alphabetically-case-insensitive\" } }`\n\nThis will apply the default order (see above) and enforce an alphabetic case-insensitive order within each group.\n\n##### Incorrect examples\n\n```ts\ninterface Foo {\n  a: x;\n  B: x;\n  c: x;\n\n  new (): Bar;\n  (): Baz;\n\n  a(): void;\n  b(): void;\n  C(): void;\n\n  // Wrong group order, should be placed before all field definitions\n  [a: string]: number;\n}\n```\n\n```ts\ninterface Foo {\n  [a: string]: number;\n\n  a: x;\n  B: x;\n  c: x;\n\n  new (): Bar;\n  (): Baz;\n\n  // Wrong alphabetic order within group\n  C(): void;\n  b(): void;\n  a(): void;\n}\n```\n\n### Sorting alphabetically case-insensitive while ignoring member groups\n\nIt is also possible to sort all members with case insensitivity and ignore the member groups completely.\n\n#### Configuration: `{ \"default\": { \"memberTypes\": \"never\", \"order\": \"alphabetically-case-insensitive\" } }`\n\n##### Incorrect example\n\n```ts\ninterface Foo {\n  B(): void;\n  a: number;\n\n  [a: string]: number; // Order doesn't matter (no sortable identifier)\n  new (): Bar; // Order doesn't matter (no sortable identifier)\n  (): Baz; // Order doesn't matter (no sortable identifier)\n}\n```\n\nNote: Wrong alphabetic order `B(): void` should come after `a: number`.\n\n## When Not To Use It\n\nIf you don't care about the general structure of your classes and interfaces, then you will not need this rule.\n\n## Related To\n\n- TSLint: [member-ordering](https://palantir.github.io/tslint/rules/member-ordering/)\n\n## Attributes\n\n- [ ] ✅ Recommended\n- [ ] 🔧 Fixable\n- [ ] 💭 Requires type information\n"},"__N_SSG":true},"page":"/[rule]","query":{"rule":"member-ordering.md"},"buildId":"V190Mxkh11cN1_jT2mDz7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><meta name="theme-color" content="#1976d2"/><title class="jsx-cbfd42e26539136">Typescript and JSS</title><link rel="icon" href="/zdns.svg" class="jsx-cbfd42e26539136"/><meta name="next-head-count" content="5"/><meta name="theme-color" content="#90caf9"/><link rel="preload" href="/_next/static/css/ef46db3751d8e999.css" as="style"/><link rel="stylesheet" href="/_next/static/css/ef46db3751d8e999.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-fcec467324f41dbb.js" defer=""></script><script src="/_next/static/chunks/framework-e70c6273bfe3f237.js" defer=""></script><script src="/_next/static/chunks/main-7c9e8fd8226b6573.js" defer=""></script><script src="/_next/static/chunks/pages/_app-0617cd64ea924586.js" defer=""></script><script src="/_next/static/chunks/505-0c2bccf53cd8dae5.js" defer=""></script><script src="/_next/static/chunks/pages/%5Brule%5D-b74fec192cf33e56.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_buildManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_ssgManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_middlewareManifest.js" defer=""></script><style id="__jsx-4ab09977da39fd03">.container.jsx-cbfd42e26539136{min-height:100vh;padding:0 .5rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main.jsx-cbfd42e26539136{padding:5rem 0;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136{width:100%;height:100px;border-top:1px solid#eaeaea;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136 img.jsx-cbfd42e26539136{margin-left:.5rem}footer.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}a.jsx-cbfd42e26539136{color:inherit;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{color:#0070f3;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:hover,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:focus,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:active{text-decoration:underline}.title.jsx-cbfd42e26539136{margin:0;line-height:1.15;font-size:4rem}.title.jsx-cbfd42e26539136,.description.jsx-cbfd42e26539136{text-align:center}.description.jsx-cbfd42e26539136{line-height:1.5;font-size:1.5rem}code.jsx-cbfd42e26539136{background:#fafafa;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:.75rem;font-size:1.1rem;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}.grid.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:800px;margin-top:3rem}.card.jsx-cbfd42e26539136{margin:1rem;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;padding:1.5rem;text-align:left;color:inherit;text-decoration:none;border:1px solid#eaeaea;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-transition:color.15s ease,border-color.15s ease;-moz-transition:color.15s ease,border-color.15s ease;-o-transition:color.15s ease,border-color.15s ease;transition:color.15s ease,border-color.15s ease}.card.jsx-cbfd42e26539136:hover,.card.jsx-cbfd42e26539136:focus,.card.jsx-cbfd42e26539136:active{color:#0070f3;border-color:#0070f3}.card.jsx-cbfd42e26539136 h3.jsx-cbfd42e26539136{margin:0 0 1rem 0;font-size:1.5rem}.card.jsx-cbfd42e26539136 p.jsx-cbfd42e26539136{margin:0;font-size:1.25rem;line-height:1.5}.logo.jsx-cbfd42e26539136{height:1em}@media(max-width:600px){.grid.jsx-cbfd42e26539136{width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}}</style><style id="__jsx-5750d7069672f50d">html,body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}</style><style data-emotion="css "></style></head><body><div id="__next" data-reactroot=""><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><div class="jsx-cbfd42e26539136 container"><main class="jsx-cbfd42e26539136"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-aoeo82"><h1><code>ban-ts-comment</code></h1>
+<p>Bans <code>@ts-&lt;directive&gt;</code> comments from being used or requires descriptions after directive.</p>
+<p>TypeScript provides several directive comments that can be used to alter how it processes files.
+Using these to suppress TypeScript Compiler Errors reduces the effectiveness of TypeScript overall.</p>
+<p>The directive comments supported by TypeScript are:</p>
+<pre><code class="language-ts">// @ts-expect-error
+// @ts-ignore
+// @ts-nocheck
+// @ts-check
+</code></pre>
+<h2>Rule Details</h2>
+<p>This rule lets you set which directive comments you want to allow in your codebase.
+By default, only <code>@ts-check</code> is allowed, as it enables rather than suppresses errors.</p>
+<p>The configuration looks like this:</p>
+<pre><code class="language-ts">interface Options {
+  &#x27;ts-expect-error&#x27;?: boolean | &#x27;allow-with-description&#x27;;
+  &#x27;ts-ignore&#x27;?: boolean | &#x27;allow-with-description&#x27;;
+  &#x27;ts-nocheck&#x27;?: boolean | &#x27;allow-with-description&#x27;;
+  &#x27;ts-check&#x27;?: boolean | &#x27;allow-with-description&#x27;;
+  minimumDescriptionLength?: number;
+}
+
+const defaultOptions: Options = {
+  &#x27;ts-expect-error&#x27;: &#x27;allow-with-description&#x27;,
+  &#x27;ts-ignore&#x27;: true,
+  &#x27;ts-nocheck&#x27;: true,
+  &#x27;ts-check&#x27;: false,
+  minimumDescriptionLength: 3,
+};
+</code></pre>
+<h3><code>ts-expect-error</code>, <code>ts-ignore</code>, <code>ts-nocheck</code>, <code>ts-check</code> directives</h3>
+<p>A value of <code>true</code> for a particular directive means that this rule will report if it finds any usage of said directive.</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h4>❌ Incorrect</h4>
+<pre><code class="language-ts">if (false) {
+  // @ts-ignore: Unreachable code error
+  console.log(&#x27;hello&#x27;);
+}
+if (false) {
+  /*
+  @ts-ignore: Unreachable code error
+  */
+  console.log(&#x27;hello&#x27;);
+}
+</code></pre>
+<h4>✅ Correct</h4>
+<pre><code class="language-ts">if (false) {
+  // Compiler warns about unreachable code error
+  console.log(&#x27;hello&#x27;);
+}
+</code></pre>
+<h3><code>allow-with-description</code></h3>
+<p>A value of <code>&#x27;allow-with-description&#x27;</code> for a particular directive means that this rule will report if it finds a directive that does not have a description following the directive (on the same line).</p>
+<p>For example, with <code>{ &#x27;ts-expect-error&#x27;: &#x27;allow-with-description&#x27; }</code>:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h4>❌ Incorrect</h4>
+<pre><code class="language-ts">if (false) {
+  // @ts-expect-error
+  console.log(&#x27;hello&#x27;);
+}
+if (false) {
+  /* @ts-expect-error */
+  console.log(&#x27;hello&#x27;);
+}
+</code></pre>
+<h4>✅ Correct</h4>
+<pre><code class="language-ts">if (false) {
+  // @ts-expect-error: Unreachable code error
+  console.log(&#x27;hello&#x27;);
+}
+if (false) {
+  /*
+  @ts-expect-error: Unreachable code error
+  */
+  console.log(&#x27;hello&#x27;);
+}
+</code></pre>
+<h3><code>minimumDescriptionLength</code></h3>
+<p>Use <code>minimumDescriptionLength</code> to set a minimum length for descriptions when using the <code>allow-with-description</code> option for a directive.</p>
+<p>For example, with <code>{ &#x27;ts-expect-error&#x27;: &#x27;allow-with-description&#x27;, minimumDescriptionLength: 10 }</code> the following pattern is:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h4>❌ Incorrect</h4>
+<pre><code class="language-ts">if (false) {
+  // @ts-expect-error: TODO
+  console.log(&#x27;hello&#x27;);
+}
+</code></pre>
+<h4>✅ Correct</h4>
+<pre><code class="language-ts">if (false) {
+  // @ts-expect-error The rationale for this override is described in issue #1337 on GitLab
+  console.log(&#x27;hello&#x27;);
+}
+</code></pre>
+<h2>When Not To Use It</h2>
+<p>If you want to use all of the TypeScript directives.</p>
+<h2>Further Reading</h2>
+<ul>
+<li>TypeScript <a href="https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html">Type Checking JavaScript Files</a></li>
+</ul>
+<h2>Related To</h2>
+<ul>
+<li>TSLint: <a href="https://palantir.github.io/tslint/rules/ban-ts-ignore/">ban-ts-ignore</a></li>
+</ul>
+<h2>Attributes</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->✅ Recommended</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->🔧 Fixable</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->💭 Requires type information</li>
+</ul></div></main><footer class="jsx-cbfd42e26539136"><a href="https://cloud.zdns.cn" target="_blank" rel="noopener noreferrer" class="jsx-cbfd42e26539136">Powered by <img src="/zdns.svg" alt="zdns" class="jsx-cbfd42e26539136 logo"/></a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"rule":"# `ban-ts-comment`\n\nBans `@ts-\u003cdirective\u003e` comments from being used or requires descriptions after directive.\n\nTypeScript provides several directive comments that can be used to alter how it processes files.\nUsing these to suppress TypeScript Compiler Errors reduces the effectiveness of TypeScript overall.\n\nThe directive comments supported by TypeScript are:\n\n```ts\n// @ts-expect-error\n// @ts-ignore\n// @ts-nocheck\n// @ts-check\n```\n\n## Rule Details\n\nThis rule lets you set which directive comments you want to allow in your codebase.\nBy default, only `@ts-check` is allowed, as it enables rather than suppresses errors.\n\nThe configuration looks like this:\n\n```ts\ninterface Options {\n  'ts-expect-error'?: boolean | 'allow-with-description';\n  'ts-ignore'?: boolean | 'allow-with-description';\n  'ts-nocheck'?: boolean | 'allow-with-description';\n  'ts-check'?: boolean | 'allow-with-description';\n  minimumDescriptionLength?: number;\n}\n\nconst defaultOptions: Options = {\n  'ts-expect-error': 'allow-with-description',\n  'ts-ignore': true,\n  'ts-nocheck': true,\n  'ts-check': false,\n  minimumDescriptionLength: 3,\n};\n```\n\n### `ts-expect-error`, `ts-ignore`, `ts-nocheck`, `ts-check` directives\n\nA value of `true` for a particular directive means that this rule will report if it finds any usage of said directive.\n\n\u003c!--tabs--\u003e\n\n#### ❌ Incorrect\n\n```ts\nif (false) {\n  // @ts-ignore: Unreachable code error\n  console.log('hello');\n}\nif (false) {\n  /*\n  @ts-ignore: Unreachable code error\n  */\n  console.log('hello');\n}\n```\n\n#### ✅ Correct\n\n```ts\nif (false) {\n  // Compiler warns about unreachable code error\n  console.log('hello');\n}\n```\n\n### `allow-with-description`\n\nA value of `'allow-with-description'` for a particular directive means that this rule will report if it finds a directive that does not have a description following the directive (on the same line).\n\nFor example, with `{ 'ts-expect-error': 'allow-with-description' }`:\n\n\u003c!--tabs--\u003e\n\n#### ❌ Incorrect\n\n```ts\nif (false) {\n  // @ts-expect-error\n  console.log('hello');\n}\nif (false) {\n  /* @ts-expect-error */\n  console.log('hello');\n}\n```\n\n#### ✅ Correct\n\n```ts\nif (false) {\n  // @ts-expect-error: Unreachable code error\n  console.log('hello');\n}\nif (false) {\n  /*\n  @ts-expect-error: Unreachable code error\n  */\n  console.log('hello');\n}\n```\n\n### `minimumDescriptionLength`\n\nUse `minimumDescriptionLength` to set a minimum length for descriptions when using the `allow-with-description` option for a directive.\n\nFor example, with `{ 'ts-expect-error': 'allow-with-description', minimumDescriptionLength: 10 }` the following pattern is:\n\n\u003c!--tabs--\u003e\n\n#### ❌ Incorrect\n\n```ts\nif (false) {\n  // @ts-expect-error: TODO\n  console.log('hello');\n}\n```\n\n#### ✅ Correct\n\n```ts\nif (false) {\n  // @ts-expect-error The rationale for this override is described in issue #1337 on GitLab\n  console.log('hello');\n}\n```\n\n## When Not To Use It\n\nIf you want to use all of the TypeScript directives.\n\n## Further Reading\n\n- TypeScript [Type Checking JavaScript Files](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html)\n\n## Related To\n\n- TSLint: [ban-ts-ignore](https://palantir.github.io/tslint/rules/ban-ts-ignore/)\n\n## Attributes\n\n- [x] ✅ Recommended\n- [ ] 🔧 Fixable\n- [ ] 💭 Requires type information\n"},"__N_SSG":true},"page":"/[rule]","query":{"rule":"ban-ts-comment.md"},"buildId":"V190Mxkh11cN1_jT2mDz7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

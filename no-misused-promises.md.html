@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><meta name="theme-color" content="#1976d2"/><title class="jsx-cbfd42e26539136">Typescript and JSS</title><link rel="icon" href="/zdns.svg" class="jsx-cbfd42e26539136"/><meta name="next-head-count" content="5"/><meta name="theme-color" content="#90caf9"/><link rel="preload" href="/_next/static/css/ef46db3751d8e999.css" as="style"/><link rel="stylesheet" href="/_next/static/css/ef46db3751d8e999.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-fcec467324f41dbb.js" defer=""></script><script src="/_next/static/chunks/framework-e70c6273bfe3f237.js" defer=""></script><script src="/_next/static/chunks/main-7c9e8fd8226b6573.js" defer=""></script><script src="/_next/static/chunks/pages/_app-0617cd64ea924586.js" defer=""></script><script src="/_next/static/chunks/505-0c2bccf53cd8dae5.js" defer=""></script><script src="/_next/static/chunks/pages/%5Brule%5D-b74fec192cf33e56.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_buildManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_ssgManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_middlewareManifest.js" defer=""></script><style id="__jsx-4ab09977da39fd03">.container.jsx-cbfd42e26539136{min-height:100vh;padding:0 .5rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main.jsx-cbfd42e26539136{padding:5rem 0;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136{width:100%;height:100px;border-top:1px solid#eaeaea;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136 img.jsx-cbfd42e26539136{margin-left:.5rem}footer.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}a.jsx-cbfd42e26539136{color:inherit;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{color:#0070f3;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:hover,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:focus,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:active{text-decoration:underline}.title.jsx-cbfd42e26539136{margin:0;line-height:1.15;font-size:4rem}.title.jsx-cbfd42e26539136,.description.jsx-cbfd42e26539136{text-align:center}.description.jsx-cbfd42e26539136{line-height:1.5;font-size:1.5rem}code.jsx-cbfd42e26539136{background:#fafafa;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:.75rem;font-size:1.1rem;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}.grid.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:800px;margin-top:3rem}.card.jsx-cbfd42e26539136{margin:1rem;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;padding:1.5rem;text-align:left;color:inherit;text-decoration:none;border:1px solid#eaeaea;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-transition:color.15s ease,border-color.15s ease;-moz-transition:color.15s ease,border-color.15s ease;-o-transition:color.15s ease,border-color.15s ease;transition:color.15s ease,border-color.15s ease}.card.jsx-cbfd42e26539136:hover,.card.jsx-cbfd42e26539136:focus,.card.jsx-cbfd42e26539136:active{color:#0070f3;border-color:#0070f3}.card.jsx-cbfd42e26539136 h3.jsx-cbfd42e26539136{margin:0 0 1rem 0;font-size:1.5rem}.card.jsx-cbfd42e26539136 p.jsx-cbfd42e26539136{margin:0;font-size:1.25rem;line-height:1.5}.logo.jsx-cbfd42e26539136{height:1em}@media(max-width:600px){.grid.jsx-cbfd42e26539136{width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}}</style><style id="__jsx-5750d7069672f50d">html,body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}</style><style data-emotion="css "></style></head><body><div id="__next" data-reactroot=""><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><div class="jsx-cbfd42e26539136 container"><main class="jsx-cbfd42e26539136"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-aoeo82"><h1><code>no-misused-promises</code></h1>
+<p>Avoid using Promises in places not designed to handle them.</p>
+<p>This rule forbids providing Promises to logical locations such as if statements in places where the TypeScript compiler allows them but they are not handled properly.
+These situations can often arise due to a missing <code>await</code> keyword or just a misunderstanding of the way async
+functions are handled/awaited.</p>
+<p>:::tip
+<code>no-misused-promises</code> only detects code that provides Promises to incorrect <em>logical</em> locations.
+See <a href="./no-floating-promises.md"><code>no-floating-promises</code></a> for detecting unhandled Promise <em>statements</em>.
+:::</p>
+<h2>Rule Details</h2>
+<p>This rule accepts a single option which is an object with <code>checksConditionals</code>
+and <code>checksVoidReturn</code> properties indicating which types of misuse to flag.
+Both are enabled by default.</p>
+<h2>Options</h2>
+<pre><code class="language-ts">type Options = [
+  {
+    checksConditionals?: boolean;
+    checksVoidReturn?: boolean | ChecksVoidReturnOptions;
+  },
+];
+
+interface ChecksVoidReturnOptions {
+  arguments?: boolean;
+  attributes?: boolean;
+  properties?: boolean;
+  returns?: boolean;
+  variables?: boolean;
+}
+
+const defaultOptions: Options = [
+  {
+    checksConditionals: true,
+    checksVoidReturn: true,
+  },
+];
+</code></pre>
+<h3><code>&quot;checksConditionals&quot;</code></h3>
+<p>If you don&#x27;t want to check conditionals, you can configure the rule with <code>&quot;checksConditionals&quot;: false</code>:</p>
+<pre><code class="language-json">{
+  &quot;@typescript-eslint/no-misused-promises&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;checksConditionals&quot;: false
+    }
+  ]
+}
+</code></pre>
+<p>Doing so prevents the rule from looking at code like <code>if (somePromise)</code>.</p>
+<h3><code>&quot;checksVoidReturn&quot;</code></h3>
+<p>Likewise, if you don&#x27;t want functions that return promises where a void return is
+expected to be checked, your configuration will look like this:</p>
+<pre><code class="language-json">{
+  &quot;@typescript-eslint/no-misused-promises&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;checksVoidReturn&quot;: false
+    }
+  ]
+}
+</code></pre>
+<p>You can disable selective parts of the <code>checksVoidReturn</code> option by providing an object that disables specific checks.
+The following options are supported:</p>
+<ul>
+<li><code>arguments</code>: Disables checking an asynchronous function passed as argument where the parameter type expects a function that returns <code>void</code></li>
+<li><code>attributes</code>: Disables checking an asynchronous function passed as a JSX attribute expected to be a function that returns <code>void</code></li>
+<li><code>properties</code>: Disables checking an asynchronous function passed as an object property expected to be a function that returns <code>void</code></li>
+<li><code>returns</code>: Disables checking an asynchronous function returned in a function whose return type is a function that returns <code>void</code></li>
+<li><code>variables</code>: Disables checking an asynchronous function used as a variable whose return type is a function that returns <code>void</code></li>
+</ul>
+<p>For example, if you don&#x27;t mind that passing a <code>() =&gt; Promise&lt;void&gt;</code> to a <code>() =&gt; void</code> parameter or JSX attribute can lead to a floating unhandled Promise:</p>
+<pre><code class="language-json">{
+  &quot;@typescript-eslint/no-misused-promises&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;checksVoidReturn&quot;: {
+        &quot;arguments&quot;: false,
+        &quot;attributes&quot;: false
+      }
+    }
+  ]
+}
+</code></pre>
+<h3><code>checksConditionals: true</code></h3>
+<p>Examples of code for this rule with <code>checksConditionals: true</code>:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h4>❌ Incorrect</h4>
+<pre><code class="language-ts">const promise = Promise.resolve(&#x27;value&#x27;);
+
+if (promise) {
+  // Do something
+}
+
+const val = promise ? 123 : 456;
+
+while (promise) {
+  // Do something
+}
+</code></pre>
+<h4>✅ Correct</h4>
+<pre><code class="language-ts">const promise = Promise.resolve(&#x27;value&#x27;);
+
+// Always `await` the Promise in a conditional
+if (await promise) {
+  // Do something
+}
+
+const val = (await promise) ? 123 : 456;
+
+while (await promise) {
+  // Do something
+}
+</code></pre>
+<!-- -->&lt;!--/tabs--&gt;<!-- -->
+<h3><code>checksVoidReturn: true</code></h3>
+<p>Examples of code for this rule with <code>checksVoidReturn: true</code>:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h4>❌ Incorrect</h4>
+<pre><code class="language-ts">[1, 2, 3].forEach(async value =&gt; {
+  await doSomething(value);
+});
+
+new Promise(async (resolve, reject) =&gt; {
+  await doSomething();
+  resolve();
+});
+
+const eventEmitter = new EventEmitter();
+eventEmitter.on(&#x27;some-event&#x27;, async () =&gt; {
+  synchronousCall();
+  await doSomething();
+  otherSynchronousCall();
+});
+</code></pre>
+<h4>✅ Correct</h4>
+<pre><code class="language-ts">// for-of puts `await` in outer context
+for (const value of [1, 2, 3]) {
+  await doSomething(value);
+}
+
+// If outer context is not `async`, handle error explicitly
+Promise.all(
+  [1, 2, 3].map(async value =&gt; {
+    await doSomething(value);
+  }),
+).catch(handleError);
+
+// Use an async IIFE wrapper
+new Promise((resolve, reject) =&gt; {
+  // combine with `void` keyword to tell `no-floating-promises` rule to ignore unhandled rejection
+  void (async () =&gt; {
+    await doSomething();
+    resolve();
+  })();
+});
+
+// Name the async wrapper to call it later
+const eventEmitter = new EventEmitter();
+eventEmitter.on(&#x27;some-event&#x27;, () =&gt; {
+  const handler = async () =&gt; {
+    await doSomething();
+    otherSynchronousCall();
+  };
+
+  try {
+    synchronousCall();
+  } catch (err) {
+    handleSpecificError(err);
+  }
+
+  handler().catch(handleError);
+});
+</code></pre>
+<!-- -->&lt;!--/tabs--&gt;<!-- -->
+<h2>When Not To Use It</h2>
+<p>If you do not use Promises in your codebase or are not concerned with possible
+misuses of them outside of what the TypeScript compiler will check.</p>
+<h2>Further Reading</h2>
+<ul>
+<li><a href="https://github.com/Microsoft/TypeScript/wiki/FAQ#why-are-functions-returning-non-void-assignable-to-function-returning-void">TypeScript void function assignability</a></li>
+</ul>
+<h2>Related To</h2>
+<ul>
+<li><a href="./no-floating-promises.md"><code>no-floating-promises</code></a></li>
+</ul>
+<h2>Attributes</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->✅ Recommended</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->🔧 Fixable</li>
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->💭 Requires type information</li>
+</ul></div></main><footer class="jsx-cbfd42e26539136"><a href="https://cloud.zdns.cn" target="_blank" rel="noopener noreferrer" class="jsx-cbfd42e26539136">Powered by <img src="/zdns.svg" alt="zdns" class="jsx-cbfd42e26539136 logo"/></a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"rule":"# `no-misused-promises`\n\nAvoid using Promises in places not designed to handle them.\n\nThis rule forbids providing Promises to logical locations such as if statements in places where the TypeScript compiler allows them but they are not handled properly.\nThese situations can often arise due to a missing `await` keyword or just a misunderstanding of the way async\nfunctions are handled/awaited.\n\n:::tip\n`no-misused-promises` only detects code that provides Promises to incorrect _logical_ locations.\nSee [`no-floating-promises`](./no-floating-promises.md) for detecting unhandled Promise _statements_.\n:::\n\n## Rule Details\n\nThis rule accepts a single option which is an object with `checksConditionals`\nand `checksVoidReturn` properties indicating which types of misuse to flag.\nBoth are enabled by default.\n\n## Options\n\n```ts\ntype Options = [\n  {\n    checksConditionals?: boolean;\n    checksVoidReturn?: boolean | ChecksVoidReturnOptions;\n  },\n];\n\ninterface ChecksVoidReturnOptions {\n  arguments?: boolean;\n  attributes?: boolean;\n  properties?: boolean;\n  returns?: boolean;\n  variables?: boolean;\n}\n\nconst defaultOptions: Options = [\n  {\n    checksConditionals: true,\n    checksVoidReturn: true,\n  },\n];\n```\n\n### `\"checksConditionals\"`\n\nIf you don't want to check conditionals, you can configure the rule with `\"checksConditionals\": false`:\n\n```json\n{\n  \"@typescript-eslint/no-misused-promises\": [\n    \"error\",\n    {\n      \"checksConditionals\": false\n    }\n  ]\n}\n```\n\nDoing so prevents the rule from looking at code like `if (somePromise)`.\n\n### `\"checksVoidReturn\"`\n\nLikewise, if you don't want functions that return promises where a void return is\nexpected to be checked, your configuration will look like this:\n\n```json\n{\n  \"@typescript-eslint/no-misused-promises\": [\n    \"error\",\n    {\n      \"checksVoidReturn\": false\n    }\n  ]\n}\n```\n\nYou can disable selective parts of the `checksVoidReturn` option by providing an object that disables specific checks.\nThe following options are supported:\n\n- `arguments`: Disables checking an asynchronous function passed as argument where the parameter type expects a function that returns `void`\n- `attributes`: Disables checking an asynchronous function passed as a JSX attribute expected to be a function that returns `void`\n- `properties`: Disables checking an asynchronous function passed as an object property expected to be a function that returns `void`\n- `returns`: Disables checking an asynchronous function returned in a function whose return type is a function that returns `void`\n- `variables`: Disables checking an asynchronous function used as a variable whose return type is a function that returns `void`\n\nFor example, if you don't mind that passing a `() =\u003e Promise\u003cvoid\u003e` to a `() =\u003e void` parameter or JSX attribute can lead to a floating unhandled Promise:\n\n```json\n{\n  \"@typescript-eslint/no-misused-promises\": [\n    \"error\",\n    {\n      \"checksVoidReturn\": {\n        \"arguments\": false,\n        \"attributes\": false\n      }\n    }\n  ]\n}\n```\n\n### `checksConditionals: true`\n\nExamples of code for this rule with `checksConditionals: true`:\n\n\u003c!--tabs--\u003e\n\n#### ❌ Incorrect\n\n```ts\nconst promise = Promise.resolve('value');\n\nif (promise) {\n  // Do something\n}\n\nconst val = promise ? 123 : 456;\n\nwhile (promise) {\n  // Do something\n}\n```\n\n#### ✅ Correct\n\n```ts\nconst promise = Promise.resolve('value');\n\n// Always `await` the Promise in a conditional\nif (await promise) {\n  // Do something\n}\n\nconst val = (await promise) ? 123 : 456;\n\nwhile (await promise) {\n  // Do something\n}\n```\n\n\u003c!--/tabs--\u003e\n\n### `checksVoidReturn: true`\n\nExamples of code for this rule with `checksVoidReturn: true`:\n\n\u003c!--tabs--\u003e\n\n#### ❌ Incorrect\n\n```ts\n[1, 2, 3].forEach(async value =\u003e {\n  await doSomething(value);\n});\n\nnew Promise(async (resolve, reject) =\u003e {\n  await doSomething();\n  resolve();\n});\n\nconst eventEmitter = new EventEmitter();\neventEmitter.on('some-event', async () =\u003e {\n  synchronousCall();\n  await doSomething();\n  otherSynchronousCall();\n});\n```\n\n#### ✅ Correct\n\n```ts\n// for-of puts `await` in outer context\nfor (const value of [1, 2, 3]) {\n  await doSomething(value);\n}\n\n// If outer context is not `async`, handle error explicitly\nPromise.all(\n  [1, 2, 3].map(async value =\u003e {\n    await doSomething(value);\n  }),\n).catch(handleError);\n\n// Use an async IIFE wrapper\nnew Promise((resolve, reject) =\u003e {\n  // combine with `void` keyword to tell `no-floating-promises` rule to ignore unhandled rejection\n  void (async () =\u003e {\n    await doSomething();\n    resolve();\n  })();\n});\n\n// Name the async wrapper to call it later\nconst eventEmitter = new EventEmitter();\neventEmitter.on('some-event', () =\u003e {\n  const handler = async () =\u003e {\n    await doSomething();\n    otherSynchronousCall();\n  };\n\n  try {\n    synchronousCall();\n  } catch (err) {\n    handleSpecificError(err);\n  }\n\n  handler().catch(handleError);\n});\n```\n\n\u003c!--/tabs--\u003e\n\n## When Not To Use It\n\nIf you do not use Promises in your codebase or are not concerned with possible\nmisuses of them outside of what the TypeScript compiler will check.\n\n## Further Reading\n\n- [TypeScript void function assignability](https://github.com/Microsoft/TypeScript/wiki/FAQ#why-are-functions-returning-non-void-assignable-to-function-returning-void)\n\n## Related To\n\n- [`no-floating-promises`](./no-floating-promises.md)\n\n## Attributes\n\n- [x] ✅ Recommended\n- [ ] 🔧 Fixable\n- [x] 💭 Requires type information\n"},"__N_SSG":true},"page":"/[rule]","query":{"rule":"no-misused-promises.md"},"buildId":"V190Mxkh11cN1_jT2mDz7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

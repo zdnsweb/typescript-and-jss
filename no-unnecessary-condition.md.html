@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><meta name="theme-color" content="#1976d2"/><title class="jsx-cbfd42e26539136">Typescript and JSS</title><link rel="icon" href="/zdns.svg" class="jsx-cbfd42e26539136"/><meta name="next-head-count" content="5"/><meta name="theme-color" content="#90caf9"/><link rel="preload" href="/_next/static/css/ef46db3751d8e999.css" as="style"/><link rel="stylesheet" href="/_next/static/css/ef46db3751d8e999.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-fcec467324f41dbb.js" defer=""></script><script src="/_next/static/chunks/framework-e70c6273bfe3f237.js" defer=""></script><script src="/_next/static/chunks/main-7c9e8fd8226b6573.js" defer=""></script><script src="/_next/static/chunks/pages/_app-0617cd64ea924586.js" defer=""></script><script src="/_next/static/chunks/505-0c2bccf53cd8dae5.js" defer=""></script><script src="/_next/static/chunks/pages/%5Brule%5D-b74fec192cf33e56.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_buildManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_ssgManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_middlewareManifest.js" defer=""></script><style id="__jsx-4ab09977da39fd03">.container.jsx-cbfd42e26539136{min-height:100vh;padding:0 .5rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main.jsx-cbfd42e26539136{padding:5rem 0;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136{width:100%;height:100px;border-top:1px solid#eaeaea;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136 img.jsx-cbfd42e26539136{margin-left:.5rem}footer.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}a.jsx-cbfd42e26539136{color:inherit;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{color:#0070f3;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:hover,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:focus,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:active{text-decoration:underline}.title.jsx-cbfd42e26539136{margin:0;line-height:1.15;font-size:4rem}.title.jsx-cbfd42e26539136,.description.jsx-cbfd42e26539136{text-align:center}.description.jsx-cbfd42e26539136{line-height:1.5;font-size:1.5rem}code.jsx-cbfd42e26539136{background:#fafafa;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:.75rem;font-size:1.1rem;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}.grid.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:800px;margin-top:3rem}.card.jsx-cbfd42e26539136{margin:1rem;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;padding:1.5rem;text-align:left;color:inherit;text-decoration:none;border:1px solid#eaeaea;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-transition:color.15s ease,border-color.15s ease;-moz-transition:color.15s ease,border-color.15s ease;-o-transition:color.15s ease,border-color.15s ease;transition:color.15s ease,border-color.15s ease}.card.jsx-cbfd42e26539136:hover,.card.jsx-cbfd42e26539136:focus,.card.jsx-cbfd42e26539136:active{color:#0070f3;border-color:#0070f3}.card.jsx-cbfd42e26539136 h3.jsx-cbfd42e26539136{margin:0 0 1rem 0;font-size:1.5rem}.card.jsx-cbfd42e26539136 p.jsx-cbfd42e26539136{margin:0;font-size:1.25rem;line-height:1.5}.logo.jsx-cbfd42e26539136{height:1em}@media(max-width:600px){.grid.jsx-cbfd42e26539136{width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}}</style><style id="__jsx-5750d7069672f50d">html,body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}</style><style data-emotion="css "></style></head><body><div id="__next" data-reactroot=""><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><div class="jsx-cbfd42e26539136 container"><main class="jsx-cbfd42e26539136"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-aoeo82"><h1><code>no-unnecessary-condition</code></h1>
+<p>Prevents conditionals where the type is always truthy or always falsy.</p>
+<p>Any expression being used as a condition must be able to evaluate as truthy or falsy in order to be considered &quot;necessary&quot;. Conversely, any expression that always evaluates to truthy or always evaluates to falsy, as determined by the type of the expression, is considered unnecessary and will be flagged by this rule.</p>
+<p>The following expressions are checked:</p>
+<ul>
+<li>Arguments to the <code>&amp;&amp;</code>, <code>||</code> and <code>?:</code> (ternary) operators</li>
+<li>Conditions for <code>if</code>, <code>for</code>, <code>while</code>, and <code>do-while</code> statements</li>
+<li>Base values of optional chain expressions</li>
+</ul>
+<h2>Rule Details</h2>
+<p>Examples of code for this rule:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h3>❌ Incorrect</h3>
+<pre><code class="language-ts">function head&lt;T&gt;(items: T[]) {
+  // items can never be nullable, so this is unnecessary
+  if (items) {
+    return items[0].toUpperCase();
+  }
+}
+
+function foo(arg: &#x27;bar&#x27; | &#x27;baz&#x27;) {
+  // arg is never nullable or empty string, so this is unnecessary
+  if (arg) {
+  }
+}
+
+function bar&lt;T&gt;(arg: string) {
+  // arg can never be nullish, so ?. is unnecessary
+  return arg?.length;
+}
+
+// Checks array predicate return types, where possible
+[
+  [1, 2],
+  [3, 4],
+].filter(t =&gt; t); // number[] is always truthy
+</code></pre>
+<h3>✅ Correct</h3>
+<pre><code class="language-ts">function head&lt;T&gt;(items: T[]) {
+  // Necessary, since items.length might be 0
+  if (items.length) {
+    return items[0].toUpperCase();
+  }
+}
+
+function foo(arg: string) {
+  // Necessary, since foo might be &#x27;&#x27;.
+  if (arg) {
+  }
+}
+
+function bar(arg?: string | null) {
+  // Necessary, since arg might be nullish
+  return arg?.length;
+}
+
+[0, 1, 2, 3].filter(t =&gt; t); // number can be truthy or falsy
+</code></pre>
+<h2>Options</h2>
+<pre><code class="language-ts">type Options = {
+  // if true, the rule will ignore constant loop conditions
+  allowConstantLoopConditions?: boolean;
+  // if true, the rule will not error when running with a tsconfig that has strictNullChecks turned **off**
+  allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing?: boolean;
+};
+
+const defaultOptions: Options = {
+  allowConstantLoopConditions: false,
+  allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
+};
+</code></pre>
+<h3><code>allowConstantLoopConditions</code></h3>
+<p>Example of correct code for <code>{ allowConstantLoopConditions: true }</code>:</p>
+<pre><code class="language-ts">while (true) {}
+for (; true; ) {}
+do {} while (true);
+</code></pre>
+<h3><code>allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing</code></h3>
+<p>If this is set to <code>false</code>, then the rule will error on every file whose <code>tsconfig.json</code> does <em>not</em> have the <code>strictNullChecks</code> compiler option (or <code>strict</code>) set to <code>true</code>.</p>
+<p>Without <code>strictNullChecks</code>, TypeScript essentially erases <code>undefined</code> and <code>null</code> from the types. This means when this rule inspects the types from a variable, <strong>it will not be able to tell that the variable might be <code>null</code> or <code>undefined</code></strong>, which essentially makes this rule useless.</p>
+<p>You should be using <code>strictNullChecks</code> to ensure complete type-safety in your codebase.</p>
+<p>If for some reason you cannot turn on <code>strictNullChecks</code>, but still want to use this rule - you can use this option to allow it - but know that the behavior of this rule is <em>undefined</em> with the compiler option turned off. We will not accept bug reports if you are using this option.</p>
+<h2>When Not To Use It</h2>
+<p>The main downside to using this rule is the need for type information.</p>
+<h2>Related To</h2>
+<ul>
+<li>ESLint: <a href="https://eslint.org/docs/rules/no-constant-condition">no-constant-condition</a> - <code>no-unnecessary-condition</code> is essentially a stronger version of <code>no-constant-condition</code>, but requires type information.</li>
+<li><a href="./strict-boolean-expressions.md">strict-boolean-expressions</a> - a more opinionated version of <code>no-unnecessary-condition</code>. <code>strict-boolean-expressions</code> enforces a specific code style, while <code>no-unnecessary-condition</code> is about correctness.</li>
+</ul>
+<h2>Attributes</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->✅ Recommended</li>
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->🔧 Fixable</li>
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->💭 Requires type information</li>
+</ul></div></main><footer class="jsx-cbfd42e26539136"><a href="https://cloud.zdns.cn" target="_blank" rel="noopener noreferrer" class="jsx-cbfd42e26539136">Powered by <img src="/zdns.svg" alt="zdns" class="jsx-cbfd42e26539136 logo"/></a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"rule":"# `no-unnecessary-condition`\n\nPrevents conditionals where the type is always truthy or always falsy.\n\nAny expression being used as a condition must be able to evaluate as truthy or falsy in order to be considered \"necessary\". Conversely, any expression that always evaluates to truthy or always evaluates to falsy, as determined by the type of the expression, is considered unnecessary and will be flagged by this rule.\n\nThe following expressions are checked:\n\n- Arguments to the `\u0026\u0026`, `||` and `?:` (ternary) operators\n- Conditions for `if`, `for`, `while`, and `do-while` statements\n- Base values of optional chain expressions\n\n## Rule Details\n\nExamples of code for this rule:\n\n\u003c!--tabs--\u003e\n\n### ❌ Incorrect\n\n```ts\nfunction head\u003cT\u003e(items: T[]) {\n  // items can never be nullable, so this is unnecessary\n  if (items) {\n    return items[0].toUpperCase();\n  }\n}\n\nfunction foo(arg: 'bar' | 'baz') {\n  // arg is never nullable or empty string, so this is unnecessary\n  if (arg) {\n  }\n}\n\nfunction bar\u003cT\u003e(arg: string) {\n  // arg can never be nullish, so ?. is unnecessary\n  return arg?.length;\n}\n\n// Checks array predicate return types, where possible\n[\n  [1, 2],\n  [3, 4],\n].filter(t =\u003e t); // number[] is always truthy\n```\n\n### ✅ Correct\n\n```ts\nfunction head\u003cT\u003e(items: T[]) {\n  // Necessary, since items.length might be 0\n  if (items.length) {\n    return items[0].toUpperCase();\n  }\n}\n\nfunction foo(arg: string) {\n  // Necessary, since foo might be ''.\n  if (arg) {\n  }\n}\n\nfunction bar(arg?: string | null) {\n  // Necessary, since arg might be nullish\n  return arg?.length;\n}\n\n[0, 1, 2, 3].filter(t =\u003e t); // number can be truthy or falsy\n```\n\n## Options\n\n```ts\ntype Options = {\n  // if true, the rule will ignore constant loop conditions\n  allowConstantLoopConditions?: boolean;\n  // if true, the rule will not error when running with a tsconfig that has strictNullChecks turned **off**\n  allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing?: boolean;\n};\n\nconst defaultOptions: Options = {\n  allowConstantLoopConditions: false,\n  allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,\n};\n```\n\n### `allowConstantLoopConditions`\n\nExample of correct code for `{ allowConstantLoopConditions: true }`:\n\n```ts\nwhile (true) {}\nfor (; true; ) {}\ndo {} while (true);\n```\n\n### `allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing`\n\nIf this is set to `false`, then the rule will error on every file whose `tsconfig.json` does _not_ have the `strictNullChecks` compiler option (or `strict`) set to `true`.\n\nWithout `strictNullChecks`, TypeScript essentially erases `undefined` and `null` from the types. This means when this rule inspects the types from a variable, **it will not be able to tell that the variable might be `null` or `undefined`**, which essentially makes this rule useless.\n\nYou should be using `strictNullChecks` to ensure complete type-safety in your codebase.\n\nIf for some reason you cannot turn on `strictNullChecks`, but still want to use this rule - you can use this option to allow it - but know that the behavior of this rule is _undefined_ with the compiler option turned off. We will not accept bug reports if you are using this option.\n\n## When Not To Use It\n\nThe main downside to using this rule is the need for type information.\n\n## Related To\n\n- ESLint: [no-constant-condition](https://eslint.org/docs/rules/no-constant-condition) - `no-unnecessary-condition` is essentially a stronger version of `no-constant-condition`, but requires type information.\n- [strict-boolean-expressions](./strict-boolean-expressions.md) - a more opinionated version of `no-unnecessary-condition`. `strict-boolean-expressions` enforces a specific code style, while `no-unnecessary-condition` is about correctness.\n\n## Attributes\n\n- [ ] ✅ Recommended\n- [x] 🔧 Fixable\n- [x] 💭 Requires type information\n"},"__N_SSG":true},"page":"/[rule]","query":{"rule":"no-unnecessary-condition.md"},"buildId":"V190Mxkh11cN1_jT2mDz7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

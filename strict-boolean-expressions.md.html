@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><meta name="theme-color" content="#1976d2"/><title class="jsx-cbfd42e26539136">Typescript and JSS</title><link rel="icon" href="/zdns.svg" class="jsx-cbfd42e26539136"/><meta name="next-head-count" content="5"/><meta name="theme-color" content="#90caf9"/><link rel="preload" href="/_next/static/css/ef46db3751d8e999.css" as="style"/><link rel="stylesheet" href="/_next/static/css/ef46db3751d8e999.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-fcec467324f41dbb.js" defer=""></script><script src="/_next/static/chunks/framework-e70c6273bfe3f237.js" defer=""></script><script src="/_next/static/chunks/main-7c9e8fd8226b6573.js" defer=""></script><script src="/_next/static/chunks/pages/_app-0617cd64ea924586.js" defer=""></script><script src="/_next/static/chunks/505-0c2bccf53cd8dae5.js" defer=""></script><script src="/_next/static/chunks/pages/%5Brule%5D-b74fec192cf33e56.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_buildManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_ssgManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_middlewareManifest.js" defer=""></script><style id="__jsx-4ab09977da39fd03">.container.jsx-cbfd42e26539136{min-height:100vh;padding:0 .5rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main.jsx-cbfd42e26539136{padding:5rem 0;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136{width:100%;height:100px;border-top:1px solid#eaeaea;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136 img.jsx-cbfd42e26539136{margin-left:.5rem}footer.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}a.jsx-cbfd42e26539136{color:inherit;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{color:#0070f3;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:hover,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:focus,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:active{text-decoration:underline}.title.jsx-cbfd42e26539136{margin:0;line-height:1.15;font-size:4rem}.title.jsx-cbfd42e26539136,.description.jsx-cbfd42e26539136{text-align:center}.description.jsx-cbfd42e26539136{line-height:1.5;font-size:1.5rem}code.jsx-cbfd42e26539136{background:#fafafa;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:.75rem;font-size:1.1rem;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}.grid.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:800px;margin-top:3rem}.card.jsx-cbfd42e26539136{margin:1rem;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;padding:1.5rem;text-align:left;color:inherit;text-decoration:none;border:1px solid#eaeaea;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-transition:color.15s ease,border-color.15s ease;-moz-transition:color.15s ease,border-color.15s ease;-o-transition:color.15s ease,border-color.15s ease;transition:color.15s ease,border-color.15s ease}.card.jsx-cbfd42e26539136:hover,.card.jsx-cbfd42e26539136:focus,.card.jsx-cbfd42e26539136:active{color:#0070f3;border-color:#0070f3}.card.jsx-cbfd42e26539136 h3.jsx-cbfd42e26539136{margin:0 0 1rem 0;font-size:1.5rem}.card.jsx-cbfd42e26539136 p.jsx-cbfd42e26539136{margin:0;font-size:1.25rem;line-height:1.5}.logo.jsx-cbfd42e26539136{height:1em}@media(max-width:600px){.grid.jsx-cbfd42e26539136{width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}}</style><style id="__jsx-5750d7069672f50d">html,body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}</style><style data-emotion="css "></style></head><body><div id="__next" data-reactroot=""><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><div class="jsx-cbfd42e26539136 container"><main class="jsx-cbfd42e26539136"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-aoeo82"><h1><code>strict-boolean-expressions</code></h1>
+<p>Restricts the types allowed in boolean expressions.</p>
+<p>Forbids usage of non-boolean types in expressions where a boolean is expected.
+<code>boolean</code> and <code>never</code> types are always allowed.
+Additional types which are considered safe in a boolean context can be configured via options.</p>
+<p>The following nodes are considered boolean expressions and their type is checked:</p>
+<ul>
+<li>Argument to the logical negation operator (<code>!arg</code>).</li>
+<li>The condition in a conditional expression (<code>cond ? x : y</code>).</li>
+<li>Conditions for <code>if</code>, <code>for</code>, <code>while</code>, and <code>do-while</code> statements.</li>
+<li>Operands of logical binary operators (<code>lhs || rhs</code> and <code>lhs &amp;&amp; rhs</code>).<!-- -->
+<ul>
+<li>Right-hand side operand is ignored when it&#x27;s not a descendant of another boolean expression.
+This is to allow usage of boolean operators for their short-circuiting behavior.</li>
+</ul>
+</li>
+</ul>
+<h2>Examples</h2>
+<p>Examples of code for this rule:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h3>❌ Incorrect</h3>
+<pre><code class="language-ts">// nullable numbers are considered unsafe by default
+let num: number | undefined = 0;
+if (num) {
+  console.log(&#x27;num is defined&#x27;);
+}
+
+// nullable strings are considered unsafe by default
+let str: string | null = null;
+if (!str) {
+  console.log(&#x27;str is empty&#x27;);
+}
+
+// nullable booleans are considered unsafe by default
+function foo(bool?: boolean) {
+  if (bool) {
+    bar();
+  }
+}
+
+// `any`, unconstrained generics and unions of more than one primitive type are disallowed
+const foo = &lt;T&gt;(arg: T) =&gt; (arg ? 1 : 0);
+
+// always-truthy and always-falsy types are disallowed
+let obj = {};
+while (obj) {
+  obj = getObj();
+}
+</code></pre>
+<h3>✅ Correct</h3>
+<pre><code class="language-tsx">// Using logical operator short-circuiting is allowed
+const Component = () =&gt; {
+  const entry = map.get(&#x27;foo&#x27;) || {};
+  return entry &amp;&amp; &lt;p&gt;Name: {entry.name}&lt;/p&gt;;
+};
+
+// nullable values should be checked explicitly against null or undefined
+let num: number | undefined = 0;
+if (num != null) {
+  console.log(&#x27;num is defined&#x27;);
+}
+
+let str: string | null = null;
+if (str != null &amp;&amp; !str) {
+  console.log(&#x27;str is empty&#x27;);
+}
+
+function foo(bool?: boolean) {
+  if (bool ?? false) {
+    bar();
+  }
+}
+
+// `any` types should be cast to boolean explicitly
+const foo = (arg: any) =&gt; (Boolean(arg) ? 1 : 0);
+</code></pre>
+<h2>Options</h2>
+<pre><code class="language-ts">type Options = {
+  allowString?: boolean;
+  allowNumber?: boolean;
+  allowNullableObject?: boolean;
+  allowNullableBoolean?: boolean;
+  allowNullableString?: boolean;
+  allowNullableNumber?: boolean;
+  allowAny?: boolean;
+};
+
+const defaultOptions: Options = {
+  allowString: true,
+  allowNumber: true,
+  allowNullableObject: true,
+  allowNullableBoolean: false,
+  allowNullableString: false,
+  allowNullableNumber: false,
+  allowAny: false,
+  allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
+};
+</code></pre>
+<h3><code>allowString</code></h3>
+<p>Allows <code>string</code> in a boolean context.
+This is safe because strings have only one falsy value (<code>&quot;&quot;</code>).
+Set this to <code>false</code> if you prefer the explicit <code>str != &quot;&quot;</code> or <code>str.length &gt; 0</code> style.</p>
+<h3><code>allowNumber</code></h3>
+<p>Allows <code>number</code> in a boolean context.
+This is safe because numbers have only two falsy values (<code>0</code> and <code>NaN</code>).
+Set this to <code>false</code> if you prefer the explicit <code>num != 0</code> and <code>!Number.isNaN(num)</code> style.</p>
+<h3><code>allowNullableObject</code></h3>
+<p>Allows <code>object | function | symbol | null | undefined</code> in a boolean context.
+This is safe because objects, functions and symbols don&#x27;t have falsy values.
+Set this to <code>false</code> if you prefer the explicit <code>obj != null</code> style.</p>
+<h3><code>allowNullableBoolean</code></h3>
+<p>Allows <code>boolean | null | undefined</code> in a boolean context.
+This is unsafe because nullable booleans can be either <code>false</code> or nullish.
+Set this to <code>false</code> if you want to enforce explicit <code>bool ?? false</code> or <code>bool ?? true</code> style.
+Set this to <code>true</code> if you don&#x27;t mind implicitly treating false the same as a nullish value.</p>
+<h3><code>allowNullableString</code></h3>
+<p>Allows <code>string | null | undefined</code> in a boolean context.
+This is unsafe because nullable strings can be either an empty string or nullish.
+Set this to <code>true</code> if you don&#x27;t mind implicitly treating an empty string the same as a nullish value.</p>
+<h3><code>allowNullableNumber</code></h3>
+<p>Allows <code>number | null | undefined</code> in a boolean context.
+This is unsafe because nullable numbers can be either a falsy number or nullish.
+Set this to <code>true</code> if you don&#x27;t mind implicitly treating zero or NaN the same as a nullish value.</p>
+<h3><code>allowAny</code></h3>
+<p>Allows <code>any</code> in a boolean context.
+This is unsafe for obvious reasons.
+Set this to <code>true</code> at your own risk.</p>
+<h3><code>allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing</code></h3>
+<p>If this is set to <code>false</code>, then the rule will error on every file whose <code>tsconfig.json</code> does <em>not</em> have the <code>strictNullChecks</code> compiler option (or <code>strict</code>) set to <code>true</code>.</p>
+<p>Without <code>strictNullChecks</code>, TypeScript essentially erases <code>undefined</code> and <code>null</code> from the types. This means when this rule inspects the types from a variable, <strong>it will not be able to tell that the variable might be <code>null</code> or <code>undefined</code></strong>, which essentially makes this rule a lot less useful.</p>
+<p>You should be using <code>strictNullChecks</code> to ensure complete type-safety in your codebase.</p>
+<p>If for some reason you cannot turn on <code>strictNullChecks</code>, but still want to use this rule - you can use this option to allow it - but know that the behavior of this rule is <em>undefined</em> with the compiler option turned off. We will not accept bug reports if you are using this option.</p>
+<h2>Fixes and Suggestions</h2>
+<p>This rule provides following fixes and suggestions for particular types in boolean context:</p>
+<ul>
+<li><code>boolean</code> - Always allowed - no fix needed.</li>
+<li><code>string</code> - (when <code>allowString</code> is <code>false</code>) - Provides following suggestions:<!-- -->
+<ul>
+<li>Change condition to check string&#x27;s length (<code>str</code> → <code>str.length &gt; 0</code>)</li>
+<li>Change condition to check for empty string (<code>str</code> → <code>str !== &quot;&quot;</code>)</li>
+<li>Explicitly cast value to a boolean (<code>str</code> → <code>Boolean(str)</code>)</li>
+</ul>
+</li>
+<li><code>number</code> - (when <code>allowNumber</code> is <code>false</code>):<!-- -->
+<ul>
+<li>For <code>array.length</code> - Provides <strong>autofix</strong>:<!-- -->
+<ul>
+<li>Change condition to check for 0 (<code>array.length</code> → <code>array.length &gt; 0</code>)</li>
+</ul>
+</li>
+<li>For other number values - Provides following suggestions:<!-- -->
+<ul>
+<li>Change condition to check for 0 (<code>num</code> → <code>num !== 0</code>)</li>
+<li>Change condition to check for NaN (<code>num</code> → <code>!Number.isNaN(num)</code>)</li>
+<li>Explicitly cast value to a boolean (<code>num</code> → <code>Boolean(num)</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>object | null | undefined</code> - (when <code>allowNullableObject</code> is <code>false</code>) - Provides <strong>autofix</strong>:<!-- -->
+<ul>
+<li>Change condition to check for null/undefined (<code>maybeObj</code> → <code>maybeObj != null</code>)</li>
+</ul>
+</li>
+<li><code>boolean | null | undefined</code> - Provides following suggestions:<!-- -->
+<ul>
+<li>Explicitly treat nullish value the same as false (<code>maybeBool</code> → <code>maybeBool ?? false</code>)</li>
+<li>Change condition to check for true/false (<code>maybeBool</code> → <code>maybeBool === true</code>)</li>
+</ul>
+</li>
+<li><code>string | null | undefined</code> - Provides following suggestions:<!-- -->
+<ul>
+<li>Change condition to check for null/undefined (<code>maybeStr</code> → <code>maybeStr != null</code>)</li>
+<li>Explicitly treat nullish value the same as an empty string (<code>maybeStr</code> → <code>maybeStr ?? &quot;&quot;</code>)</li>
+<li>Explicitly cast value to a boolean (<code>maybeStr</code> → <code>Boolean(maybeStr)</code>)</li>
+</ul>
+</li>
+<li><code>number | null | undefined</code> - Provides following suggestions:<!-- -->
+<ul>
+<li>Change condition to check for null/undefined (<code>maybeNum</code> → <code>maybeNum != null</code>)</li>
+<li>Explicitly treat nullish value the same as 0 (<code>maybeNum</code> → <code>maybeNum ?? 0</code>)</li>
+<li>Explicitly cast value to a boolean (<code>maybeNum</code> → <code>Boolean(maybeNum)</code>)</li>
+</ul>
+</li>
+<li><code>any</code> and <code>unknown</code> - Provides following suggestions:<!-- -->
+<ul>
+<li>Explicitly cast value to a boolean (<code>value</code> → <code>Boolean(value)</code>)</li>
+</ul>
+</li>
+</ul>
+<h2>Related To</h2>
+<ul>
+<li>TSLint: <a href="https://palantir.github.io/tslint/rules/strict-boolean-expressions">strict-boolean-expressions</a></li>
+<li><a href="./no-unnecessary-condition.md">no-unnecessary-condition</a> - Similar rule which reports always-truthy and always-falsy values in conditions</li>
+</ul>
+<h2>Attributes</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->✅ Recommended</li>
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->🔧 Fixable</li>
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->💭 Requires type information</li>
+</ul></div></main><footer class="jsx-cbfd42e26539136"><a href="https://cloud.zdns.cn" target="_blank" rel="noopener noreferrer" class="jsx-cbfd42e26539136">Powered by <img src="/zdns.svg" alt="zdns" class="jsx-cbfd42e26539136 logo"/></a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"rule":"# `strict-boolean-expressions`\n\nRestricts the types allowed in boolean expressions.\n\nForbids usage of non-boolean types in expressions where a boolean is expected.\n`boolean` and `never` types are always allowed.\nAdditional types which are considered safe in a boolean context can be configured via options.\n\nThe following nodes are considered boolean expressions and their type is checked:\n\n- Argument to the logical negation operator (`!arg`).\n- The condition in a conditional expression (`cond ? x : y`).\n- Conditions for `if`, `for`, `while`, and `do-while` statements.\n- Operands of logical binary operators (`lhs || rhs` and `lhs \u0026\u0026 rhs`).\n  - Right-hand side operand is ignored when it's not a descendant of another boolean expression.\n    This is to allow usage of boolean operators for their short-circuiting behavior.\n\n## Examples\n\nExamples of code for this rule:\n\n\u003c!--tabs--\u003e\n\n### ❌ Incorrect\n\n```ts\n// nullable numbers are considered unsafe by default\nlet num: number | undefined = 0;\nif (num) {\n  console.log('num is defined');\n}\n\n// nullable strings are considered unsafe by default\nlet str: string | null = null;\nif (!str) {\n  console.log('str is empty');\n}\n\n// nullable booleans are considered unsafe by default\nfunction foo(bool?: boolean) {\n  if (bool) {\n    bar();\n  }\n}\n\n// `any`, unconstrained generics and unions of more than one primitive type are disallowed\nconst foo = \u003cT\u003e(arg: T) =\u003e (arg ? 1 : 0);\n\n// always-truthy and always-falsy types are disallowed\nlet obj = {};\nwhile (obj) {\n  obj = getObj();\n}\n```\n\n### ✅ Correct\n\n```tsx\n// Using logical operator short-circuiting is allowed\nconst Component = () =\u003e {\n  const entry = map.get('foo') || {};\n  return entry \u0026\u0026 \u003cp\u003eName: {entry.name}\u003c/p\u003e;\n};\n\n// nullable values should be checked explicitly against null or undefined\nlet num: number | undefined = 0;\nif (num != null) {\n  console.log('num is defined');\n}\n\nlet str: string | null = null;\nif (str != null \u0026\u0026 !str) {\n  console.log('str is empty');\n}\n\nfunction foo(bool?: boolean) {\n  if (bool ?? false) {\n    bar();\n  }\n}\n\n// `any` types should be cast to boolean explicitly\nconst foo = (arg: any) =\u003e (Boolean(arg) ? 1 : 0);\n```\n\n## Options\n\n```ts\ntype Options = {\n  allowString?: boolean;\n  allowNumber?: boolean;\n  allowNullableObject?: boolean;\n  allowNullableBoolean?: boolean;\n  allowNullableString?: boolean;\n  allowNullableNumber?: boolean;\n  allowAny?: boolean;\n};\n\nconst defaultOptions: Options = {\n  allowString: true,\n  allowNumber: true,\n  allowNullableObject: true,\n  allowNullableBoolean: false,\n  allowNullableString: false,\n  allowNullableNumber: false,\n  allowAny: false,\n  allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,\n};\n```\n\n### `allowString`\n\nAllows `string` in a boolean context.\nThis is safe because strings have only one falsy value (`\"\"`).\nSet this to `false` if you prefer the explicit `str != \"\"` or `str.length \u003e 0` style.\n\n### `allowNumber`\n\nAllows `number` in a boolean context.\nThis is safe because numbers have only two falsy values (`0` and `NaN`).\nSet this to `false` if you prefer the explicit `num != 0` and `!Number.isNaN(num)` style.\n\n### `allowNullableObject`\n\nAllows `object | function | symbol | null | undefined` in a boolean context.\nThis is safe because objects, functions and symbols don't have falsy values.\nSet this to `false` if you prefer the explicit `obj != null` style.\n\n### `allowNullableBoolean`\n\nAllows `boolean | null | undefined` in a boolean context.\nThis is unsafe because nullable booleans can be either `false` or nullish.\nSet this to `false` if you want to enforce explicit `bool ?? false` or `bool ?? true` style.\nSet this to `true` if you don't mind implicitly treating false the same as a nullish value.\n\n### `allowNullableString`\n\nAllows `string | null | undefined` in a boolean context.\nThis is unsafe because nullable strings can be either an empty string or nullish.\nSet this to `true` if you don't mind implicitly treating an empty string the same as a nullish value.\n\n### `allowNullableNumber`\n\nAllows `number | null | undefined` in a boolean context.\nThis is unsafe because nullable numbers can be either a falsy number or nullish.\nSet this to `true` if you don't mind implicitly treating zero or NaN the same as a nullish value.\n\n### `allowAny`\n\nAllows `any` in a boolean context.\nThis is unsafe for obvious reasons.\nSet this to `true` at your own risk.\n\n### `allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing`\n\nIf this is set to `false`, then the rule will error on every file whose `tsconfig.json` does _not_ have the `strictNullChecks` compiler option (or `strict`) set to `true`.\n\nWithout `strictNullChecks`, TypeScript essentially erases `undefined` and `null` from the types. This means when this rule inspects the types from a variable, **it will not be able to tell that the variable might be `null` or `undefined`**, which essentially makes this rule a lot less useful.\n\nYou should be using `strictNullChecks` to ensure complete type-safety in your codebase.\n\nIf for some reason you cannot turn on `strictNullChecks`, but still want to use this rule - you can use this option to allow it - but know that the behavior of this rule is _undefined_ with the compiler option turned off. We will not accept bug reports if you are using this option.\n\n## Fixes and Suggestions\n\nThis rule provides following fixes and suggestions for particular types in boolean context:\n\n- `boolean` - Always allowed - no fix needed.\n- `string` - (when `allowString` is `false`) - Provides following suggestions:\n  - Change condition to check string's length (`str` → `str.length \u003e 0`)\n  - Change condition to check for empty string (`str` → `str !== \"\"`)\n  - Explicitly cast value to a boolean (`str` → `Boolean(str)`)\n- `number` - (when `allowNumber` is `false`):\n  - For `array.length` - Provides **autofix**:\n    - Change condition to check for 0 (`array.length` → `array.length \u003e 0`)\n  - For other number values - Provides following suggestions:\n    - Change condition to check for 0 (`num` → `num !== 0`)\n    - Change condition to check for NaN (`num` → `!Number.isNaN(num)`)\n    - Explicitly cast value to a boolean (`num` → `Boolean(num)`)\n- `object | null | undefined` - (when `allowNullableObject` is `false`) - Provides **autofix**:\n  - Change condition to check for null/undefined (`maybeObj` → `maybeObj != null`)\n- `boolean | null | undefined` - Provides following suggestions:\n  - Explicitly treat nullish value the same as false (`maybeBool` → `maybeBool ?? false`)\n  - Change condition to check for true/false (`maybeBool` → `maybeBool === true`)\n- `string | null | undefined` - Provides following suggestions:\n  - Change condition to check for null/undefined (`maybeStr` → `maybeStr != null`)\n  - Explicitly treat nullish value the same as an empty string (`maybeStr` → `maybeStr ?? \"\"`)\n  - Explicitly cast value to a boolean (`maybeStr` → `Boolean(maybeStr)`)\n- `number | null | undefined` - Provides following suggestions:\n  - Change condition to check for null/undefined (`maybeNum` → `maybeNum != null`)\n  - Explicitly treat nullish value the same as 0 (`maybeNum` → `maybeNum ?? 0`)\n  - Explicitly cast value to a boolean (`maybeNum` → `Boolean(maybeNum)`)\n- `any` and `unknown` - Provides following suggestions:\n  - Explicitly cast value to a boolean (`value` → `Boolean(value)`)\n\n## Related To\n\n- TSLint: [strict-boolean-expressions](https://palantir.github.io/tslint/rules/strict-boolean-expressions)\n- [no-unnecessary-condition](./no-unnecessary-condition.md) - Similar rule which reports always-truthy and always-falsy values in conditions\n\n## Attributes\n\n- [ ] ✅ Recommended\n- [x] 🔧 Fixable\n- [x] 💭 Requires type information\n"},"__N_SSG":true},"page":"/[rule]","query":{"rule":"strict-boolean-expressions.md"},"buildId":"V190Mxkh11cN1_jT2mDz7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

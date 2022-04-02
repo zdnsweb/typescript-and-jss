@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><meta name="theme-color" content="#1976d2"/><title class="jsx-cbfd42e26539136">Typescript and JSS</title><link rel="icon" href="/zdns.svg" class="jsx-cbfd42e26539136"/><meta name="next-head-count" content="5"/><meta name="theme-color" content="#90caf9"/><link rel="preload" href="/_next/static/css/ef46db3751d8e999.css" as="style"/><link rel="stylesheet" href="/_next/static/css/ef46db3751d8e999.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-fcec467324f41dbb.js" defer=""></script><script src="/_next/static/chunks/framework-e70c6273bfe3f237.js" defer=""></script><script src="/_next/static/chunks/main-7c9e8fd8226b6573.js" defer=""></script><script src="/_next/static/chunks/pages/_app-0617cd64ea924586.js" defer=""></script><script src="/_next/static/chunks/505-0c2bccf53cd8dae5.js" defer=""></script><script src="/_next/static/chunks/pages/%5Brule%5D-b74fec192cf33e56.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_buildManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_ssgManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_middlewareManifest.js" defer=""></script><style id="__jsx-4ab09977da39fd03">.container.jsx-cbfd42e26539136{min-height:100vh;padding:0 .5rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main.jsx-cbfd42e26539136{padding:5rem 0;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136{width:100%;height:100px;border-top:1px solid#eaeaea;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136 img.jsx-cbfd42e26539136{margin-left:.5rem}footer.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}a.jsx-cbfd42e26539136{color:inherit;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{color:#0070f3;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:hover,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:focus,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:active{text-decoration:underline}.title.jsx-cbfd42e26539136{margin:0;line-height:1.15;font-size:4rem}.title.jsx-cbfd42e26539136,.description.jsx-cbfd42e26539136{text-align:center}.description.jsx-cbfd42e26539136{line-height:1.5;font-size:1.5rem}code.jsx-cbfd42e26539136{background:#fafafa;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:.75rem;font-size:1.1rem;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}.grid.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:800px;margin-top:3rem}.card.jsx-cbfd42e26539136{margin:1rem;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;padding:1.5rem;text-align:left;color:inherit;text-decoration:none;border:1px solid#eaeaea;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-transition:color.15s ease,border-color.15s ease;-moz-transition:color.15s ease,border-color.15s ease;-o-transition:color.15s ease,border-color.15s ease;transition:color.15s ease,border-color.15s ease}.card.jsx-cbfd42e26539136:hover,.card.jsx-cbfd42e26539136:focus,.card.jsx-cbfd42e26539136:active{color:#0070f3;border-color:#0070f3}.card.jsx-cbfd42e26539136 h3.jsx-cbfd42e26539136{margin:0 0 1rem 0;font-size:1.5rem}.card.jsx-cbfd42e26539136 p.jsx-cbfd42e26539136{margin:0;font-size:1.25rem;line-height:1.5}.logo.jsx-cbfd42e26539136{height:1em}@media(max-width:600px){.grid.jsx-cbfd42e26539136{width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}}</style><style id="__jsx-5750d7069672f50d">html,body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}</style><style data-emotion="css "></style></head><body><div id="__next" data-reactroot=""><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><div class="jsx-cbfd42e26539136 container"><main class="jsx-cbfd42e26539136"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-aoeo82"><h1><code>no-unsafe-return</code></h1>
+<p>Disallows returning any from a function.</p>
+<p>Despite your best intentions, the <code>any</code> type can sometimes leak into your codebase.
+Returned <code>any</code> typed values are not checked at all by TypeScript, so it creates a potential safety hole, and source of bugs in your codebase.</p>
+<h2>Rule Details</h2>
+<p>This rule disallows returning <code>any</code> or <code>any[]</code> from a function.
+This rule also compares the return type to the function&#x27;s declared/inferred return type to ensure you don&#x27;t return an unsafe <code>any</code> in a generic position to a receiver that&#x27;s expecting a specific type. For example, it will error if you return <code>Set&lt;any&gt;</code> from a function declared as returning <code>Set&lt;string&gt;</code>.</p>
+<p>Examples of code for this rule:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h3>❌ Incorrect</h3>
+<pre><code class="language-ts">function foo1() {
+  return 1 as any;
+}
+function foo2() {
+  return Object.create(null);
+}
+const foo3 = () =&gt; {
+  return 1 as any;
+};
+const foo4 = () =&gt; Object.create(null);
+
+function foo5() {
+  return [] as any[];
+}
+function foo6() {
+  return [] as Array&lt;any&gt;;
+}
+function foo7() {
+  return [] as readonly any[];
+}
+function foo8() {
+  return [] as Readonly&lt;any[]&gt;;
+}
+const foo9 = () =&gt; {
+  return [] as any[];
+};
+const foo10 = () =&gt; [] as any[];
+
+const foo11 = (): string[] =&gt; [1, 2, 3] as any[];
+
+// generic position examples
+function assignability1(): Set&lt;string&gt; {
+  return new Set&lt;any&gt;([1]);
+}
+type TAssign = () =&gt; Set&lt;string&gt;;
+const assignability2: TAssign = () =&gt; new Set&lt;any&gt;([true]);
+</code></pre>
+<h3>✅ Correct</h3>
+<pre><code class="language-ts">function foo1() {
+  return 1;
+}
+function foo2() {
+  return Object.create(null) as Record&lt;string, unknown&gt;;
+}
+
+const foo3 = () =&gt; [];
+const foo4 = () =&gt; [&#x27;a&#x27;];
+
+function assignability1(): Set&lt;string&gt; {
+  return new Set&lt;string&gt;([&#x27;foo&#x27;]);
+}
+type TAssign = () =&gt; Set&lt;string&gt;;
+const assignability2: TAssign = () =&gt; new Set([&#x27;foo&#x27;]);
+</code></pre>
+<!-- -->&lt;!--/tabs--&gt;<!-- -->
+<p>There are cases where the rule allows to return <code>any</code> to <code>unknown</code>.</p>
+<p>Examples of <code>any</code> to <code>unknown</code> return that are allowed.</p>
+<pre><code class="language-ts">function foo1(): unknown {
+  return JSON.parse(singleObjString); // Return type for JSON.parse is any.
+}
+
+function foo2(): unknown[] {
+  return [] as any[];
+}
+</code></pre>
+<h2>Options</h2>
+<pre><code class="language-jsonc">// .eslintrc.json
+{
+  &quot;rules&quot;: {
+    &quot;@typescript-eslint/no-unsafe-return&quot;: &quot;error&quot;
+  }
+}
+</code></pre>
+<p>This rule is not configurable.</p>
+<h2>Related To</h2>
+<ul>
+<li><a href="./no-explicit-any.md"><code>no-explicit-any</code></a></li>
+<li>TSLint: <a href="https://palantir.github.io/tslint/rules/no-unsafe-any/"><code>no-unsafe-any</code></a></li>
+</ul>
+<h2>Attributes</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->✅ Recommended</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->🔧 Fixable</li>
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->💭 Requires type information</li>
+</ul></div></main><footer class="jsx-cbfd42e26539136"><a href="https://cloud.zdns.cn" target="_blank" rel="noopener noreferrer" class="jsx-cbfd42e26539136">Powered by <img src="/zdns.svg" alt="zdns" class="jsx-cbfd42e26539136 logo"/></a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"rule":"# `no-unsafe-return`\n\nDisallows returning any from a function.\n\nDespite your best intentions, the `any` type can sometimes leak into your codebase.\nReturned `any` typed values are not checked at all by TypeScript, so it creates a potential safety hole, and source of bugs in your codebase.\n\n## Rule Details\n\nThis rule disallows returning `any` or `any[]` from a function.\nThis rule also compares the return type to the function's declared/inferred return type to ensure you don't return an unsafe `any` in a generic position to a receiver that's expecting a specific type. For example, it will error if you return `Set\u003cany\u003e` from a function declared as returning `Set\u003cstring\u003e`.\n\nExamples of code for this rule:\n\n\u003c!--tabs--\u003e\n\n### ❌ Incorrect\n\n```ts\nfunction foo1() {\n  return 1 as any;\n}\nfunction foo2() {\n  return Object.create(null);\n}\nconst foo3 = () =\u003e {\n  return 1 as any;\n};\nconst foo4 = () =\u003e Object.create(null);\n\nfunction foo5() {\n  return [] as any[];\n}\nfunction foo6() {\n  return [] as Array\u003cany\u003e;\n}\nfunction foo7() {\n  return [] as readonly any[];\n}\nfunction foo8() {\n  return [] as Readonly\u003cany[]\u003e;\n}\nconst foo9 = () =\u003e {\n  return [] as any[];\n};\nconst foo10 = () =\u003e [] as any[];\n\nconst foo11 = (): string[] =\u003e [1, 2, 3] as any[];\n\n// generic position examples\nfunction assignability1(): Set\u003cstring\u003e {\n  return new Set\u003cany\u003e([1]);\n}\ntype TAssign = () =\u003e Set\u003cstring\u003e;\nconst assignability2: TAssign = () =\u003e new Set\u003cany\u003e([true]);\n```\n\n### ✅ Correct\n\n```ts\nfunction foo1() {\n  return 1;\n}\nfunction foo2() {\n  return Object.create(null) as Record\u003cstring, unknown\u003e;\n}\n\nconst foo3 = () =\u003e [];\nconst foo4 = () =\u003e ['a'];\n\nfunction assignability1(): Set\u003cstring\u003e {\n  return new Set\u003cstring\u003e(['foo']);\n}\ntype TAssign = () =\u003e Set\u003cstring\u003e;\nconst assignability2: TAssign = () =\u003e new Set(['foo']);\n```\n\n\u003c!--/tabs--\u003e\n\nThere are cases where the rule allows to return `any` to `unknown`.\n\nExamples of `any` to `unknown` return that are allowed.\n\n```ts\nfunction foo1(): unknown {\n  return JSON.parse(singleObjString); // Return type for JSON.parse is any.\n}\n\nfunction foo2(): unknown[] {\n  return [] as any[];\n}\n```\n\n## Options\n\n```jsonc\n// .eslintrc.json\n{\n  \"rules\": {\n    \"@typescript-eslint/no-unsafe-return\": \"error\"\n  }\n}\n```\n\nThis rule is not configurable.\n\n## Related To\n\n- [`no-explicit-any`](./no-explicit-any.md)\n- TSLint: [`no-unsafe-any`](https://palantir.github.io/tslint/rules/no-unsafe-any/)\n\n## Attributes\n\n- [x] ✅ Recommended\n- [ ] 🔧 Fixable\n- [x] 💭 Requires type information\n"},"__N_SSG":true},"page":"/[rule]","query":{"rule":"no-unsafe-return.md"},"buildId":"V190Mxkh11cN1_jT2mDz7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

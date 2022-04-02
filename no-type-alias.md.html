@@ -1,0 +1,478 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><meta name="theme-color" content="#1976d2"/><title class="jsx-cbfd42e26539136">Typescript and JSS</title><link rel="icon" href="/zdns.svg" class="jsx-cbfd42e26539136"/><meta name="next-head-count" content="5"/><meta name="theme-color" content="#90caf9"/><link rel="preload" href="/_next/static/css/ef46db3751d8e999.css" as="style"/><link rel="stylesheet" href="/_next/static/css/ef46db3751d8e999.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-fcec467324f41dbb.js" defer=""></script><script src="/_next/static/chunks/framework-e70c6273bfe3f237.js" defer=""></script><script src="/_next/static/chunks/main-7c9e8fd8226b6573.js" defer=""></script><script src="/_next/static/chunks/pages/_app-0617cd64ea924586.js" defer=""></script><script src="/_next/static/chunks/505-0c2bccf53cd8dae5.js" defer=""></script><script src="/_next/static/chunks/pages/%5Brule%5D-b74fec192cf33e56.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_buildManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_ssgManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_middlewareManifest.js" defer=""></script><style id="__jsx-4ab09977da39fd03">.container.jsx-cbfd42e26539136{min-height:100vh;padding:0 .5rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main.jsx-cbfd42e26539136{padding:5rem 0;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136{width:100%;height:100px;border-top:1px solid#eaeaea;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136 img.jsx-cbfd42e26539136{margin-left:.5rem}footer.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}a.jsx-cbfd42e26539136{color:inherit;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{color:#0070f3;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:hover,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:focus,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:active{text-decoration:underline}.title.jsx-cbfd42e26539136{margin:0;line-height:1.15;font-size:4rem}.title.jsx-cbfd42e26539136,.description.jsx-cbfd42e26539136{text-align:center}.description.jsx-cbfd42e26539136{line-height:1.5;font-size:1.5rem}code.jsx-cbfd42e26539136{background:#fafafa;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:.75rem;font-size:1.1rem;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}.grid.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:800px;margin-top:3rem}.card.jsx-cbfd42e26539136{margin:1rem;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;padding:1.5rem;text-align:left;color:inherit;text-decoration:none;border:1px solid#eaeaea;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-transition:color.15s ease,border-color.15s ease;-moz-transition:color.15s ease,border-color.15s ease;-o-transition:color.15s ease,border-color.15s ease;transition:color.15s ease,border-color.15s ease}.card.jsx-cbfd42e26539136:hover,.card.jsx-cbfd42e26539136:focus,.card.jsx-cbfd42e26539136:active{color:#0070f3;border-color:#0070f3}.card.jsx-cbfd42e26539136 h3.jsx-cbfd42e26539136{margin:0 0 1rem 0;font-size:1.5rem}.card.jsx-cbfd42e26539136 p.jsx-cbfd42e26539136{margin:0;font-size:1.25rem;line-height:1.5}.logo.jsx-cbfd42e26539136{height:1em}@media(max-width:600px){.grid.jsx-cbfd42e26539136{width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}}</style><style id="__jsx-5750d7069672f50d">html,body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}</style><style data-emotion="css "></style></head><body><div id="__next" data-reactroot=""><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><div class="jsx-cbfd42e26539136 container"><main class="jsx-cbfd42e26539136"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-aoeo82"><h1><code>no-type-alias</code></h1>
+<p>Disallow the use of type aliases.</p>
+<p>In TypeScript, type aliases serve three purposes:</p>
+<ul>
+<li>Aliasing other types so that we can refer to them using a simpler name.</li>
+</ul>
+<pre><code class="language-ts">// this...
+type Person = {
+    firstName: string,
+    lastName: string,
+    age: number
+};
+
+function addPerson(person : Person) { ... }
+
+// is easier to read than this...
+function addPerson(person : { firstName: string, lastName: string, age: number}) { ... }
+</code></pre>
+<ul>
+<li>Act sort of like an interface, providing a set of methods and properties that must exist
+in the objects implementing the type.</li>
+</ul>
+<pre><code class="language-ts">type Person = {
+    firstName: string,
+    lastName: string,
+    age: number,
+    walk: () =&gt; void,
+    talk: () =&gt; void
+};
+
+// you know person will have 3 properties and 2 methods,
+// because the structure has already been defined.
+var person : Person = { ... }
+
+// so we can be sure that this will work
+person.walk();
+</code></pre>
+<ul>
+<li>Act like mapping tools between types to allow quick modifications.</li>
+</ul>
+<pre><code class="language-ts">type Immutable&lt;T&gt; = { readonly [P in keyof T]: T[P] };
+
+type Person = {
+  name: string;
+  age: number;
+};
+
+type ImmutablePerson = Immutable&lt;Person&gt;;
+
+var person: ImmutablePerson = { name: &#x27;John&#x27;, age: 30 };
+person.name = &#x27;Brad&#x27;; // error, readonly property
+</code></pre>
+<p>When aliasing, the type alias does not create a new type, it just creates a new name
+to refer to the original type. So aliasing primitives and other simple types, tuples, unions
+or intersections can some times be redundant.</p>
+<pre><code class="language-ts">// this doesn&#x27;t make much sense
+type myString = string;
+</code></pre>
+<p>On the other hand, using a type alias as an interface can limit your ability to:</p>
+<ul>
+<li>Reuse your code: interfaces can be extended or implemented by other types. Type aliases cannot.</li>
+<li>Debug your code: interfaces create a new name, so is easy to identify the base type of an object
+while debugging the application.</li>
+</ul>
+<p>Finally, mapping types is an advanced technique and leaving it open can quickly become a pain point
+in your application.</p>
+<h2>Rule Details</h2>
+<p>This rule disallows the use of type aliases in favor of interfaces
+and simplified types (primitives, tuples, unions, intersections, etc).</p>
+<h2>Options</h2>
+<p>This rule, in its default state, does not require any argument. If you would like to enable one
+or more of the following you may pass an object with the options set as follows:</p>
+<ul>
+<li><code>allowAliases</code> set to <code>&quot;always&quot;</code> will allow you to do aliasing (Defaults to <code>&quot;never&quot;</code>).</li>
+<li><code>allowCallbacks</code> set to <code>&quot;always&quot;</code> will allow you to use type aliases with callbacks (Defaults to <code>&quot;never&quot;</code>)</li>
+<li><code>allowConditionalTypes</code> set to <code>&quot;always&quot;</code> will allow you to use type aliases with conditional types (Defaults to <code>&quot;never&quot;</code>)</li>
+<li><code>allowConstructors</code> set to <code>&quot;always&quot;</code> will allow you to use type aliases with constructors (Defaults to <code>&quot;never&quot;</code>)</li>
+<li><code>allowLiterals</code> set to <code>&quot;always&quot;</code> will allow you to use type aliases with literal objects (Defaults to <code>&quot;never&quot;</code>)</li>
+<li><code>allowMappedTypes</code> set to <code>&quot;always&quot;</code> will allow you to use type aliases as mapping tools (Defaults to <code>&quot;never&quot;</code>)</li>
+<li><code>allowTupleTypes</code> set to <code>&quot;always&quot;</code> will allow you to use type aliases with tuples (Defaults to <code>&quot;never&quot;</code>)</li>
+<li><code>allowGenerics</code> set to <code>&quot;always&quot;</code> will allow you to use type aliases with generics (Defaults to <code>&quot;never&quot;</code>)</li>
+</ul>
+<h3><code>allowAliases</code></h3>
+<p>This applies to primitive types and reference types.</p>
+<p>The setting accepts the following values:</p>
+<ul>
+<li><code>&quot;always&quot;</code> or <code>&quot;never&quot;</code> to active or deactivate the feature.</li>
+<li><code>&quot;in-unions&quot;</code>, allows aliasing in union statements, e.g. <code>type Foo = string | string[];</code></li>
+<li><code>&quot;in-intersections&quot;</code>, allows aliasing in intersection statements, e.g. <code>type Foo = string &amp; string[];</code></li>
+<li><code>&quot;in-unions-and-intersections&quot;</code>, allows aliasing in union and/or intersection statements.</li>
+</ul>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowAliases&quot;: &quot;always&quot; }</code> options:</p>
+<pre><code class="language-ts">// primitives
+type Foo = &#x27;a&#x27;;
+
+type Foo = &#x27;a&#x27; | &#x27;b&#x27;;
+
+type Foo = string;
+
+type Foo = string | string[];
+
+type Foo = string &amp; string[];
+
+// reference types
+interface Bar {}
+class Baz implements Bar {}
+
+type Foo = Bar;
+
+type Foo = Bar | Baz;
+
+type Foo = Bar &amp; Baz;
+</code></pre>
+<p>Examples of <strong>incorrect</strong> code for the <code>{ &quot;allowAliases&quot;: &quot;in-unions&quot; }</code> option:</p>
+<pre><code class="language-ts">// primitives
+type Foo = &#x27;a&#x27;;
+
+type Foo = string;
+
+type Foo = string &amp; string[];
+
+// reference types
+interface Bar {}
+class Baz implements Bar {}
+
+type Foo = Bar;
+
+type Foo = Bar &amp; Baz;
+</code></pre>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowAliases&quot;: &quot;in-unions&quot; }</code> option:</p>
+<pre><code class="language-ts">// primitives
+type Foo = &#x27;a&#x27; | &#x27;b&#x27;;
+
+type Foo = string | string[];
+
+// reference types
+interface Bar {}
+class Baz implements Bar {}
+
+type Foo = Bar | Baz;
+</code></pre>
+<p>Examples of <strong>incorrect</strong> code for the <code>{ &quot;allowAliases&quot;: &quot;in-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">// primitives
+type Foo = &#x27;a&#x27;;
+
+type Foo = &#x27;a&#x27; | &#x27;b&#x27;;
+
+type Foo = string;
+
+type Foo = string | string[];
+
+// reference types
+interface Bar {}
+class Baz implements Bar {}
+
+type Foo = Bar;
+
+type Foo = Bar | Baz;
+</code></pre>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowAliases&quot;: &quot;in-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">// primitives
+type Foo = string &amp; string[];
+
+// reference types
+interface Bar {}
+class Baz implements Bar {}
+
+type Foo = Bar &amp; Baz;
+</code></pre>
+<p>Examples of <strong>incorrect</strong> code for the <code>{ &quot;allowAliases&quot;: &quot;in-unions-and-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">// primitives
+type Foo = &#x27;a&#x27;;
+
+type Foo = string;
+
+// reference types
+interface Bar {}
+class Baz implements Bar {}
+
+type Foo = Bar;
+</code></pre>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowAliases&quot;: &quot;in-unions-and-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">// primitives
+type Foo = &#x27;a&#x27; | &#x27;b&#x27;;
+
+type Foo = string | string[];
+
+type Foo = string &amp; string[];
+
+// reference types
+interface Bar {}
+class Baz implements Bar {}
+
+type Foo = Bar | Baz;
+
+type Foo = Bar &amp; Baz;
+</code></pre>
+<h3><code>allowCallbacks</code></h3>
+<p>This applies to function types.</p>
+<p>The setting accepts the following values:</p>
+<ul>
+<li><code>&quot;always&quot;</code> or <code>&quot;never&quot;</code> to active or deactivate the feature.</li>
+</ul>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowCallbacks&quot;: &quot;always&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo = () =&gt; void;
+
+type Foo = (name: string) =&gt; string;
+
+class Person {}
+
+type Foo = (name: string, age: number) =&gt; string | Person;
+
+type Foo = (name: string, age: number) =&gt; string &amp; Person;
+</code></pre>
+<h3><code>allowConditionalTypes</code></h3>
+<p>This applies to conditional types.</p>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowConditionalTypes&quot;: &quot;always&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo&lt;T&gt; = T extends number ? number : null;
+</code></pre>
+<h3><code>allowConstructors</code></h3>
+<p>This applies to constructor types.</p>
+<p>The setting accepts the following values:</p>
+<ul>
+<li><code>&quot;always&quot;</code> or <code>&quot;never&quot;</code> to active or deactivate the feature.</li>
+</ul>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowConstructors&quot;: &quot;always&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo = new () =&gt; void;
+</code></pre>
+<h3><code>allowLiterals</code></h3>
+<p>This applies to literal types (<code>type Foo = { ... }</code>).</p>
+<p>The setting accepts the following options:</p>
+<ul>
+<li><code>&quot;always&quot;</code> or <code>&quot;never&quot;</code> to active or deactivate the feature.</li>
+<li><code>&quot;in-unions&quot;</code>, allows literals in union statements, e.g. <code>type Foo = string | string[];</code></li>
+<li><code>&quot;in-intersections&quot;</code>, allows literals in intersection statements, e.g. <code>type Foo = string &amp; string[];</code></li>
+<li><code>&quot;in-unions-and-intersections&quot;</code>, allows literals in union and/or intersection statements.</li>
+</ul>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowLiterals&quot;: &quot;always&quot; }</code> options:</p>
+<pre><code class="language-ts">type Foo = {};
+
+type Foo = {
+  name: string;
+  age: number;
+};
+
+type Foo = {
+  name: string;
+  age: number;
+  walk: (miles: number) =&gt; void;
+};
+
+type Foo = { name: string } | { age: number };
+
+type Foo = { name: string } &amp; { age: number };
+</code></pre>
+<p>Examples of <strong>incorrect</strong> code for the <code>{ &quot;allowLiterals&quot;: &quot;in-unions&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo = {};
+
+type Foo = {
+  name: string;
+  age: number;
+};
+
+type Foo = {
+  name: string;
+  age: number;
+  walk: (miles: number) =&gt; void;
+};
+
+type Foo = { name: string } &amp; { age: number };
+</code></pre>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowLiterals&quot;: &quot;in-unions&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo = { name: string } | { age: number };
+</code></pre>
+<p>Examples of <strong>incorrect</strong> code for the <code>{ &quot;allowLiterals&quot;: &quot;in-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo = {};
+
+type Foo = {
+  name: string;
+  age: number;
+};
+
+type Foo = {
+  name: string;
+  age: number;
+  walk: (miles: number) =&gt; void;
+};
+
+type Foo = { name: string } | { age: number };
+</code></pre>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowLiterals&quot;: &quot;in-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo = { name: string } &amp; { age: number };
+</code></pre>
+<p>Examples of <strong>incorrect</strong> code for the <code>{ &quot;allowLiterals&quot;: &quot;in-unions-and-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo = {};
+
+type Foo = {
+  name: string;
+  age: number;
+};
+
+type Foo = {
+  name: string;
+  age: number;
+  walk: (miles: number) =&gt; void;
+};
+</code></pre>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowLiterals&quot;: &quot;in-unions-and-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo = { name: string } | { age: number };
+
+type Foo = { name: string } &amp; { age: number };
+</code></pre>
+<h3><code>allowMappedTypes</code></h3>
+<p>This applies to literal types.</p>
+<p>The setting accepts the following values:</p>
+<ul>
+<li><code>&quot;always&quot;</code> or <code>&quot;never&quot;</code> to active or deactivate the feature.</li>
+<li><code>&quot;in-unions&quot;</code>, allows aliasing in union statements, e.g. <code>type Foo = string | string[];</code></li>
+<li><code>&quot;in-intersections&quot;</code>, allows aliasing in intersection statements, e.g. <code>type Foo = string &amp; string[];</code></li>
+<li><code>&quot;in-unions-and-intersections&quot;</code>, allows aliasing in union and/or intersection statements.</li>
+</ul>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowMappedTypes&quot;: &quot;always&quot; }</code> options:</p>
+<pre><code class="language-ts">type Foo&lt;T&gt; = { readonly [P in keyof T]: T[P] };
+
+type Foo&lt;T&gt; = { [P in keyof T]?: T[P] };
+
+type Foo&lt;T, U&gt; =
+  | { readonly [P in keyof T]: T[P] }
+  | { readonly [P in keyof U]: U[P] };
+
+type Foo&lt;T, U&gt; = { [P in keyof T]?: T[P] } | { [P in keyof U]?: U[P] };
+
+type Foo&lt;T, U&gt; = { readonly [P in keyof T]: T[P] } &amp; {
+  readonly [P in keyof U]: U[P];
+};
+
+type Foo&lt;T, U&gt; = { [P in keyof T]?: T[P] } &amp; { [P in keyof U]?: U[P] };
+</code></pre>
+<p>Examples of <strong>incorrect</strong> code for the <code>{ &quot;allowMappedTypes&quot;: &quot;in-unions&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo&lt;T&gt; = { readonly [P in keyof T]: T[P] };
+
+type Foo&lt;T&gt; = { [P in keyof T]?: T[P] };
+
+type Foo&lt;T, U&gt; = { readonly [P in keyof T]: T[P] } &amp; {
+  readonly [P in keyof U]: U[P];
+};
+
+type Foo&lt;T, U&gt; = { [P in keyof T]?: T[P] } &amp; { [P in keyof U]?: U[P] };
+</code></pre>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowMappedTypes&quot;: &quot;in-unions&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo&lt;T, U&gt; =
+  | { readonly [P in keyof T]: T[P] }
+  | { readonly [P in keyof U]: U[P] };
+
+type Foo&lt;T, U&gt; = { [P in keyof T]?: T[P] } | { [P in keyof U]?: U[P] };
+</code></pre>
+<p>Examples of <strong>incorrect</strong> code for the <code>{ &quot;allowMappedTypes&quot;: &quot;in-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo&lt;T&gt; = { readonly [P in keyof T]: T[P] };
+
+type Foo&lt;T&gt; = { [P in keyof T]?: T[P] };
+
+type Foo&lt;T, U&gt; =
+  | { readonly [P in keyof T]: T[P] }
+  | { readonly [P in keyof U]: U[P] };
+
+type Foo&lt;T, U&gt; = { [P in keyof T]?: T[P] } | { [P in keyof U]?: U[P] };
+</code></pre>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowMappedTypes&quot;: &quot;in-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo&lt;T, U&gt; = { readonly [P in keyof T]: T[P] } &amp; {
+  readonly [P in keyof U]: U[P];
+};
+
+type Foo&lt;T, U&gt; = { [P in keyof T]?: T[P] } &amp; { [P in keyof U]?: U[P] };
+</code></pre>
+<p>Examples of <strong>incorrect</strong> code for the <code>{ &quot;allowMappedTypes&quot;: &quot;in-unions-and-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo&lt;T&gt; = { readonly [P in keyof T]: T[P] };
+
+type Foo&lt;T&gt; = { [P in keyof T]?: T[P] };
+</code></pre>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowMappedTypes&quot;: &quot;in-unions-and-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo&lt;T, U&gt; =
+  | { readonly [P in keyof T]: T[P] }
+  | { readonly [P in keyof U]: U[P] };
+
+type Foo&lt;T, U&gt; = { [P in keyof T]?: T[P] } | { [P in keyof U]?: U[P] };
+
+type Foo&lt;T, U&gt; = { readonly [P in keyof T]: T[P] } &amp; {
+  readonly [P in keyof U]: U[P];
+};
+
+type Foo&lt;T, U&gt; = { [P in keyof T]?: T[P] } &amp; { [P in keyof U]?: U[P] };
+</code></pre>
+<h3><code>allowTupleTypes</code></h3>
+<p>This applies to tuple types (<code>type Foo = [number]</code>).</p>
+<p>The setting accepts the following options:</p>
+<ul>
+<li><code>&quot;always&quot;</code> or <code>&quot;never&quot;</code> to active or deactivate the feature.</li>
+<li><code>&quot;in-unions&quot;</code>, allows tuples in union statements, e.g. <code>type Foo = [string] | [string, string];</code></li>
+<li><code>&quot;in-intersections&quot;</code>, allows tuples in intersection statements, e.g. <code>type Foo = [string] &amp; [string, string];</code></li>
+<li><code>&quot;in-unions-and-intersections&quot;</code>, allows tuples in union and/or intersection statements.</li>
+</ul>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowTupleTypes&quot;: &quot;always&quot; }</code> options:</p>
+<pre><code class="language-ts">type Foo = [number];
+
+type Foo = [number] | [number, number];
+
+type Foo = [number] &amp; [number, number];
+
+type Foo = [number] | ([number, number] &amp; [string, string]);
+</code></pre>
+<p>Examples of <strong>incorrect</strong> code for the <code>{ &quot;allowTupleTypes&quot;: &quot;in-unions&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo = [number];
+
+type Foo = [number] &amp; [number, number];
+
+type Foo = [string] &amp; [number];
+</code></pre>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowTupleTypes&quot;: &quot;in-unions&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo = [number] | [number, number];
+
+type Foo = [string] | [number];
+</code></pre>
+<p>Examples of <strong>incorrect</strong> code for the <code>{ &quot;allowTupleTypes&quot;: &quot;in-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo = [number];
+
+type Foo = [number] | [number, number];
+
+type Foo = [string] | [number];
+</code></pre>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowTupleTypes&quot;: &quot;in-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo = [number] &amp; [number, number];
+
+type Foo = [string] &amp; [number];
+</code></pre>
+<p>Examples of <strong>incorrect</strong> code for the <code>{ &quot;allowTupleTypes&quot;: &quot;in-unions-and-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo = [number];
+
+type Foo = [string];
+</code></pre>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowLiterals&quot;: &quot;in-unions-and-intersections&quot; }</code> option:</p>
+<pre><code class="language-ts">type Foo = [number] &amp; [number, number];
+
+type Foo = [string] | [number];
+</code></pre>
+<h3><code>allowGenerics</code></h3>
+<p>This applies to generic types, including TypeScript provided global utility types (<code>type Foo = Record&lt;string, number&gt;</code>).</p>
+<p>The setting accepts the following options:</p>
+<ul>
+<li><code>&quot;always&quot;</code> or <code>&quot;never&quot;</code> to active or deactivate the feature.</li>
+</ul>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;allowGenerics&quot;: &quot;always&quot; }</code> options:</p>
+<pre><code class="language-ts">type Foo = Bar&lt;string&gt;;
+
+type Foo = Record&lt;string, number&gt;;
+
+type Foo = Readonly&lt;Bar&gt;;
+
+type Foo = Partial&lt;Bar&gt;;
+
+type Foo = Omit&lt;Bar, &#x27;a&#x27; | &#x27;b&#x27;&gt;;
+</code></pre>
+<h2>When Not To Use It</h2>
+<p>When you can&#x27;t express some shape with an interface or you need to use a union, tuple type,
+callback, etc. that would cause the code to be unreadable or impractical.</p>
+<h2>Further Reading</h2>
+<ul>
+<li><a href="https://www.typescriptlang.org/docs/handbook/advanced-types.html">Advance Types</a></li>
+</ul>
+<h2>Related To</h2>
+<ul>
+<li>TSLint: <a href="https://palantir.github.io/tslint/rules/interface-over-type-literal/">interface-over-type-literal</a></li>
+</ul>
+<h2>Attributes</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->✅ Recommended</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->🔧 Fixable</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->💭 Requires type information</li>
+</ul></div></main><footer class="jsx-cbfd42e26539136"><a href="https://cloud.zdns.cn" target="_blank" rel="noopener noreferrer" class="jsx-cbfd42e26539136">Powered by <img src="/zdns.svg" alt="zdns" class="jsx-cbfd42e26539136 logo"/></a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"rule":"# `no-type-alias`\n\nDisallow the use of type aliases.\n\nIn TypeScript, type aliases serve three purposes:\n\n- Aliasing other types so that we can refer to them using a simpler name.\n\n```ts\n// this...\ntype Person = {\n    firstName: string,\n    lastName: string,\n    age: number\n};\n\nfunction addPerson(person : Person) { ... }\n\n// is easier to read than this...\nfunction addPerson(person : { firstName: string, lastName: string, age: number}) { ... }\n```\n\n- Act sort of like an interface, providing a set of methods and properties that must exist\n  in the objects implementing the type.\n\n```ts\ntype Person = {\n    firstName: string,\n    lastName: string,\n    age: number,\n    walk: () =\u003e void,\n    talk: () =\u003e void\n};\n\n// you know person will have 3 properties and 2 methods,\n// because the structure has already been defined.\nvar person : Person = { ... }\n\n// so we can be sure that this will work\nperson.walk();\n```\n\n- Act like mapping tools between types to allow quick modifications.\n\n```ts\ntype Immutable\u003cT\u003e = { readonly [P in keyof T]: T[P] };\n\ntype Person = {\n  name: string;\n  age: number;\n};\n\ntype ImmutablePerson = Immutable\u003cPerson\u003e;\n\nvar person: ImmutablePerson = { name: 'John', age: 30 };\nperson.name = 'Brad'; // error, readonly property\n```\n\nWhen aliasing, the type alias does not create a new type, it just creates a new name\nto refer to the original type. So aliasing primitives and other simple types, tuples, unions\nor intersections can some times be redundant.\n\n```ts\n// this doesn't make much sense\ntype myString = string;\n```\n\nOn the other hand, using a type alias as an interface can limit your ability to:\n\n- Reuse your code: interfaces can be extended or implemented by other types. Type aliases cannot.\n- Debug your code: interfaces create a new name, so is easy to identify the base type of an object\n  while debugging the application.\n\nFinally, mapping types is an advanced technique and leaving it open can quickly become a pain point\nin your application.\n\n## Rule Details\n\nThis rule disallows the use of type aliases in favor of interfaces\nand simplified types (primitives, tuples, unions, intersections, etc).\n\n## Options\n\nThis rule, in its default state, does not require any argument. If you would like to enable one\nor more of the following you may pass an object with the options set as follows:\n\n- `allowAliases` set to `\"always\"` will allow you to do aliasing (Defaults to `\"never\"`).\n- `allowCallbacks` set to `\"always\"` will allow you to use type aliases with callbacks (Defaults to `\"never\"`)\n- `allowConditionalTypes` set to `\"always\"` will allow you to use type aliases with conditional types (Defaults to `\"never\"`)\n- `allowConstructors` set to `\"always\"` will allow you to use type aliases with constructors (Defaults to `\"never\"`)\n- `allowLiterals` set to `\"always\"` will allow you to use type aliases with literal objects (Defaults to `\"never\"`)\n- `allowMappedTypes` set to `\"always\"` will allow you to use type aliases as mapping tools (Defaults to `\"never\"`)\n- `allowTupleTypes` set to `\"always\"` will allow you to use type aliases with tuples (Defaults to `\"never\"`)\n- `allowGenerics` set to `\"always\"` will allow you to use type aliases with generics (Defaults to `\"never\"`)\n\n### `allowAliases`\n\nThis applies to primitive types and reference types.\n\nThe setting accepts the following values:\n\n- `\"always\"` or `\"never\"` to active or deactivate the feature.\n- `\"in-unions\"`, allows aliasing in union statements, e.g. `type Foo = string | string[];`\n- `\"in-intersections\"`, allows aliasing in intersection statements, e.g. `type Foo = string \u0026 string[];`\n- `\"in-unions-and-intersections\"`, allows aliasing in union and/or intersection statements.\n\nExamples of **correct** code for the `{ \"allowAliases\": \"always\" }` options:\n\n```ts\n// primitives\ntype Foo = 'a';\n\ntype Foo = 'a' | 'b';\n\ntype Foo = string;\n\ntype Foo = string | string[];\n\ntype Foo = string \u0026 string[];\n\n// reference types\ninterface Bar {}\nclass Baz implements Bar {}\n\ntype Foo = Bar;\n\ntype Foo = Bar | Baz;\n\ntype Foo = Bar \u0026 Baz;\n```\n\nExamples of **incorrect** code for the `{ \"allowAliases\": \"in-unions\" }` option:\n\n```ts\n// primitives\ntype Foo = 'a';\n\ntype Foo = string;\n\ntype Foo = string \u0026 string[];\n\n// reference types\ninterface Bar {}\nclass Baz implements Bar {}\n\ntype Foo = Bar;\n\ntype Foo = Bar \u0026 Baz;\n```\n\nExamples of **correct** code for the `{ \"allowAliases\": \"in-unions\" }` option:\n\n```ts\n// primitives\ntype Foo = 'a' | 'b';\n\ntype Foo = string | string[];\n\n// reference types\ninterface Bar {}\nclass Baz implements Bar {}\n\ntype Foo = Bar | Baz;\n```\n\nExamples of **incorrect** code for the `{ \"allowAliases\": \"in-intersections\" }` option:\n\n```ts\n// primitives\ntype Foo = 'a';\n\ntype Foo = 'a' | 'b';\n\ntype Foo = string;\n\ntype Foo = string | string[];\n\n// reference types\ninterface Bar {}\nclass Baz implements Bar {}\n\ntype Foo = Bar;\n\ntype Foo = Bar | Baz;\n```\n\nExamples of **correct** code for the `{ \"allowAliases\": \"in-intersections\" }` option:\n\n```ts\n// primitives\ntype Foo = string \u0026 string[];\n\n// reference types\ninterface Bar {}\nclass Baz implements Bar {}\n\ntype Foo = Bar \u0026 Baz;\n```\n\nExamples of **incorrect** code for the `{ \"allowAliases\": \"in-unions-and-intersections\" }` option:\n\n```ts\n// primitives\ntype Foo = 'a';\n\ntype Foo = string;\n\n// reference types\ninterface Bar {}\nclass Baz implements Bar {}\n\ntype Foo = Bar;\n```\n\nExamples of **correct** code for the `{ \"allowAliases\": \"in-unions-and-intersections\" }` option:\n\n```ts\n// primitives\ntype Foo = 'a' | 'b';\n\ntype Foo = string | string[];\n\ntype Foo = string \u0026 string[];\n\n// reference types\ninterface Bar {}\nclass Baz implements Bar {}\n\ntype Foo = Bar | Baz;\n\ntype Foo = Bar \u0026 Baz;\n```\n\n### `allowCallbacks`\n\nThis applies to function types.\n\nThe setting accepts the following values:\n\n- `\"always\"` or `\"never\"` to active or deactivate the feature.\n\nExamples of **correct** code for the `{ \"allowCallbacks\": \"always\" }` option:\n\n```ts\ntype Foo = () =\u003e void;\n\ntype Foo = (name: string) =\u003e string;\n\nclass Person {}\n\ntype Foo = (name: string, age: number) =\u003e string | Person;\n\ntype Foo = (name: string, age: number) =\u003e string \u0026 Person;\n```\n\n### `allowConditionalTypes`\n\nThis applies to conditional types.\n\nExamples of **correct** code for the `{ \"allowConditionalTypes\": \"always\" }` option:\n\n```ts\ntype Foo\u003cT\u003e = T extends number ? number : null;\n```\n\n### `allowConstructors`\n\nThis applies to constructor types.\n\nThe setting accepts the following values:\n\n- `\"always\"` or `\"never\"` to active or deactivate the feature.\n\nExamples of **correct** code for the `{ \"allowConstructors\": \"always\" }` option:\n\n```ts\ntype Foo = new () =\u003e void;\n```\n\n### `allowLiterals`\n\nThis applies to literal types (`type Foo = { ... }`).\n\nThe setting accepts the following options:\n\n- `\"always\"` or `\"never\"` to active or deactivate the feature.\n- `\"in-unions\"`, allows literals in union statements, e.g. `type Foo = string | string[];`\n- `\"in-intersections\"`, allows literals in intersection statements, e.g. `type Foo = string \u0026 string[];`\n- `\"in-unions-and-intersections\"`, allows literals in union and/or intersection statements.\n\nExamples of **correct** code for the `{ \"allowLiterals\": \"always\" }` options:\n\n```ts\ntype Foo = {};\n\ntype Foo = {\n  name: string;\n  age: number;\n};\n\ntype Foo = {\n  name: string;\n  age: number;\n  walk: (miles: number) =\u003e void;\n};\n\ntype Foo = { name: string } | { age: number };\n\ntype Foo = { name: string } \u0026 { age: number };\n```\n\nExamples of **incorrect** code for the `{ \"allowLiterals\": \"in-unions\" }` option:\n\n```ts\ntype Foo = {};\n\ntype Foo = {\n  name: string;\n  age: number;\n};\n\ntype Foo = {\n  name: string;\n  age: number;\n  walk: (miles: number) =\u003e void;\n};\n\ntype Foo = { name: string } \u0026 { age: number };\n```\n\nExamples of **correct** code for the `{ \"allowLiterals\": \"in-unions\" }` option:\n\n```ts\ntype Foo = { name: string } | { age: number };\n```\n\nExamples of **incorrect** code for the `{ \"allowLiterals\": \"in-intersections\" }` option:\n\n```ts\ntype Foo = {};\n\ntype Foo = {\n  name: string;\n  age: number;\n};\n\ntype Foo = {\n  name: string;\n  age: number;\n  walk: (miles: number) =\u003e void;\n};\n\ntype Foo = { name: string } | { age: number };\n```\n\nExamples of **correct** code for the `{ \"allowLiterals\": \"in-intersections\" }` option:\n\n```ts\ntype Foo = { name: string } \u0026 { age: number };\n```\n\nExamples of **incorrect** code for the `{ \"allowLiterals\": \"in-unions-and-intersections\" }` option:\n\n```ts\ntype Foo = {};\n\ntype Foo = {\n  name: string;\n  age: number;\n};\n\ntype Foo = {\n  name: string;\n  age: number;\n  walk: (miles: number) =\u003e void;\n};\n```\n\nExamples of **correct** code for the `{ \"allowLiterals\": \"in-unions-and-intersections\" }` option:\n\n```ts\ntype Foo = { name: string } | { age: number };\n\ntype Foo = { name: string } \u0026 { age: number };\n```\n\n### `allowMappedTypes`\n\nThis applies to literal types.\n\nThe setting accepts the following values:\n\n- `\"always\"` or `\"never\"` to active or deactivate the feature.\n- `\"in-unions\"`, allows aliasing in union statements, e.g. `type Foo = string | string[];`\n- `\"in-intersections\"`, allows aliasing in intersection statements, e.g. `type Foo = string \u0026 string[];`\n- `\"in-unions-and-intersections\"`, allows aliasing in union and/or intersection statements.\n\nExamples of **correct** code for the `{ \"allowMappedTypes\": \"always\" }` options:\n\n```ts\ntype Foo\u003cT\u003e = { readonly [P in keyof T]: T[P] };\n\ntype Foo\u003cT\u003e = { [P in keyof T]?: T[P] };\n\ntype Foo\u003cT, U\u003e =\n  | { readonly [P in keyof T]: T[P] }\n  | { readonly [P in keyof U]: U[P] };\n\ntype Foo\u003cT, U\u003e = { [P in keyof T]?: T[P] } | { [P in keyof U]?: U[P] };\n\ntype Foo\u003cT, U\u003e = { readonly [P in keyof T]: T[P] } \u0026 {\n  readonly [P in keyof U]: U[P];\n};\n\ntype Foo\u003cT, U\u003e = { [P in keyof T]?: T[P] } \u0026 { [P in keyof U]?: U[P] };\n```\n\nExamples of **incorrect** code for the `{ \"allowMappedTypes\": \"in-unions\" }` option:\n\n```ts\ntype Foo\u003cT\u003e = { readonly [P in keyof T]: T[P] };\n\ntype Foo\u003cT\u003e = { [P in keyof T]?: T[P] };\n\ntype Foo\u003cT, U\u003e = { readonly [P in keyof T]: T[P] } \u0026 {\n  readonly [P in keyof U]: U[P];\n};\n\ntype Foo\u003cT, U\u003e = { [P in keyof T]?: T[P] } \u0026 { [P in keyof U]?: U[P] };\n```\n\nExamples of **correct** code for the `{ \"allowMappedTypes\": \"in-unions\" }` option:\n\n```ts\ntype Foo\u003cT, U\u003e =\n  | { readonly [P in keyof T]: T[P] }\n  | { readonly [P in keyof U]: U[P] };\n\ntype Foo\u003cT, U\u003e = { [P in keyof T]?: T[P] } | { [P in keyof U]?: U[P] };\n```\n\nExamples of **incorrect** code for the `{ \"allowMappedTypes\": \"in-intersections\" }` option:\n\n```ts\ntype Foo\u003cT\u003e = { readonly [P in keyof T]: T[P] };\n\ntype Foo\u003cT\u003e = { [P in keyof T]?: T[P] };\n\ntype Foo\u003cT, U\u003e =\n  | { readonly [P in keyof T]: T[P] }\n  | { readonly [P in keyof U]: U[P] };\n\ntype Foo\u003cT, U\u003e = { [P in keyof T]?: T[P] } | { [P in keyof U]?: U[P] };\n```\n\nExamples of **correct** code for the `{ \"allowMappedTypes\": \"in-intersections\" }` option:\n\n```ts\ntype Foo\u003cT, U\u003e = { readonly [P in keyof T]: T[P] } \u0026 {\n  readonly [P in keyof U]: U[P];\n};\n\ntype Foo\u003cT, U\u003e = { [P in keyof T]?: T[P] } \u0026 { [P in keyof U]?: U[P] };\n```\n\nExamples of **incorrect** code for the `{ \"allowMappedTypes\": \"in-unions-and-intersections\" }` option:\n\n```ts\ntype Foo\u003cT\u003e = { readonly [P in keyof T]: T[P] };\n\ntype Foo\u003cT\u003e = { [P in keyof T]?: T[P] };\n```\n\nExamples of **correct** code for the `{ \"allowMappedTypes\": \"in-unions-and-intersections\" }` option:\n\n```ts\ntype Foo\u003cT, U\u003e =\n  | { readonly [P in keyof T]: T[P] }\n  | { readonly [P in keyof U]: U[P] };\n\ntype Foo\u003cT, U\u003e = { [P in keyof T]?: T[P] } | { [P in keyof U]?: U[P] };\n\ntype Foo\u003cT, U\u003e = { readonly [P in keyof T]: T[P] } \u0026 {\n  readonly [P in keyof U]: U[P];\n};\n\ntype Foo\u003cT, U\u003e = { [P in keyof T]?: T[P] } \u0026 { [P in keyof U]?: U[P] };\n```\n\n### `allowTupleTypes`\n\nThis applies to tuple types (`type Foo = [number]`).\n\nThe setting accepts the following options:\n\n- `\"always\"` or `\"never\"` to active or deactivate the feature.\n- `\"in-unions\"`, allows tuples in union statements, e.g. `type Foo = [string] | [string, string];`\n- `\"in-intersections\"`, allows tuples in intersection statements, e.g. `type Foo = [string] \u0026 [string, string];`\n- `\"in-unions-and-intersections\"`, allows tuples in union and/or intersection statements.\n\nExamples of **correct** code for the `{ \"allowTupleTypes\": \"always\" }` options:\n\n```ts\ntype Foo = [number];\n\ntype Foo = [number] | [number, number];\n\ntype Foo = [number] \u0026 [number, number];\n\ntype Foo = [number] | ([number, number] \u0026 [string, string]);\n```\n\nExamples of **incorrect** code for the `{ \"allowTupleTypes\": \"in-unions\" }` option:\n\n```ts\ntype Foo = [number];\n\ntype Foo = [number] \u0026 [number, number];\n\ntype Foo = [string] \u0026 [number];\n```\n\nExamples of **correct** code for the `{ \"allowTupleTypes\": \"in-unions\" }` option:\n\n```ts\ntype Foo = [number] | [number, number];\n\ntype Foo = [string] | [number];\n```\n\nExamples of **incorrect** code for the `{ \"allowTupleTypes\": \"in-intersections\" }` option:\n\n```ts\ntype Foo = [number];\n\ntype Foo = [number] | [number, number];\n\ntype Foo = [string] | [number];\n```\n\nExamples of **correct** code for the `{ \"allowTupleTypes\": \"in-intersections\" }` option:\n\n```ts\ntype Foo = [number] \u0026 [number, number];\n\ntype Foo = [string] \u0026 [number];\n```\n\nExamples of **incorrect** code for the `{ \"allowTupleTypes\": \"in-unions-and-intersections\" }` option:\n\n```ts\ntype Foo = [number];\n\ntype Foo = [string];\n```\n\nExamples of **correct** code for the `{ \"allowLiterals\": \"in-unions-and-intersections\" }` option:\n\n```ts\ntype Foo = [number] \u0026 [number, number];\n\ntype Foo = [string] | [number];\n```\n\n### `allowGenerics`\n\nThis applies to generic types, including TypeScript provided global utility types (`type Foo = Record\u003cstring, number\u003e`).\n\nThe setting accepts the following options:\n\n- `\"always\"` or `\"never\"` to active or deactivate the feature.\n\nExamples of **correct** code for the `{ \"allowGenerics\": \"always\" }` options:\n\n```ts\ntype Foo = Bar\u003cstring\u003e;\n\ntype Foo = Record\u003cstring, number\u003e;\n\ntype Foo = Readonly\u003cBar\u003e;\n\ntype Foo = Partial\u003cBar\u003e;\n\ntype Foo = Omit\u003cBar, 'a' | 'b'\u003e;\n```\n\n## When Not To Use It\n\nWhen you can't express some shape with an interface or you need to use a union, tuple type,\ncallback, etc. that would cause the code to be unreadable or impractical.\n\n## Further Reading\n\n- [Advance Types](https://www.typescriptlang.org/docs/handbook/advanced-types.html)\n\n## Related To\n\n- TSLint: [interface-over-type-literal](https://palantir.github.io/tslint/rules/interface-over-type-literal/)\n\n## Attributes\n\n- [ ] ✅ Recommended\n- [ ] 🔧 Fixable\n- [ ] 💭 Requires type information\n"},"__N_SSG":true},"page":"/[rule]","query":{"rule":"no-type-alias.md"},"buildId":"V190Mxkh11cN1_jT2mDz7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

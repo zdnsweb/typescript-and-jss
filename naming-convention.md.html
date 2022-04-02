@@ -1,0 +1,742 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><meta name="theme-color" content="#1976d2"/><title class="jsx-cbfd42e26539136">Typescript and JSS</title><link rel="icon" href="/zdns.svg" class="jsx-cbfd42e26539136"/><meta name="next-head-count" content="5"/><meta name="theme-color" content="#90caf9"/><link rel="preload" href="/_next/static/css/ef46db3751d8e999.css" as="style"/><link rel="stylesheet" href="/_next/static/css/ef46db3751d8e999.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-fcec467324f41dbb.js" defer=""></script><script src="/_next/static/chunks/framework-e70c6273bfe3f237.js" defer=""></script><script src="/_next/static/chunks/main-7c9e8fd8226b6573.js" defer=""></script><script src="/_next/static/chunks/pages/_app-0617cd64ea924586.js" defer=""></script><script src="/_next/static/chunks/505-0c2bccf53cd8dae5.js" defer=""></script><script src="/_next/static/chunks/pages/%5Brule%5D-b74fec192cf33e56.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_buildManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_ssgManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_middlewareManifest.js" defer=""></script><style id="__jsx-4ab09977da39fd03">.container.jsx-cbfd42e26539136{min-height:100vh;padding:0 .5rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main.jsx-cbfd42e26539136{padding:5rem 0;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136{width:100%;height:100px;border-top:1px solid#eaeaea;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136 img.jsx-cbfd42e26539136{margin-left:.5rem}footer.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}a.jsx-cbfd42e26539136{color:inherit;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{color:#0070f3;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:hover,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:focus,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:active{text-decoration:underline}.title.jsx-cbfd42e26539136{margin:0;line-height:1.15;font-size:4rem}.title.jsx-cbfd42e26539136,.description.jsx-cbfd42e26539136{text-align:center}.description.jsx-cbfd42e26539136{line-height:1.5;font-size:1.5rem}code.jsx-cbfd42e26539136{background:#fafafa;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:.75rem;font-size:1.1rem;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}.grid.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:800px;margin-top:3rem}.card.jsx-cbfd42e26539136{margin:1rem;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;padding:1.5rem;text-align:left;color:inherit;text-decoration:none;border:1px solid#eaeaea;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-transition:color.15s ease,border-color.15s ease;-moz-transition:color.15s ease,border-color.15s ease;-o-transition:color.15s ease,border-color.15s ease;transition:color.15s ease,border-color.15s ease}.card.jsx-cbfd42e26539136:hover,.card.jsx-cbfd42e26539136:focus,.card.jsx-cbfd42e26539136:active{color:#0070f3;border-color:#0070f3}.card.jsx-cbfd42e26539136 h3.jsx-cbfd42e26539136{margin:0 0 1rem 0;font-size:1.5rem}.card.jsx-cbfd42e26539136 p.jsx-cbfd42e26539136{margin:0;font-size:1.25rem;line-height:1.5}.logo.jsx-cbfd42e26539136{height:1em}@media(max-width:600px){.grid.jsx-cbfd42e26539136{width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}}</style><style id="__jsx-5750d7069672f50d">html,body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}</style><style data-emotion="css "></style></head><body><div id="__next" data-reactroot=""><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><div class="jsx-cbfd42e26539136 container"><main class="jsx-cbfd42e26539136"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-aoeo82"><h1><code>naming-convention</code></h1>
+<p>Enforces naming conventions for everything across a codebase.</p>
+<p>Enforcing naming conventions helps keep the codebase consistent, and reduces overhead when thinking about how to name a variable.
+Additionally, a well-designed style guide can help communicate intent, such as by enforcing all private properties begin with an <code>_</code>, and all global-level constants are written in <code>UPPER_CASE</code>.</p>
+<p>There are many different rules that have existed over time, but they have had the problem of not having enough granularity, meaning it was hard to have a well defined style guide, and most of the time you needed 3 or more rules at once to enforce different conventions, hoping they didn&#x27;t conflict.</p>
+<h2>Rule Details</h2>
+<p>This rule allows you to enforce conventions for any identifier, using granular selectors to create a fine-grained style guide.</p>
+<p>:::note</p>
+<p>This rule only needs type information in specific cases, detailed below.</p>
+<p>:::</p>
+<h2>Options</h2>
+<p>This rule accepts an array of objects, with each object describing a different naming convention.
+Each property will be described in detail below. Also see the examples section below for illustrated examples.</p>
+<pre><code class="language-ts">type Options = {
+  // format options
+  format:
+    | (
+        | &#x27;camelCase&#x27;
+        | &#x27;strictCamelCase&#x27;
+        | &#x27;PascalCase&#x27;
+        | &#x27;StrictPascalCase&#x27;
+        | &#x27;snake_case&#x27;
+        | &#x27;UPPER_CASE&#x27;
+      )[]
+    | null;
+  custom?: {
+    regex: string;
+    match: boolean;
+  };
+  leadingUnderscore?:
+    | &#x27;forbid&#x27;
+    | &#x27;require&#x27;
+    | &#x27;requireDouble&#x27;
+    | &#x27;allow&#x27;
+    | &#x27;allowDouble&#x27;
+    | &#x27;allowSingleOrDouble&#x27;;
+  trailingUnderscore?:
+    | &#x27;forbid&#x27;
+    | &#x27;require&#x27;
+    | &#x27;requireDouble&#x27;
+    | &#x27;allow&#x27;
+    | &#x27;allowDouble&#x27;
+    | &#x27;allowSingleOrDouble&#x27;;
+  prefix?: string[];
+  suffix?: string[];
+
+  // selector options
+  selector: Selector | Selector[];
+  filter?:
+    | string
+    | {
+        regex: string;
+        match: boolean;
+      };
+  // the allowed values for these are dependent on the selector - see below
+  modifiers?: Modifiers&lt;Selector&gt;[];
+  types?: Types&lt;Selector&gt;[];
+}[];
+
+// the default config is similar to ESLint&#x27;s camelcase rule but more strict
+const defaultOptions: Options = [
+  {
+    selector: &#x27;default&#x27;,
+    format: [&#x27;camelCase&#x27;],
+    leadingUnderscore: &#x27;allow&#x27;,
+    trailingUnderscore: &#x27;allow&#x27;,
+  },
+
+  {
+    selector: &#x27;variable&#x27;,
+    format: [&#x27;camelCase&#x27;, &#x27;UPPER_CASE&#x27;],
+    leadingUnderscore: &#x27;allow&#x27;,
+    trailingUnderscore: &#x27;allow&#x27;,
+  },
+
+  {
+    selector: &#x27;typeLike&#x27;,
+    format: [&#x27;PascalCase&#x27;],
+  },
+];
+</code></pre>
+<h3>Format Options</h3>
+<p>Every single selector can have the same set of format options.
+For information about how each selector is applied, see <a href="#how-does-the-rule-evaluate-a-names-format">&quot;How does the rule evaluate a name&#x27;s format?&quot;</a>.</p>
+<h4><code>format</code></h4>
+<p>The <code>format</code> option defines the allowed formats for the identifier. This option accepts an array of the following values, and the identifier can match any of them:</p>
+<ul>
+<li><code>camelCase</code> - standard camelCase format - no underscores are allowed between characters, and consecutive capitals are allowed (i.e. both <code>myID</code> and <code>myId</code> are valid).</li>
+<li><code>strictCamelCase</code> - same as <code>camelCase</code>, but consecutive capitals are not allowed (i.e. <code>myId</code> is valid, but <code>myID</code> is not).</li>
+<li><code>PascalCase</code> - same as <code>camelCase</code>, except the first character must be upper-case.</li>
+<li><code>StrictPascalCase</code> - same as <code>strictCamelCase</code>, except the first character must be upper-case.</li>
+<li><code>snake_case</code> - standard snake_case format - all characters must be lower-case, and underscores are allowed.</li>
+<li><code>UPPER_CASE</code> - same as <code>snake_case</code>, except all characters must be upper-case.</li>
+</ul>
+<p>Instead of an array, you may also pass <code>null</code>. This signifies &quot;this selector shall not have its format checked&quot;.
+This can be useful if you want to enforce no particular format for a specific selector, after applying a group selector.</p>
+<h4><code>custom</code></h4>
+<p>The <code>custom</code> option defines a custom regex that the identifier must (or must not) match. This option allows you to have a bit more finer-grained control over identifiers, letting you ban (or force) certain patterns and substrings.
+Accepts an object with the following properties:</p>
+<ul>
+<li><code>regex</code> - a string that is then passed into RegExp to create a new regular expression: <code>new RegExp(regex)</code></li>
+<li><code>match</code> - true if the identifier <em>must</em> match the <code>regex</code>, false if the identifier <em>must not</em> match the <code>regex</code>.</li>
+</ul>
+<h4><code>filter</code></h4>
+<p>The <code>filter</code> option operates similar to <code>custom</code>, accepting the same shaped object, except that it controls if the rest of the configuration should or should not be applied to an identifier.</p>
+<p>You can use this to include or exclude specific identifiers from specific configurations.</p>
+<p>Accepts an object with the following properties:</p>
+<ul>
+<li><code>regex</code> - a string that is then passed into RegExp to create a new regular expression: <code>new RegExp(regex)</code></li>
+<li><code>match</code> - true if the identifier <em>must</em> match the <code>regex</code>, false if the identifier <em>must not</em> match the <code>regex</code>.</li>
+</ul>
+<p>Alternatively, <code>filter</code> accepts a regular expression (anything accepted into <code>new RegExp(filter)</code>). In this case, it&#x27;s treated as if you had passed an object with the regex and <code>match: true</code>.</p>
+<h4><code>leadingUnderscore</code> / <code>trailingUnderscore</code></h4>
+<p>The <code>leadingUnderscore</code> / <code>trailingUnderscore</code> options control whether leading/trailing underscores are considered valid. Accepts one of the following values:</p>
+<ul>
+<li><code>forbid</code> - a leading/trailing underscore is not allowed at all.</li>
+<li><code>require</code> - a single leading/trailing underscore must be included.</li>
+<li><code>requireDouble</code> - two leading/trailing underscores must be included.</li>
+<li><code>allow</code> - existence of a single leading/trailing underscore is not explicitly enforced.</li>
+<li><code>allowDouble</code> - existence of a double leading/trailing underscore is not explicitly enforced.</li>
+<li><code>allowSingleOrDouble</code> - existence of a single or a double leading/trailing underscore is not explicitly enforced.</li>
+</ul>
+<h4><code>prefix</code> / <code>suffix</code></h4>
+<p>The <code>prefix</code> / <code>suffix</code> options control which prefix/suffix strings must exist for the identifier. Accepts an array of strings.</p>
+<p>If these are provided, the identifier must start with one of the provided values. For example, if you provide <code>{ prefix: [&#x27;IFace&#x27;, &#x27;Class&#x27;, &#x27;Type&#x27;] }</code>, then the following names are valid: <code>IFaceFoo</code>, <code>ClassBar</code>, <code>TypeBaz</code>, but the name <code>Bang</code> is not valid, as it contains none of the prefixes.</p>
+<p><strong>Note:</strong> As <a href="#format-options">documented above</a>, the prefix is trimmed before format is validated, therefore PascalCase must be used to allow variables such as <code>isEnabled</code> using the prefix <code>is</code>.</p>
+<h3>Selector Options</h3>
+<ul>
+<li><code>selector</code> allows you to specify what types of identifiers to target.<!-- -->
+<ul>
+<li>Accepts one or array of selectors to define an option block that applies to one or multiple selectors.</li>
+<li>For example, if you provide <code>{ selector: [&#x27;variable&#x27;, &#x27;function&#x27;] }</code>, then it will apply the same option to variable and function nodes.</li>
+<li>See <a href="#allowed-selectors-modifiers-and-types">Allowed Selectors, Modifiers and Types</a> below for the complete list of allowed selectors.</li>
+</ul>
+</li>
+<li><code>modifiers</code> allows you to specify which modifiers to granularly apply to, such as the accessibility (<code>private</code>/<code>public</code>/<code>protected</code>), or if the thing is <code>static</code>, etc.<!-- -->
+<ul>
+<li>The name must match <em>all</em> of the modifiers.</li>
+<li>For example, if you provide <code>{ modifiers: [&#x27;private&#x27;, &#x27;static&#x27;, &#x27;readonly&#x27;] }</code>, then it will only match something that is <code>private static readonly</code>, and something that is just <code>private</code> will not match.</li>
+<li>The following <code>modifiers</code> are allowed:<!-- -->
+<ul>
+<li><code>const</code> - matches a variable declared as being <code>const</code> (<code>const x = 1</code>).</li>
+<li><code>destructured</code> - matches a variable declared via an object destructuring pattern (<code>const {x, z = 2}</code>).<!-- -->
+<ul>
+<li>Note that this does not match renamed destructured properties (<code>const {x: y, a: b = 2}</code>).</li>
+</ul>
+</li>
+<li><code>global</code> - matches a variable/function declared in the top-level scope.</li>
+<li><code>exported</code> - matches anything that is exported from the module.</li>
+<li><code>unused</code> - matches anything that is not used.</li>
+<li><code>requiresQuotes</code> - matches any name that requires quotes as it is not a valid identifier (i.e. has a space, a dash, etc in it).</li>
+<li><code>public</code> - matches any member that is either explicitly declared as <code>public</code>, or has no visibility modifier (i.e. implicitly public).</li>
+<li><code>readonly</code>, <code>static</code>, <code>abstract</code>, <code>protected</code>, <code>private</code> - matches any member explicitly declared with the given modifier.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>types</code> allows you to specify which types to match. This option supports simple, primitive types only (<code>boolean</code>, <code>string</code>, <code>number</code>, <code>array</code>, <code>function</code>).<!-- -->
+<ul>
+<li>The name must match <em>one</em> of the types.</li>
+<li><strong><em>NOTE - Using this option will require that you lint with type information.</em></strong></li>
+<li>For example, this lets you do things like enforce that <code>boolean</code> variables are prefixed with a verb.</li>
+<li>The following <code>types</code> are allowed:<!-- -->
+<ul>
+<li><code>boolean</code> matches any type assignable to <code>boolean | null | undefined</code></li>
+<li><code>string</code> matches any type assignable to <code>string | null | undefined</code></li>
+<li><code>number</code> matches any type assignable to <code>number | null | undefined</code></li>
+<li><code>array</code> matches any type assignable to <code>Array&lt;unknown&gt; | null | undefined</code></li>
+<li><code>function</code> matches any type assignable to <code>Function | null | undefined</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The ordering of selectors does not matter. The implementation will automatically sort the selectors to ensure they match from most-specific to least specific. It will keep checking selectors in that order until it finds one that matches the name. See <a href="#how-does-the-rule-automatically-order-selectors">&quot;How does the rule automatically order selectors?&quot;</a></p>
+<h4>Allowed Selectors, Modifiers and Types</h4>
+<p>There are two types of selectors, individual selectors, and grouped selectors.</p>
+<h5>Individual Selectors</h5>
+<p>Individual Selectors match specific, well-defined sets. There is no overlap between each of the individual selectors.</p>
+<ul>
+<li><code>variable</code> - matches any <code>var</code> / <code>let</code> / <code>const</code> variable name.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>const</code>, <code>destructured</code>, <code>global</code>, <code>exported</code>, <code>unused</code>.</li>
+<li>Allowed <code>types</code>: <code>boolean</code>, <code>string</code>, <code>number</code>, <code>function</code>, <code>array</code>.</li>
+</ul>
+</li>
+<li><code>function</code> - matches any named function declaration or named function expression.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>global</code>, <code>exported</code>, <code>unused</code>.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+<li><code>parameter</code> - matches any function parameter. Does not match parameter properties.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>destructured</code>, <code>unused</code>.</li>
+<li>Allowed <code>types</code>: <code>boolean</code>, <code>string</code>, <code>number</code>, <code>function</code>, <code>array</code>.</li>
+</ul>
+</li>
+<li><code>classProperty</code> - matches any class property. Does not match properties that have direct function expression or arrow function expression values.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>abstract</code>, <code>private</code>, <code>protected</code>, <code>public</code>, <code>readonly</code>, <code>requiresQuotes</code>, <code>static</code>.</li>
+<li>Allowed <code>types</code>: <code>boolean</code>, <code>string</code>, <code>number</code>, <code>function</code>, <code>array</code>.</li>
+</ul>
+</li>
+<li><code>objectLiteralProperty</code> - matches any object literal property. Does not match properties that have direct function expression or arrow function expression values.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>public</code>, <code>requiresQuotes</code>.</li>
+<li>Allowed <code>types</code>: <code>boolean</code>, <code>string</code>, <code>number</code>, <code>function</code>, <code>array</code>.</li>
+</ul>
+</li>
+<li><code>typeProperty</code> - matches any object type property. Does not match properties that have direct function expression or arrow function expression values.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>public</code>, <code>readonly</code>, <code>requiresQuotes</code>.</li>
+<li>Allowed <code>types</code>: <code>boolean</code>, <code>string</code>, <code>number</code>, <code>function</code>, <code>array</code>.</li>
+</ul>
+</li>
+<li><code>parameterProperty</code> - matches any parameter property.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>private</code>, <code>protected</code>, <code>public</code>, <code>readonly</code>.</li>
+<li>Allowed <code>types</code>: <code>boolean</code>, <code>string</code>, <code>number</code>, <code>function</code>, <code>array</code>.</li>
+</ul>
+</li>
+<li><code>classMethod</code> - matches any class method. Also matches properties that have direct function expression or arrow function expression values. Does not match accessors.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>abstract</code>, <code>private</code>, <code>protected</code>, <code>public</code>, <code>requiresQuotes</code>, <code>static</code>.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+<li><code>objectLiteralMethod</code> - matches any object literal method. Also matches properties that have direct function expression or arrow function expression values. Does not match accessors.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>public</code>, <code>requiresQuotes</code>.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+<li><code>typeMethod</code> - matches any object type method. Also matches properties that have direct function expression or arrow function expression values. Does not match accessors.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>public</code>, <code>requiresQuotes</code>.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+<li><code>accessor</code> - matches any accessor.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>abstract</code>, <code>private</code>, <code>protected</code>, <code>public</code>, <code>requiresQuotes</code>, <code>static</code>.</li>
+<li>Allowed <code>types</code>: <code>boolean</code>, <code>string</code>, <code>number</code>, <code>function</code>, <code>array</code>.</li>
+</ul>
+</li>
+<li><code>enumMember</code> - matches any enum member.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>requiresQuotes</code>.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+<li><code>class</code> - matches any class declaration.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>abstract</code>, <code>exported</code>, <code>unused</code>.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+<li><code>interface</code> - matches any interface declaration.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>exported</code>, <code>unused</code>.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+<li><code>typeAlias</code> - matches any type alias declaration.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>exported</code>, <code>unused</code>.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+<li><code>enum</code> - matches any enum declaration.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>exported</code>, <code>unused</code>.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+<li><code>typeParameter</code> - matches any generic type parameter declaration.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>unused</code>.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+</ul>
+<h5>Group Selectors</h5>
+<p>Group Selectors are provided for convenience, and essentially bundle up sets of individual selectors.</p>
+<ul>
+<li><code>default</code> - matches everything.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: all modifiers.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+<li><code>variableLike</code> - matches the same as <code>variable</code>, <code>function</code> and <code>parameter</code>.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>unused</code>.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+<li><code>memberLike</code> - matches the same as <code>property</code>, <code>parameterProperty</code>, <code>method</code>, <code>accessor</code>, <code>enumMember</code>.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>private</code>, <code>protected</code>, <code>public</code>, <code>static</code>, <code>readonly</code>, <code>abstract</code>, <code>requiresQuotes</code>.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+<li><code>typeLike</code> - matches the same as <code>class</code>, <code>interface</code>, <code>typeAlias</code>, <code>enum</code>, <code>typeParameter</code>.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>abstract</code>, <code>unused</code>.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+<li><code>property</code> - matches the same as <code>classProperty</code>, <code>objectLiteralProperty</code>, <code>typeProperty</code>.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>private</code>, <code>protected</code>, <code>public</code>, <code>static</code>, <code>readonly</code>, <code>abstract</code>, <code>requiresQuotes</code>.</li>
+<li>Allowed <code>types</code>: <code>boolean</code>, <code>string</code>, <code>number</code>, <code>function</code>, <code>array</code>.</li>
+</ul>
+</li>
+<li><code>method</code> - matches the same as <code>classMethod</code>, <code>objectLiteralMethod</code>, <code>typeMethod</code>.<!-- -->
+<ul>
+<li>Allowed <code>modifiers</code>: <code>private</code>, <code>protected</code>, <code>public</code>, <code>static</code>, <code>readonly</code>, <code>abstract</code>, <code>requiresQuotes</code>.</li>
+<li>Allowed <code>types</code>: none.</li>
+</ul>
+</li>
+</ul>
+<h2>FAQ</h2>
+<p>This is a big rule, and there&#x27;s a lot of docs. Here are a few clarifications that people often ask about or figure out via trial-and-error.</p>
+<h3>How does the rule evaluate a selector?</h3>
+<p>Each selector is checked in the following way:</p>
+<ol>
+<li>check the <code>selector</code>
+<ol>
+<li>if <code>selector</code> is one individual selector → the name&#x27;s type must be of that type.</li>
+<li>if <code>selector</code> is a group selector → the name&#x27;s type must be one of the grouped types.</li>
+<li>if <code>selector</code> is an array of selectors → apply the above for each selector in the array.</li>
+</ol>
+</li>
+<li>check the <code>filter</code>
+<ol>
+<li>if <code>filter</code> is omitted → skip this step.</li>
+<li>if the name matches the <code>filter</code> → continue evaluating this selector.</li>
+<li>if the name does not match the <code>filter</code> → skip this selector and continue to the next selector.</li>
+</ol>
+</li>
+<li>check the <code>types</code>
+<ol>
+<li>if <code>types</code> is omitted → skip this step.</li>
+<li>if the name has a type in <code>types</code> → continue evaluating this selector.</li>
+<li>if the name does not have a type in <code>types</code> → skip this selector and continue to the next selector.</li>
+</ol>
+</li>
+</ol>
+<p>A name is considered to pass the config if it:</p>
+<ol>
+<li>Matches one selector and passes all of that selector&#x27;s format checks.</li>
+<li>Matches no selectors.</li>
+</ol>
+<p>A name is considered to fail the config if it matches one selector and fails one that selector&#x27;s format checks.</p>
+<h3>How does the rule automatically order selectors?</h3>
+<p>Each identifier should match exactly one selector. It may match multiple group selectors - but only ever one selector.
+With that in mind - the base sort order works out to be:</p>
+<ol>
+<li>Individual Selectors</li>
+<li>Grouped Selectors</li>
+<li>Default Selector</li>
+</ol>
+<p>Within each of these categories, some further sorting occurs based on what selector options are supplied:</p>
+<ol>
+<li><code>filter</code> is given the highest priority above all else.</li>
+<li><code>types</code></li>
+<li><code>modifiers</code></li>
+<li>everything else</li>
+</ol>
+<p>For example, if you provide the following config:</p>
+<pre><code class="language-ts">[
+  /* 1 */ { selector: &#x27;default&#x27;, format: [&#x27;camelCase&#x27;] },
+  /* 2 */ { selector: &#x27;variable&#x27;, format: [&#x27;snake_case&#x27;] },
+  /* 3 */ { selector: &#x27;variable&#x27;, types: [&#x27;boolean&#x27;], format: [&#x27;UPPER_CASE&#x27;] },
+  /* 4 */ { selector: &#x27;variableLike&#x27;, format: [&#x27;PascalCase&#x27;] },
+];
+</code></pre>
+<p>Then for the code <code>const x = 1</code>, the rule will validate the selectors in the following order: <code>3</code>, <code>2</code>, <code>4</code>, <code>1</code>.
+To clearly spell it out:</p>
+<ul>
+<li>(3) is tested first because it has <code>types</code> and is an individual selector.</li>
+<li>(2) is tested next because it is an individual selector.</li>
+<li>(4) is tested next as it is a grouped selector.</li>
+<li>(1) is tested last as it is the base default selector.</li>
+</ul>
+<p>Its worth noting that whilst this order is applied, all selectors may not run on a name.
+This is explained in <a href="#how-does-the-rule-evaluate-a-names-format">&quot;How does the rule evaluate a name&#x27;s format?&quot;</a></p>
+<h3>How does the rule evaluate a name&#x27;s format?</h3>
+<p>When the format of an identifier is checked, it is checked in the following order:</p>
+<ol>
+<li>validate leading underscore</li>
+<li>validate trailing underscore</li>
+<li>validate prefix</li>
+<li>validate suffix</li>
+<li>validate custom</li>
+<li>validate format</li>
+</ol>
+<p>For steps 1-4, if the identifier matches the option, the matching part will be removed.
+This is done so that you can apply formats like PascalCase without worrying about prefixes or underscores causing it to not match.</p>
+<p>One final note is that if the name were to become empty via this trimming process, it is considered to match all <code>format</code>s. An example of where this might be useful is for generic type parameters, where you want all names to be prefixed with <code>T</code>, but also want to allow for the single character <code>T</code> name.</p>
+<p>Here are some examples to help illustrate</p>
+<p>Name: <code>_IMyInterface</code>
+Selector:</p>
+<pre><code class="language-json">{
+  &quot;leadingUnderscore&quot;: &quot;require&quot;,
+  &quot;prefix&quot;: [&quot;I&quot;],
+  &quot;format&quot;: [&quot;UPPER_CASE&quot;, &quot;StrictPascalCase&quot;]
+}
+</code></pre>
+<ol>
+<li><code>name = _IMyInterface</code></li>
+<li>validate leading underscore<!-- -->
+<ol>
+<li>config is provided</li>
+<li>check name → pass</li>
+<li>Trim underscore → <code>name = IMyInterface</code></li>
+</ol>
+</li>
+<li>validate trailing underscore<!-- -->
+<ol>
+<li>config is not provided → skip</li>
+</ol>
+</li>
+<li>validate prefix<!-- -->
+<ol>
+<li>config is provided</li>
+<li>check name → pass</li>
+<li>Trim prefix → <code>name = MyInterface</code></li>
+</ol>
+</li>
+<li>validate suffix<!-- -->
+<ol>
+<li>config is not provided → skip</li>
+</ol>
+</li>
+<li>validate custom<!-- -->
+<ol>
+<li>config is not provided → skip</li>
+</ol>
+</li>
+<li>validate format<!-- -->
+<ol>
+<li>for each format...<!-- -->
+<ol>
+<li><code>format = &#x27;UPPER_CASE&#x27;</code>
+<ol>
+<li>check format → fail.<!-- -->
+<ul>
+<li>Important to note that if you supply multiple formats - the name only needs to match <em>one</em> of them!</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><code>format = &#x27;StrictPascalCase&#x27;</code>
+<ol>
+<li>check format → success.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><strong><em>success</em></strong></li>
+</ol>
+<p>Name: <code>IMyInterface</code>
+Selector:</p>
+<pre><code class="language-json">{
+  &quot;format&quot;: [&quot;StrictPascalCase&quot;],
+  &quot;trailingUnderscore&quot;: &quot;allow&quot;,
+  &quot;custom&quot;: {
+    &quot;regex&quot;: &quot;^I[A-Z]&quot;,
+    &quot;match&quot;: false
+  }
+}
+</code></pre>
+<ol>
+<li><code>name = IMyInterface</code></li>
+<li>validate leading underscore<!-- -->
+<ol>
+<li>config is not provided → skip</li>
+</ol>
+</li>
+<li>validate trailing underscore<!-- -->
+<ol>
+<li>config is provided</li>
+<li>check name → pass</li>
+<li>Trim underscore → <code>name = IMyInterface</code></li>
+</ol>
+</li>
+<li>validate prefix<!-- -->
+<ol>
+<li>config is not provided → skip</li>
+</ol>
+</li>
+<li>validate suffix<!-- -->
+<ol>
+<li>config is not provided → skip</li>
+</ol>
+</li>
+<li>validate custom<!-- -->
+<ol>
+<li>config is provided</li>
+<li><code>regex = new RegExp(&quot;^I[A-Z]&quot;)</code></li>
+<li><code>regex.test(name) === custom.match</code></li>
+<li><strong><em>fail</em></strong> → report and exit</li>
+</ol>
+</li>
+</ol>
+<h3>What happens if I provide a <code>modifiers</code> to a Group Selector?</h3>
+<p>Some group selectors accept <code>modifiers</code>. For the most part these will work exactly the same as with individual selectors.
+There is one exception to this in that a modifier might not apply to all individual selectors covered by a group selector.</p>
+<p>For example - <code>memberLike</code> includes the <code>enumMember</code> selector, and it allows the <code>protected</code> modifier.
+An <code>enumMember</code> can never ever be <code>protected</code>, which means that the following config will never match any <code>enumMember</code>:</p>
+<pre><code class="language-json">{
+  &quot;selector&quot;: &quot;memberLike&quot;,
+  &quot;modifiers&quot;: [&quot;protected&quot;]
+}
+</code></pre>
+<p>To help with matching, members that cannot specify an accessibility will always have the <code>public</code> modifier. This means that the following config will always match any <code>enumMember</code>:</p>
+<pre><code class="language-json">{
+  &quot;selector&quot;: &quot;memberLike&quot;,
+  &quot;modifiers&quot;: [&quot;public&quot;]
+}
+</code></pre>
+<h2>Examples</h2>
+<h3>Enforce that all variables, functions and properties follow are camelCase</h3>
+<pre><code class="language-json">{
+  &quot;@typescript-eslint/naming-convention&quot;: [
+    &quot;error&quot;,
+    { &quot;selector&quot;: &quot;variableLike&quot;, &quot;format&quot;: [&quot;camelCase&quot;] }
+  ]
+}
+</code></pre>
+<h3>Enforce that private members are prefixed with an underscore</h3>
+<pre><code class="language-json">{
+  &quot;@typescript-eslint/naming-convention&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;selector&quot;: &quot;memberLike&quot;,
+      &quot;modifiers&quot;: [&quot;private&quot;],
+      &quot;format&quot;: [&quot;camelCase&quot;],
+      &quot;leadingUnderscore&quot;: &quot;require&quot;
+    }
+  ]
+}
+</code></pre>
+<h3>Enforce that boolean variables are prefixed with an allowed verb</h3>
+<p><strong>Note:</strong> As <a href="#format-options">documented above</a>, the prefix is trimmed before format is validated, thus PascalCase must be used to allow variables such as <code>isEnabled</code>.</p>
+<pre><code class="language-json">{
+  &quot;@typescript-eslint/naming-convention&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;selector&quot;: &quot;variable&quot;,
+      &quot;types&quot;: [&quot;boolean&quot;],
+      &quot;format&quot;: [&quot;PascalCase&quot;],
+      &quot;prefix&quot;: [&quot;is&quot;, &quot;should&quot;, &quot;has&quot;, &quot;can&quot;, &quot;did&quot;, &quot;will&quot;]
+    }
+  ]
+}
+</code></pre>
+<h3>Enforce that all variables are either in camelCase or UPPER_CASE</h3>
+<pre><code class="language-json">{
+  &quot;@typescript-eslint/naming-convention&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;selector&quot;: &quot;variable&quot;,
+      &quot;format&quot;: [&quot;camelCase&quot;, &quot;UPPER_CASE&quot;]
+    }
+  ]
+}
+</code></pre>
+<h3>Enforce that all const variables are in UPPER_CASE</h3>
+<pre><code class="language-json">{
+  &quot;@typescript-eslint/naming-convention&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;selector&quot;: &quot;variable&quot;,
+      &quot;modifiers&quot;: [&quot;const&quot;],
+      &quot;format&quot;: [&quot;UPPER_CASE&quot;]
+    }
+  ]
+}
+</code></pre>
+<h3>Enforce that type parameters (generics) are prefixed with <code>T</code></h3>
+<p>This allows you to emulate the old <code>generic-type-naming</code> rule.</p>
+<pre><code class="language-json">{
+  &quot;@typescript-eslint/naming-convention&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;selector&quot;: &quot;typeParameter&quot;,
+      &quot;format&quot;: [&quot;PascalCase&quot;],
+      &quot;prefix&quot;: [&quot;T&quot;]
+    }
+  ]
+}
+</code></pre>
+<h3>Enforce that interface names do not begin with an <code>I</code></h3>
+<p>This allows you to emulate the old <code>interface-name-prefix</code> rule.</p>
+<pre><code class="language-json">{
+  &quot;@typescript-eslint/naming-convention&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;selector&quot;: &quot;interface&quot;,
+      &quot;format&quot;: [&quot;PascalCase&quot;],
+      &quot;custom&quot;: {
+        &quot;regex&quot;: &quot;^I[A-Z]&quot;,
+        &quot;match&quot;: false
+      }
+    }
+  ]
+}
+</code></pre>
+<h3>Enforce that variable and function names are in camelCase</h3>
+<p>This allows you to lint multiple type with same pattern.</p>
+<pre><code class="language-json">{
+  &quot;@typescript-eslint/naming-convention&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;selector&quot;: [&quot;variable&quot;, &quot;function&quot;],
+      &quot;format&quot;: [&quot;camelCase&quot;],
+      &quot;leadingUnderscore&quot;: &quot;allow&quot;
+    }
+  ]
+}
+</code></pre>
+<h3>Ignore properties that <strong><em>require</em></strong> quotes</h3>
+<p>Sometimes you have to use a quoted name that breaks the convention (for example, HTTP headers).
+If this is a common thing in your codebase, then you have a few options.</p>
+<p>If you simply want to allow all property names that require quotes, you can use the <code>requiresQuotes</code> modifier to match any property name that <em>requires</em> quoting, and use <code>format: null</code> to ignore the name.</p>
+<pre><code class="language-jsonc">{
+  &quot;@typescript-eslint/naming-convention&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;selector&quot;: [
+        &quot;classProperty&quot;,
+        &quot;objectLiteralProperty&quot;,
+        &quot;typeProperty&quot;,
+        &quot;classMethod&quot;,
+        &quot;objectLiteralMethod&quot;,
+        &quot;typeMethod&quot;,
+        &quot;accessor&quot;,
+        &quot;enumMember&quot;
+      ],
+      &quot;format&quot;: null,
+      &quot;modifiers&quot;: [&quot;requiresQuotes&quot;]
+    }
+  ]
+}
+</code></pre>
+<p>If you have a small and known list of exceptions, you can use the <code>filter</code> option to ignore these specific names only:</p>
+<pre><code class="language-jsonc">{
+  &quot;@typescript-eslint/naming-convention&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;selector&quot;: &quot;property&quot;,
+      &quot;format&quot;: [&quot;strictCamelCase&quot;],
+      &quot;filter&quot;: {
+        // you can expand this regex to add more allowed names
+        &quot;regex&quot;: &quot;^(Property-Name-One|Property-Name-Two)$&quot;,
+        &quot;match&quot;: false
+      }
+    }
+  ]
+}
+</code></pre>
+<p>You can use the <code>filter</code> option to ignore names with specific characters:</p>
+<pre><code class="language-jsonc">{
+  &quot;@typescript-eslint/naming-convention&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;selector&quot;: &quot;property&quot;,
+      &quot;format&quot;: [&quot;strictCamelCase&quot;],
+      &quot;filter&quot;: {
+        // you can expand this regex as you find more cases that require quoting that you want to allow
+        &quot;regex&quot;: &quot;[- ]&quot;,
+        &quot;match&quot;: false
+      }
+    }
+  ]
+}
+</code></pre>
+<p>Note that there is no way to ignore any name that is quoted - only names that are required to be quoted.
+This is intentional - adding quotes around a name is not an escape hatch for proper naming.
+If you want an escape hatch for a specific name - you should can use an <a href="https://eslint.org/docs/user-guide/configuring#disabling-rules-with-inline-comments"><code>eslint-disable</code> comment</a>.</p>
+<h3>Ignore destructured names</h3>
+<p>Sometimes you might want to allow destructured properties to retain their original name, even if it breaks your naming convention.</p>
+<p>You can use the <code>destructured</code> modifier to match these names, and explicitly set <code>format: null</code> to apply no formatting:</p>
+<pre><code class="language-jsonc">{
+  &quot;@typescript-eslint/naming-convention&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;selector&quot;: &quot;variable&quot;,
+      &quot;modifiers&quot;: [&quot;destructured&quot;],
+      &quot;format&quot;: null
+    }
+  ]
+}
+</code></pre>
+<h3>Enforce the codebase follows ESLint&#x27;s <code>camelcase</code> conventions</h3>
+<pre><code class="language-json">{
+  &quot;camelcase&quot;: &quot;off&quot;,
+  &quot;@typescript-eslint/naming-convention&quot;: [
+    &quot;error&quot;,
+    {
+      &quot;selector&quot;: &quot;default&quot;,
+      &quot;format&quot;: [&quot;camelCase&quot;]
+    },
+
+    {
+      &quot;selector&quot;: &quot;variable&quot;,
+      &quot;format&quot;: [&quot;camelCase&quot;, &quot;UPPER_CASE&quot;]
+    },
+    {
+      &quot;selector&quot;: &quot;parameter&quot;,
+      &quot;format&quot;: [&quot;camelCase&quot;],
+      &quot;leadingUnderscore&quot;: &quot;allow&quot;
+    },
+
+    {
+      &quot;selector&quot;: &quot;memberLike&quot;,
+      &quot;modifiers&quot;: [&quot;private&quot;],
+      &quot;format&quot;: [&quot;camelCase&quot;],
+      &quot;leadingUnderscore&quot;: &quot;require&quot;
+    },
+
+    {
+      &quot;selector&quot;: &quot;typeLike&quot;,
+      &quot;format&quot;: [&quot;PascalCase&quot;]
+    }
+  ]
+}
+</code></pre>
+<h2>When Not To Use It</h2>
+<p>If you do not want to enforce naming conventions for anything.</p>
+<h2>Attributes</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->✅ Recommended</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->🔧 Fixable</li>
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->💭 Requires type information</li>
+</ul></div></main><footer class="jsx-cbfd42e26539136"><a href="https://cloud.zdns.cn" target="_blank" rel="noopener noreferrer" class="jsx-cbfd42e26539136">Powered by <img src="/zdns.svg" alt="zdns" class="jsx-cbfd42e26539136 logo"/></a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"rule":"# `naming-convention`\n\nEnforces naming conventions for everything across a codebase.\n\nEnforcing naming conventions helps keep the codebase consistent, and reduces overhead when thinking about how to name a variable.\nAdditionally, a well-designed style guide can help communicate intent, such as by enforcing all private properties begin with an `_`, and all global-level constants are written in `UPPER_CASE`.\n\nThere are many different rules that have existed over time, but they have had the problem of not having enough granularity, meaning it was hard to have a well defined style guide, and most of the time you needed 3 or more rules at once to enforce different conventions, hoping they didn't conflict.\n\n## Rule Details\n\nThis rule allows you to enforce conventions for any identifier, using granular selectors to create a fine-grained style guide.\n\n:::note\n\nThis rule only needs type information in specific cases, detailed below.\n\n:::\n\n## Options\n\nThis rule accepts an array of objects, with each object describing a different naming convention.\nEach property will be described in detail below. Also see the examples section below for illustrated examples.\n\n```ts\ntype Options = {\n  // format options\n  format:\n    | (\n        | 'camelCase'\n        | 'strictCamelCase'\n        | 'PascalCase'\n        | 'StrictPascalCase'\n        | 'snake_case'\n        | 'UPPER_CASE'\n      )[]\n    | null;\n  custom?: {\n    regex: string;\n    match: boolean;\n  };\n  leadingUnderscore?:\n    | 'forbid'\n    | 'require'\n    | 'requireDouble'\n    | 'allow'\n    | 'allowDouble'\n    | 'allowSingleOrDouble';\n  trailingUnderscore?:\n    | 'forbid'\n    | 'require'\n    | 'requireDouble'\n    | 'allow'\n    | 'allowDouble'\n    | 'allowSingleOrDouble';\n  prefix?: string[];\n  suffix?: string[];\n\n  // selector options\n  selector: Selector | Selector[];\n  filter?:\n    | string\n    | {\n        regex: string;\n        match: boolean;\n      };\n  // the allowed values for these are dependent on the selector - see below\n  modifiers?: Modifiers\u003cSelector\u003e[];\n  types?: Types\u003cSelector\u003e[];\n}[];\n\n// the default config is similar to ESLint's camelcase rule but more strict\nconst defaultOptions: Options = [\n  {\n    selector: 'default',\n    format: ['camelCase'],\n    leadingUnderscore: 'allow',\n    trailingUnderscore: 'allow',\n  },\n\n  {\n    selector: 'variable',\n    format: ['camelCase', 'UPPER_CASE'],\n    leadingUnderscore: 'allow',\n    trailingUnderscore: 'allow',\n  },\n\n  {\n    selector: 'typeLike',\n    format: ['PascalCase'],\n  },\n];\n```\n\n### Format Options\n\nEvery single selector can have the same set of format options.\nFor information about how each selector is applied, see [\"How does the rule evaluate a name's format?\"](#how-does-the-rule-evaluate-a-names-format).\n\n#### `format`\n\nThe `format` option defines the allowed formats for the identifier. This option accepts an array of the following values, and the identifier can match any of them:\n\n- `camelCase` - standard camelCase format - no underscores are allowed between characters, and consecutive capitals are allowed (i.e. both `myID` and `myId` are valid).\n- `strictCamelCase` - same as `camelCase`, but consecutive capitals are not allowed (i.e. `myId` is valid, but `myID` is not).\n- `PascalCase` - same as `camelCase`, except the first character must be upper-case.\n- `StrictPascalCase` - same as `strictCamelCase`, except the first character must be upper-case.\n- `snake_case` - standard snake_case format - all characters must be lower-case, and underscores are allowed.\n- `UPPER_CASE` - same as `snake_case`, except all characters must be upper-case.\n\nInstead of an array, you may also pass `null`. This signifies \"this selector shall not have its format checked\".\nThis can be useful if you want to enforce no particular format for a specific selector, after applying a group selector.\n\n#### `custom`\n\nThe `custom` option defines a custom regex that the identifier must (or must not) match. This option allows you to have a bit more finer-grained control over identifiers, letting you ban (or force) certain patterns and substrings.\nAccepts an object with the following properties:\n\n- `regex` - a string that is then passed into RegExp to create a new regular expression: `new RegExp(regex)`\n- `match` - true if the identifier _must_ match the `regex`, false if the identifier _must not_ match the `regex`.\n\n#### `filter`\n\nThe `filter` option operates similar to `custom`, accepting the same shaped object, except that it controls if the rest of the configuration should or should not be applied to an identifier.\n\nYou can use this to include or exclude specific identifiers from specific configurations.\n\nAccepts an object with the following properties:\n\n- `regex` - a string that is then passed into RegExp to create a new regular expression: `new RegExp(regex)`\n- `match` - true if the identifier _must_ match the `regex`, false if the identifier _must not_ match the `regex`.\n\nAlternatively, `filter` accepts a regular expression (anything accepted into `new RegExp(filter)`). In this case, it's treated as if you had passed an object with the regex and `match: true`.\n\n#### `leadingUnderscore` / `trailingUnderscore`\n\nThe `leadingUnderscore` / `trailingUnderscore` options control whether leading/trailing underscores are considered valid. Accepts one of the following values:\n\n- `forbid` - a leading/trailing underscore is not allowed at all.\n- `require` - a single leading/trailing underscore must be included.\n- `requireDouble` - two leading/trailing underscores must be included.\n- `allow` - existence of a single leading/trailing underscore is not explicitly enforced.\n- `allowDouble` - existence of a double leading/trailing underscore is not explicitly enforced.\n- `allowSingleOrDouble` - existence of a single or a double leading/trailing underscore is not explicitly enforced.\n\n#### `prefix` / `suffix`\n\nThe `prefix` / `suffix` options control which prefix/suffix strings must exist for the identifier. Accepts an array of strings.\n\nIf these are provided, the identifier must start with one of the provided values. For example, if you provide `{ prefix: ['IFace', 'Class', 'Type'] }`, then the following names are valid: `IFaceFoo`, `ClassBar`, `TypeBaz`, but the name `Bang` is not valid, as it contains none of the prefixes.\n\n**Note:** As [documented above](#format-options), the prefix is trimmed before format is validated, therefore PascalCase must be used to allow variables such as `isEnabled` using the prefix `is`.\n\n### Selector Options\n\n- `selector` allows you to specify what types of identifiers to target.\n  - Accepts one or array of selectors to define an option block that applies to one or multiple selectors.\n  - For example, if you provide `{ selector: ['variable', 'function'] }`, then it will apply the same option to variable and function nodes.\n  - See [Allowed Selectors, Modifiers and Types](#allowed-selectors-modifiers-and-types) below for the complete list of allowed selectors.\n- `modifiers` allows you to specify which modifiers to granularly apply to, such as the accessibility (`private`/`public`/`protected`), or if the thing is `static`, etc.\n  - The name must match _all_ of the modifiers.\n  - For example, if you provide `{ modifiers: ['private', 'static', 'readonly'] }`, then it will only match something that is `private static readonly`, and something that is just `private` will not match.\n  - The following `modifiers` are allowed:\n    - `const` - matches a variable declared as being `const` (`const x = 1`).\n    - `destructured` - matches a variable declared via an object destructuring pattern (`const {x, z = 2}`).\n      - Note that this does not match renamed destructured properties (`const {x: y, a: b = 2}`).\n    - `global` - matches a variable/function declared in the top-level scope.\n    - `exported` - matches anything that is exported from the module.\n    - `unused` - matches anything that is not used.\n    - `requiresQuotes` - matches any name that requires quotes as it is not a valid identifier (i.e. has a space, a dash, etc in it).\n    - `public` - matches any member that is either explicitly declared as `public`, or has no visibility modifier (i.e. implicitly public).\n    - `readonly`, `static`, `abstract`, `protected`, `private` - matches any member explicitly declared with the given modifier.\n- `types` allows you to specify which types to match. This option supports simple, primitive types only (`boolean`, `string`, `number`, `array`, `function`).\n  - The name must match _one_ of the types.\n  - **_NOTE - Using this option will require that you lint with type information._**\n  - For example, this lets you do things like enforce that `boolean` variables are prefixed with a verb.\n  - The following `types` are allowed:\n    - `boolean` matches any type assignable to `boolean | null | undefined`\n    - `string` matches any type assignable to `string | null | undefined`\n    - `number` matches any type assignable to `number | null | undefined`\n    - `array` matches any type assignable to `Array\u003cunknown\u003e | null | undefined`\n    - `function` matches any type assignable to `Function | null | undefined`\n\nThe ordering of selectors does not matter. The implementation will automatically sort the selectors to ensure they match from most-specific to least specific. It will keep checking selectors in that order until it finds one that matches the name. See [\"How does the rule automatically order selectors?\"](#how-does-the-rule-automatically-order-selectors)\n\n#### Allowed Selectors, Modifiers and Types\n\nThere are two types of selectors, individual selectors, and grouped selectors.\n\n##### Individual Selectors\n\nIndividual Selectors match specific, well-defined sets. There is no overlap between each of the individual selectors.\n\n- `variable` - matches any `var` / `let` / `const` variable name.\n  - Allowed `modifiers`: `const`, `destructured`, `global`, `exported`, `unused`.\n  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.\n- `function` - matches any named function declaration or named function expression.\n  - Allowed `modifiers`: `global`, `exported`, `unused`.\n  - Allowed `types`: none.\n- `parameter` - matches any function parameter. Does not match parameter properties.\n  - Allowed `modifiers`: `destructured`, `unused`.\n  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.\n- `classProperty` - matches any class property. Does not match properties that have direct function expression or arrow function expression values.\n  - Allowed `modifiers`: `abstract`, `private`, `protected`, `public`, `readonly`, `requiresQuotes`, `static`.\n  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.\n- `objectLiteralProperty` - matches any object literal property. Does not match properties that have direct function expression or arrow function expression values.\n  - Allowed `modifiers`: `public`, `requiresQuotes`.\n  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.\n- `typeProperty` - matches any object type property. Does not match properties that have direct function expression or arrow function expression values.\n  - Allowed `modifiers`: `public`, `readonly`, `requiresQuotes`.\n  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.\n- `parameterProperty` - matches any parameter property.\n  - Allowed `modifiers`: `private`, `protected`, `public`, `readonly`.\n  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.\n- `classMethod` - matches any class method. Also matches properties that have direct function expression or arrow function expression values. Does not match accessors.\n  - Allowed `modifiers`: `abstract`, `private`, `protected`, `public`, `requiresQuotes`, `static`.\n  - Allowed `types`: none.\n- `objectLiteralMethod` - matches any object literal method. Also matches properties that have direct function expression or arrow function expression values. Does not match accessors.\n  - Allowed `modifiers`: `public`, `requiresQuotes`.\n  - Allowed `types`: none.\n- `typeMethod` - matches any object type method. Also matches properties that have direct function expression or arrow function expression values. Does not match accessors.\n  - Allowed `modifiers`: `public`, `requiresQuotes`.\n  - Allowed `types`: none.\n- `accessor` - matches any accessor.\n  - Allowed `modifiers`: `abstract`, `private`, `protected`, `public`, `requiresQuotes`, `static`.\n  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.\n- `enumMember` - matches any enum member.\n  - Allowed `modifiers`: `requiresQuotes`.\n  - Allowed `types`: none.\n- `class` - matches any class declaration.\n  - Allowed `modifiers`: `abstract`, `exported`, `unused`.\n  - Allowed `types`: none.\n- `interface` - matches any interface declaration.\n  - Allowed `modifiers`: `exported`, `unused`.\n  - Allowed `types`: none.\n- `typeAlias` - matches any type alias declaration.\n  - Allowed `modifiers`: `exported`, `unused`.\n  - Allowed `types`: none.\n- `enum` - matches any enum declaration.\n  - Allowed `modifiers`: `exported`, `unused`.\n  - Allowed `types`: none.\n- `typeParameter` - matches any generic type parameter declaration.\n  - Allowed `modifiers`: `unused`.\n  - Allowed `types`: none.\n\n##### Group Selectors\n\nGroup Selectors are provided for convenience, and essentially bundle up sets of individual selectors.\n\n- `default` - matches everything.\n  - Allowed `modifiers`: all modifiers.\n  - Allowed `types`: none.\n- `variableLike` - matches the same as `variable`, `function` and `parameter`.\n  - Allowed `modifiers`: `unused`.\n  - Allowed `types`: none.\n- `memberLike` - matches the same as `property`, `parameterProperty`, `method`, `accessor`, `enumMember`.\n  - Allowed `modifiers`: `private`, `protected`, `public`, `static`, `readonly`, `abstract`, `requiresQuotes`.\n  - Allowed `types`: none.\n- `typeLike` - matches the same as `class`, `interface`, `typeAlias`, `enum`, `typeParameter`.\n  - Allowed `modifiers`: `abstract`, `unused`.\n  - Allowed `types`: none.\n- `property` - matches the same as `classProperty`, `objectLiteralProperty`, `typeProperty`.\n  - Allowed `modifiers`: `private`, `protected`, `public`, `static`, `readonly`, `abstract`, `requiresQuotes`.\n  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.\n- `method` - matches the same as `classMethod`, `objectLiteralMethod`, `typeMethod`.\n  - Allowed `modifiers`: `private`, `protected`, `public`, `static`, `readonly`, `abstract`, `requiresQuotes`.\n  - Allowed `types`: none.\n\n## FAQ\n\nThis is a big rule, and there's a lot of docs. Here are a few clarifications that people often ask about or figure out via trial-and-error.\n\n### How does the rule evaluate a selector?\n\nEach selector is checked in the following way:\n\n1. check the `selector`\n   1. if `selector` is one individual selector → the name's type must be of that type.\n   1. if `selector` is a group selector → the name's type must be one of the grouped types.\n   1. if `selector` is an array of selectors → apply the above for each selector in the array.\n1. check the `filter`\n   1. if `filter` is omitted → skip this step.\n   1. if the name matches the `filter` → continue evaluating this selector.\n   1. if the name does not match the `filter` → skip this selector and continue to the next selector.\n1. check the `types`\n   1. if `types` is omitted → skip this step.\n   1. if the name has a type in `types` → continue evaluating this selector.\n   1. if the name does not have a type in `types` → skip this selector and continue to the next selector.\n\nA name is considered to pass the config if it:\n\n1. Matches one selector and passes all of that selector's format checks.\n2. Matches no selectors.\n\nA name is considered to fail the config if it matches one selector and fails one that selector's format checks.\n\n### How does the rule automatically order selectors?\n\nEach identifier should match exactly one selector. It may match multiple group selectors - but only ever one selector.\nWith that in mind - the base sort order works out to be:\n\n1. Individual Selectors\n2. Grouped Selectors\n3. Default Selector\n\nWithin each of these categories, some further sorting occurs based on what selector options are supplied:\n\n1. `filter` is given the highest priority above all else.\n2. `types`\n3. `modifiers`\n4. everything else\n\nFor example, if you provide the following config:\n\n```ts\n[\n  /* 1 */ { selector: 'default', format: ['camelCase'] },\n  /* 2 */ { selector: 'variable', format: ['snake_case'] },\n  /* 3 */ { selector: 'variable', types: ['boolean'], format: ['UPPER_CASE'] },\n  /* 4 */ { selector: 'variableLike', format: ['PascalCase'] },\n];\n```\n\nThen for the code `const x = 1`, the rule will validate the selectors in the following order: `3`, `2`, `4`, `1`.\nTo clearly spell it out:\n\n- (3) is tested first because it has `types` and is an individual selector.\n- (2) is tested next because it is an individual selector.\n- (4) is tested next as it is a grouped selector.\n- (1) is tested last as it is the base default selector.\n\nIts worth noting that whilst this order is applied, all selectors may not run on a name.\nThis is explained in [\"How does the rule evaluate a name's format?\"](#how-does-the-rule-evaluate-a-names-format)\n\n### How does the rule evaluate a name's format?\n\nWhen the format of an identifier is checked, it is checked in the following order:\n\n1. validate leading underscore\n1. validate trailing underscore\n1. validate prefix\n1. validate suffix\n1. validate custom\n1. validate format\n\nFor steps 1-4, if the identifier matches the option, the matching part will be removed.\nThis is done so that you can apply formats like PascalCase without worrying about prefixes or underscores causing it to not match.\n\nOne final note is that if the name were to become empty via this trimming process, it is considered to match all `format`s. An example of where this might be useful is for generic type parameters, where you want all names to be prefixed with `T`, but also want to allow for the single character `T` name.\n\nHere are some examples to help illustrate\n\nName: `_IMyInterface`\nSelector:\n\n```json\n{\n  \"leadingUnderscore\": \"require\",\n  \"prefix\": [\"I\"],\n  \"format\": [\"UPPER_CASE\", \"StrictPascalCase\"]\n}\n```\n\n1. `name = _IMyInterface`\n1. validate leading underscore\n   1. config is provided\n   1. check name → pass\n   1. Trim underscore → `name = IMyInterface`\n1. validate trailing underscore\n   1. config is not provided → skip\n1. validate prefix\n   1. config is provided\n   1. check name → pass\n   1. Trim prefix → `name = MyInterface`\n1. validate suffix\n   1. config is not provided → skip\n1. validate custom\n   1. config is not provided → skip\n1. validate format\n   1. for each format...\n      1. `format = 'UPPER_CASE'`\n         1. check format → fail.\n            - Important to note that if you supply multiple formats - the name only needs to match _one_ of them!\n      1. `format = 'StrictPascalCase'`\n         1. check format → success.\n1. **_success_**\n\nName: `IMyInterface`\nSelector:\n\n```json\n{\n  \"format\": [\"StrictPascalCase\"],\n  \"trailingUnderscore\": \"allow\",\n  \"custom\": {\n    \"regex\": \"^I[A-Z]\",\n    \"match\": false\n  }\n}\n```\n\n1. `name = IMyInterface`\n1. validate leading underscore\n   1. config is not provided → skip\n1. validate trailing underscore\n   1. config is provided\n   1. check name → pass\n   1. Trim underscore → `name = IMyInterface`\n1. validate prefix\n   1. config is not provided → skip\n1. validate suffix\n   1. config is not provided → skip\n1. validate custom\n   1. config is provided\n   1. `regex = new RegExp(\"^I[A-Z]\")`\n   1. `regex.test(name) === custom.match`\n   1. **_fail_** → report and exit\n\n### What happens if I provide a `modifiers` to a Group Selector?\n\nSome group selectors accept `modifiers`. For the most part these will work exactly the same as with individual selectors.\nThere is one exception to this in that a modifier might not apply to all individual selectors covered by a group selector.\n\nFor example - `memberLike` includes the `enumMember` selector, and it allows the `protected` modifier.\nAn `enumMember` can never ever be `protected`, which means that the following config will never match any `enumMember`:\n\n```json\n{\n  \"selector\": \"memberLike\",\n  \"modifiers\": [\"protected\"]\n}\n```\n\nTo help with matching, members that cannot specify an accessibility will always have the `public` modifier. This means that the following config will always match any `enumMember`:\n\n```json\n{\n  \"selector\": \"memberLike\",\n  \"modifiers\": [\"public\"]\n}\n```\n\n## Examples\n\n### Enforce that all variables, functions and properties follow are camelCase\n\n```json\n{\n  \"@typescript-eslint/naming-convention\": [\n    \"error\",\n    { \"selector\": \"variableLike\", \"format\": [\"camelCase\"] }\n  ]\n}\n```\n\n### Enforce that private members are prefixed with an underscore\n\n```json\n{\n  \"@typescript-eslint/naming-convention\": [\n    \"error\",\n    {\n      \"selector\": \"memberLike\",\n      \"modifiers\": [\"private\"],\n      \"format\": [\"camelCase\"],\n      \"leadingUnderscore\": \"require\"\n    }\n  ]\n}\n```\n\n### Enforce that boolean variables are prefixed with an allowed verb\n\n**Note:** As [documented above](#format-options), the prefix is trimmed before format is validated, thus PascalCase must be used to allow variables such as `isEnabled`.\n\n```json\n{\n  \"@typescript-eslint/naming-convention\": [\n    \"error\",\n    {\n      \"selector\": \"variable\",\n      \"types\": [\"boolean\"],\n      \"format\": [\"PascalCase\"],\n      \"prefix\": [\"is\", \"should\", \"has\", \"can\", \"did\", \"will\"]\n    }\n  ]\n}\n```\n\n### Enforce that all variables are either in camelCase or UPPER_CASE\n\n```json\n{\n  \"@typescript-eslint/naming-convention\": [\n    \"error\",\n    {\n      \"selector\": \"variable\",\n      \"format\": [\"camelCase\", \"UPPER_CASE\"]\n    }\n  ]\n}\n```\n\n### Enforce that all const variables are in UPPER_CASE\n\n```json\n{\n  \"@typescript-eslint/naming-convention\": [\n    \"error\",\n    {\n      \"selector\": \"variable\",\n      \"modifiers\": [\"const\"],\n      \"format\": [\"UPPER_CASE\"]\n    }\n  ]\n}\n```\n\n### Enforce that type parameters (generics) are prefixed with `T`\n\nThis allows you to emulate the old `generic-type-naming` rule.\n\n```json\n{\n  \"@typescript-eslint/naming-convention\": [\n    \"error\",\n    {\n      \"selector\": \"typeParameter\",\n      \"format\": [\"PascalCase\"],\n      \"prefix\": [\"T\"]\n    }\n  ]\n}\n```\n\n### Enforce that interface names do not begin with an `I`\n\nThis allows you to emulate the old `interface-name-prefix` rule.\n\n```json\n{\n  \"@typescript-eslint/naming-convention\": [\n    \"error\",\n    {\n      \"selector\": \"interface\",\n      \"format\": [\"PascalCase\"],\n      \"custom\": {\n        \"regex\": \"^I[A-Z]\",\n        \"match\": false\n      }\n    }\n  ]\n}\n```\n\n### Enforce that variable and function names are in camelCase\n\nThis allows you to lint multiple type with same pattern.\n\n```json\n{\n  \"@typescript-eslint/naming-convention\": [\n    \"error\",\n    {\n      \"selector\": [\"variable\", \"function\"],\n      \"format\": [\"camelCase\"],\n      \"leadingUnderscore\": \"allow\"\n    }\n  ]\n}\n```\n\n### Ignore properties that **_require_** quotes\n\nSometimes you have to use a quoted name that breaks the convention (for example, HTTP headers).\nIf this is a common thing in your codebase, then you have a few options.\n\nIf you simply want to allow all property names that require quotes, you can use the `requiresQuotes` modifier to match any property name that _requires_ quoting, and use `format: null` to ignore the name.\n\n```jsonc\n{\n  \"@typescript-eslint/naming-convention\": [\n    \"error\",\n    {\n      \"selector\": [\n        \"classProperty\",\n        \"objectLiteralProperty\",\n        \"typeProperty\",\n        \"classMethod\",\n        \"objectLiteralMethod\",\n        \"typeMethod\",\n        \"accessor\",\n        \"enumMember\"\n      ],\n      \"format\": null,\n      \"modifiers\": [\"requiresQuotes\"]\n    }\n  ]\n}\n```\n\nIf you have a small and known list of exceptions, you can use the `filter` option to ignore these specific names only:\n\n```jsonc\n{\n  \"@typescript-eslint/naming-convention\": [\n    \"error\",\n    {\n      \"selector\": \"property\",\n      \"format\": [\"strictCamelCase\"],\n      \"filter\": {\n        // you can expand this regex to add more allowed names\n        \"regex\": \"^(Property-Name-One|Property-Name-Two)$\",\n        \"match\": false\n      }\n    }\n  ]\n}\n```\n\nYou can use the `filter` option to ignore names with specific characters:\n\n```jsonc\n{\n  \"@typescript-eslint/naming-convention\": [\n    \"error\",\n    {\n      \"selector\": \"property\",\n      \"format\": [\"strictCamelCase\"],\n      \"filter\": {\n        // you can expand this regex as you find more cases that require quoting that you want to allow\n        \"regex\": \"[- ]\",\n        \"match\": false\n      }\n    }\n  ]\n}\n```\n\nNote that there is no way to ignore any name that is quoted - only names that are required to be quoted.\nThis is intentional - adding quotes around a name is not an escape hatch for proper naming.\nIf you want an escape hatch for a specific name - you should can use an [`eslint-disable` comment](https://eslint.org/docs/user-guide/configuring#disabling-rules-with-inline-comments).\n\n### Ignore destructured names\n\nSometimes you might want to allow destructured properties to retain their original name, even if it breaks your naming convention.\n\nYou can use the `destructured` modifier to match these names, and explicitly set `format: null` to apply no formatting:\n\n```jsonc\n{\n  \"@typescript-eslint/naming-convention\": [\n    \"error\",\n    {\n      \"selector\": \"variable\",\n      \"modifiers\": [\"destructured\"],\n      \"format\": null\n    }\n  ]\n}\n```\n\n### Enforce the codebase follows ESLint's `camelcase` conventions\n\n```json\n{\n  \"camelcase\": \"off\",\n  \"@typescript-eslint/naming-convention\": [\n    \"error\",\n    {\n      \"selector\": \"default\",\n      \"format\": [\"camelCase\"]\n    },\n\n    {\n      \"selector\": \"variable\",\n      \"format\": [\"camelCase\", \"UPPER_CASE\"]\n    },\n    {\n      \"selector\": \"parameter\",\n      \"format\": [\"camelCase\"],\n      \"leadingUnderscore\": \"allow\"\n    },\n\n    {\n      \"selector\": \"memberLike\",\n      \"modifiers\": [\"private\"],\n      \"format\": [\"camelCase\"],\n      \"leadingUnderscore\": \"require\"\n    },\n\n    {\n      \"selector\": \"typeLike\",\n      \"format\": [\"PascalCase\"]\n    }\n  ]\n}\n```\n\n## When Not To Use It\n\nIf you do not want to enforce naming conventions for anything.\n\n## Attributes\n\n- [ ] ✅ Recommended\n- [ ] 🔧 Fixable\n- [x] 💭 Requires type information\n"},"__N_SSG":true},"page":"/[rule]","query":{"rule":"naming-convention.md"},"buildId":"V190Mxkh11cN1_jT2mDz7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

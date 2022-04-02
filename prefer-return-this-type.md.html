@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><meta name="theme-color" content="#1976d2"/><title class="jsx-cbfd42e26539136">Typescript and JSS</title><link rel="icon" href="/zdns.svg" class="jsx-cbfd42e26539136"/><meta name="next-head-count" content="5"/><meta name="theme-color" content="#90caf9"/><link rel="preload" href="/_next/static/css/ef46db3751d8e999.css" as="style"/><link rel="stylesheet" href="/_next/static/css/ef46db3751d8e999.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-fcec467324f41dbb.js" defer=""></script><script src="/_next/static/chunks/framework-e70c6273bfe3f237.js" defer=""></script><script src="/_next/static/chunks/main-7c9e8fd8226b6573.js" defer=""></script><script src="/_next/static/chunks/pages/_app-0617cd64ea924586.js" defer=""></script><script src="/_next/static/chunks/505-0c2bccf53cd8dae5.js" defer=""></script><script src="/_next/static/chunks/pages/%5Brule%5D-b74fec192cf33e56.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_buildManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_ssgManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_middlewareManifest.js" defer=""></script><style id="__jsx-4ab09977da39fd03">.container.jsx-cbfd42e26539136{min-height:100vh;padding:0 .5rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main.jsx-cbfd42e26539136{padding:5rem 0;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136{width:100%;height:100px;border-top:1px solid#eaeaea;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136 img.jsx-cbfd42e26539136{margin-left:.5rem}footer.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}a.jsx-cbfd42e26539136{color:inherit;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{color:#0070f3;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:hover,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:focus,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:active{text-decoration:underline}.title.jsx-cbfd42e26539136{margin:0;line-height:1.15;font-size:4rem}.title.jsx-cbfd42e26539136,.description.jsx-cbfd42e26539136{text-align:center}.description.jsx-cbfd42e26539136{line-height:1.5;font-size:1.5rem}code.jsx-cbfd42e26539136{background:#fafafa;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:.75rem;font-size:1.1rem;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}.grid.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:800px;margin-top:3rem}.card.jsx-cbfd42e26539136{margin:1rem;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;padding:1.5rem;text-align:left;color:inherit;text-decoration:none;border:1px solid#eaeaea;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-transition:color.15s ease,border-color.15s ease;-moz-transition:color.15s ease,border-color.15s ease;-o-transition:color.15s ease,border-color.15s ease;transition:color.15s ease,border-color.15s ease}.card.jsx-cbfd42e26539136:hover,.card.jsx-cbfd42e26539136:focus,.card.jsx-cbfd42e26539136:active{color:#0070f3;border-color:#0070f3}.card.jsx-cbfd42e26539136 h3.jsx-cbfd42e26539136{margin:0 0 1rem 0;font-size:1.5rem}.card.jsx-cbfd42e26539136 p.jsx-cbfd42e26539136{margin:0;font-size:1.25rem;line-height:1.5}.logo.jsx-cbfd42e26539136{height:1em}@media(max-width:600px){.grid.jsx-cbfd42e26539136{width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}}</style><style id="__jsx-5750d7069672f50d">html,body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}</style><style data-emotion="css "></style></head><body><div id="__next" data-reactroot=""><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><div class="jsx-cbfd42e26539136 container"><main class="jsx-cbfd42e26539136"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-aoeo82"><h1><code>prefer-return-this-type</code></h1>
+<p>Enforce that <code>this</code> is used when only <code>this</code> type is returned.</p>
+<p><a href="https://en.wikipedia.org/wiki/Method_chaining">Method chaining</a> is a common pattern in OOP languages and TypeScript provides a special <a href="https://www.typescriptlang.org/docs/handbook/2/classes.html#this-types">polymorphic this type</a>.
+If any type other than <code>this</code> is specified as the return type of these chaining methods, TypeScript will fail to cast it when invoking in subclass.</p>
+<pre><code class="language-ts">class Animal {
+  eat(): Animal {
+    console.log(&quot;I&#x27;m moving!&quot;);
+    return this;
+  }
+}
+
+class Cat extends Animal {
+  meow(): Cat {
+    console.log(&#x27;Meow~&#x27;);
+    return this;
+  }
+}
+
+const cat = new Cat();
+// Error: Property &#x27;meow&#x27; does not exist on type &#x27;Animal&#x27;.
+// because `eat` returns `Animal` and not all animals meow.
+cat.eat().meow();
+
+// the error can be fixed by removing the return type of `eat` or use `this` as the return type.
+class Animal {
+  eat(): this {
+    console.log(&quot;I&#x27;m moving!&quot;);
+    return this;
+  }
+}
+
+class Cat extends Animal {
+  meow(): this {
+    console.log(&#x27;Meow~&#x27;);
+    return this;
+  }
+}
+
+const cat = new Cat();
+// no errors. Because `eat` returns `Cat` now
+cat.eat().meow();
+</code></pre>
+<h2>Rule Details</h2>
+<p>Examples of code for this rule:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h3>❌ Incorrect</h3>
+<pre><code class="language-ts">class Foo {
+  f1(): Foo {
+    return this;
+  }
+  f2 = (): Foo =&gt; {
+    return this;
+  };
+  f3(): Foo | undefined {
+    return Math.random() &gt; 0.5 ? this : undefined;
+  }
+}
+</code></pre>
+<h3>✅ Correct</h3>
+<pre><code class="language-ts">class Foo {
+  f1(): this {
+    return this;
+  }
+  f2() {
+    return this;
+  }
+  f3 = (): this =&gt; {
+    return this;
+  };
+  f4 = () =&gt; {
+    return this;
+  };
+}
+
+class Base {}
+class Derived extends Base {
+  f(): Base {
+    return this;
+  }
+}
+</code></pre>
+<h2>When Not To Use It</h2>
+<p>If you don&#x27;t use method chaining or explicit return values, you can safely turn this rule off.</p>
+<h2>Attributes</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->✅ Recommended</li>
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->🔧 Fixable</li>
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->💭 Requires type information</li>
+</ul></div></main><footer class="jsx-cbfd42e26539136"><a href="https://cloud.zdns.cn" target="_blank" rel="noopener noreferrer" class="jsx-cbfd42e26539136">Powered by <img src="/zdns.svg" alt="zdns" class="jsx-cbfd42e26539136 logo"/></a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"rule":"# `prefer-return-this-type`\n\nEnforce that `this` is used when only `this` type is returned.\n\n[Method chaining](https://en.wikipedia.org/wiki/Method_chaining) is a common pattern in OOP languages and TypeScript provides a special [polymorphic this type](https://www.typescriptlang.org/docs/handbook/2/classes.html#this-types).\nIf any type other than `this` is specified as the return type of these chaining methods, TypeScript will fail to cast it when invoking in subclass.\n\n```ts\nclass Animal {\n  eat(): Animal {\n    console.log(\"I'm moving!\");\n    return this;\n  }\n}\n\nclass Cat extends Animal {\n  meow(): Cat {\n    console.log('Meow~');\n    return this;\n  }\n}\n\nconst cat = new Cat();\n// Error: Property 'meow' does not exist on type 'Animal'.\n// because `eat` returns `Animal` and not all animals meow.\ncat.eat().meow();\n\n// the error can be fixed by removing the return type of `eat` or use `this` as the return type.\nclass Animal {\n  eat(): this {\n    console.log(\"I'm moving!\");\n    return this;\n  }\n}\n\nclass Cat extends Animal {\n  meow(): this {\n    console.log('Meow~');\n    return this;\n  }\n}\n\nconst cat = new Cat();\n// no errors. Because `eat` returns `Cat` now\ncat.eat().meow();\n```\n\n## Rule Details\n\nExamples of code for this rule:\n\n\u003c!--tabs--\u003e\n\n### ❌ Incorrect\n\n```ts\nclass Foo {\n  f1(): Foo {\n    return this;\n  }\n  f2 = (): Foo =\u003e {\n    return this;\n  };\n  f3(): Foo | undefined {\n    return Math.random() \u003e 0.5 ? this : undefined;\n  }\n}\n```\n\n### ✅ Correct\n\n```ts\nclass Foo {\n  f1(): this {\n    return this;\n  }\n  f2() {\n    return this;\n  }\n  f3 = (): this =\u003e {\n    return this;\n  };\n  f4 = () =\u003e {\n    return this;\n  };\n}\n\nclass Base {}\nclass Derived extends Base {\n  f(): Base {\n    return this;\n  }\n}\n```\n\n## When Not To Use It\n\nIf you don't use method chaining or explicit return values, you can safely turn this rule off.\n\n## Attributes\n\n- [ ] ✅ Recommended\n- [x] 🔧 Fixable\n- [x] 💭 Requires type information\n"},"__N_SSG":true},"page":"/[rule]","query":{"rule":"prefer-return-this-type.md"},"buildId":"V190Mxkh11cN1_jT2mDz7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

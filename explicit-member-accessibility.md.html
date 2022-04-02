@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><meta name="theme-color" content="#1976d2"/><title class="jsx-cbfd42e26539136">Typescript and JSS</title><link rel="icon" href="/zdns.svg" class="jsx-cbfd42e26539136"/><meta name="next-head-count" content="5"/><meta name="theme-color" content="#90caf9"/><link rel="preload" href="/_next/static/css/ef46db3751d8e999.css" as="style"/><link rel="stylesheet" href="/_next/static/css/ef46db3751d8e999.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-fcec467324f41dbb.js" defer=""></script><script src="/_next/static/chunks/framework-e70c6273bfe3f237.js" defer=""></script><script src="/_next/static/chunks/main-7c9e8fd8226b6573.js" defer=""></script><script src="/_next/static/chunks/pages/_app-0617cd64ea924586.js" defer=""></script><script src="/_next/static/chunks/505-0c2bccf53cd8dae5.js" defer=""></script><script src="/_next/static/chunks/pages/%5Brule%5D-b74fec192cf33e56.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_buildManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_ssgManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_middlewareManifest.js" defer=""></script><style id="__jsx-4ab09977da39fd03">.container.jsx-cbfd42e26539136{min-height:100vh;padding:0 .5rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main.jsx-cbfd42e26539136{padding:5rem 0;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136{width:100%;height:100px;border-top:1px solid#eaeaea;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136 img.jsx-cbfd42e26539136{margin-left:.5rem}footer.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}a.jsx-cbfd42e26539136{color:inherit;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{color:#0070f3;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:hover,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:focus,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:active{text-decoration:underline}.title.jsx-cbfd42e26539136{margin:0;line-height:1.15;font-size:4rem}.title.jsx-cbfd42e26539136,.description.jsx-cbfd42e26539136{text-align:center}.description.jsx-cbfd42e26539136{line-height:1.5;font-size:1.5rem}code.jsx-cbfd42e26539136{background:#fafafa;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:.75rem;font-size:1.1rem;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}.grid.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:800px;margin-top:3rem}.card.jsx-cbfd42e26539136{margin:1rem;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;padding:1.5rem;text-align:left;color:inherit;text-decoration:none;border:1px solid#eaeaea;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-transition:color.15s ease,border-color.15s ease;-moz-transition:color.15s ease,border-color.15s ease;-o-transition:color.15s ease,border-color.15s ease;transition:color.15s ease,border-color.15s ease}.card.jsx-cbfd42e26539136:hover,.card.jsx-cbfd42e26539136:focus,.card.jsx-cbfd42e26539136:active{color:#0070f3;border-color:#0070f3}.card.jsx-cbfd42e26539136 h3.jsx-cbfd42e26539136{margin:0 0 1rem 0;font-size:1.5rem}.card.jsx-cbfd42e26539136 p.jsx-cbfd42e26539136{margin:0;font-size:1.25rem;line-height:1.5}.logo.jsx-cbfd42e26539136{height:1em}@media(max-width:600px){.grid.jsx-cbfd42e26539136{width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}}</style><style id="__jsx-5750d7069672f50d">html,body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}</style><style data-emotion="css "></style></head><body><div id="__next" data-reactroot=""><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><div class="jsx-cbfd42e26539136 container"><main class="jsx-cbfd42e26539136"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-aoeo82"><h1><code>explicit-member-accessibility</code></h1>
+<p>Require explicit accessibility modifiers on class properties and methods.</p>
+<p>Leaving off accessibility modifier and making everything public can make
+your interface hard to use by others.
+If you make all internal pieces private or protected, your interface will
+be easier to use.</p>
+<h2>Rule Details</h2>
+<p>This rule aims to make code more readable and explicit about who can use
+which properties.</p>
+<h2>Options</h2>
+<pre><code class="language-ts">type AccessibilityLevel =
+  | &#x27;explicit&#x27; // require an accessor (including public)
+  | &#x27;no-public&#x27; // don&#x27;t require public
+  | &#x27;off&#x27;; // don&#x27;t check
+
+type Options = {
+  accessibility?: AccessibilityLevel;
+  ignoredMethodNames?: string[];
+  overrides?: {
+    accessors?: AccessibilityLevel;
+    constructors?: AccessibilityLevel;
+    methods?: AccessibilityLevel;
+    properties?: AccessibilityLevel;
+    parameterProperties?: AccessibilityLevel;
+  };
+};
+
+const defaultOptions: Options = {
+  accessibility: &#x27;explicit&#x27;,
+};
+</code></pre>
+<h3>Configuring in a mixed JS/TS codebase</h3>
+<p>If you are working on a codebase within which you lint non-TypeScript code (i.e. <code>.js</code>/<code>.jsx</code>), you should ensure that you should use <a href="https://eslint.org/docs/user-guide/configuring#disabling-rules-only-for-a-group-of-files">ESLint <code>overrides</code></a> to only enable the rule on <code>.ts</code>/<code>.tsx</code> files. If you don&#x27;t, then you will get unfixable lint errors reported within <code>.js</code>/<code>.jsx</code> files.</p>
+<pre><code class="language-jsonc">{
+  &quot;rules&quot;: {
+    // disable the rule for all files
+    &quot;@typescript-eslint/explicit-member-accessibility&quot;: &quot;off&quot;
+  },
+  &quot;overrides&quot;: [
+    {
+      // enable the rule specifically for TypeScript files
+      &quot;files&quot;: [&quot;*.ts&quot;, &quot;*.tsx&quot;],
+      &quot;rules&quot;: {
+        &quot;@typescript-eslint/explicit-member-accessibility&quot;: [&quot;error&quot;]
+      }
+    }
+  ]
+}
+</code></pre>
+<h3><code>accessibility</code></h3>
+<p>This rule in its default state requires no configuration and will enforce that every class member has an accessibility modifier. If you would like to allow for some implicit public members then you have the following options:</p>
+<pre><code class="language-ts">{
+  accessibility: &#x27;explicit&#x27;,
+  overrides: {
+    accessors: &#x27;explicit&#x27;,
+    constructors: &#x27;no-public&#x27;,
+    methods: &#x27;explicit&#x27;,
+    properties: &#x27;off&#x27;,
+    parameterProperties: &#x27;explicit&#x27;
+  }
+}
+</code></pre>
+<p>Note the above is an example of a possible configuration you could use - it is not the default configuration.</p>
+<p>The following patterns are considered incorrect code if no options are provided:</p>
+<pre><code class="language-ts">class Animal {
+  constructor(name) {
+    // No accessibility modifier
+    this.animalName = name;
+  }
+  animalName: string; // No accessibility modifier
+  get name(): string {
+    // No accessibility modifier
+    return this.animalName;
+  }
+  set name(value: string) {
+    // No accessibility modifier
+    this.animalName = value;
+  }
+  walk() {
+    // method
+  }
+}
+</code></pre>
+<p>The following patterns are considered correct with the default options <code>{ accessibility: &#x27;explicit&#x27; }</code>:</p>
+<pre><code class="language-ts">class Animal {
+  public constructor(public breed, name) {
+    // Parameter property and constructor
+    this.animalName = name;
+  }
+  private animalName: string; // Property
+  get name(): string {
+    // get accessor
+    return this.animalName;
+  }
+  set name(value: string) {
+    // set accessor
+    this.animalName = value;
+  }
+  public walk() {
+    // method
+  }
+}
+</code></pre>
+<p>The following patterns are considered incorrect with the accessibility set to <strong>no-public</strong> <code>[{ accessibility: &#x27;no-public&#x27; }]</code>:</p>
+<pre><code class="language-ts">class Animal {
+  public constructor(public breed, name) {
+    // Parameter property and constructor
+    this.animalName = name;
+  }
+  public animalName: string; // Property
+  public get name(): string {
+    // get accessor
+    return this.animalName;
+  }
+  public set name(value: string) {
+    // set accessor
+    this.animalName = value;
+  }
+  public walk() {
+    // method
+  }
+}
+</code></pre>
+<p>The following patterns are considered correct with the accessibility set to <strong>no-public</strong> <code>[{ accessibility: &#x27;no-public&#x27; }]</code>:</p>
+<pre><code class="language-ts">class Animal {
+  constructor(protected breed, name) {
+    // Parameter property and constructor
+    this.name = name;
+  }
+  private animalName: string; // Property
+  get name(): string {
+    // get accessor
+    return this.animalName;
+  }
+  private set name(value: string) {
+    // set accessor
+    this.animalName = value;
+  }
+  protected walk() {
+    // method
+  }
+}
+</code></pre>
+<h3>Overrides</h3>
+<p>There are three ways in which an override can be used.</p>
+<ul>
+<li>To disallow the use of public on a given member.</li>
+<li>To enforce explicit member accessibility when the root has allowed implicit public accessibility</li>
+<li>To disable any checks on given member type</li>
+</ul>
+<h4>Disallow the use of public on a given member</h4>
+<p>e.g. <code>[ { overrides: { constructors: &#x27;no-public&#x27; } } ]</code></p>
+<p>The following patterns are considered incorrect with the example override</p>
+<pre><code class="language-ts">class Animal {
+  public constructor(protected animalName) {}
+  public get name() {
+    return this.animalName;
+  }
+}
+</code></pre>
+<p>The following patterns are considered correct with the example override</p>
+<pre><code class="language-ts">class Animal {
+  constructor(protected animalName) {}
+  public get name() {
+    return this.animalName;
+  }
+}
+</code></pre>
+<h4>Require explicit accessibility for a given member</h4>
+<p>e.g. <code>[ { accessibility: &#x27;no-public&#x27;, overrides: { properties: &#x27;explicit&#x27; } } ]</code></p>
+<p>The following patterns are considered incorrect with the example override</p>
+<pre><code class="language-ts">class Animal {
+  constructor(protected animalName) {}
+  get name() {
+    return this.animalName;
+  }
+  protected set name(value: string) {
+    this.animalName = value;
+  }
+  legs: number;
+  private hasFleas: boolean;
+}
+</code></pre>
+<p>The following patterns are considered correct with the example override</p>
+<pre><code class="language-ts">class Animal {
+  constructor(protected animalName) {}
+  get name() {
+    return this.animalName;
+  }
+  protected set name(value: string) {
+    this.animalName = value;
+  }
+  public legs: number;
+  private hasFleas: boolean;
+}
+</code></pre>
+<p>e.g. <code>[ { accessibility: &#x27;off&#x27;, overrides: { parameterProperties: &#x27;explicit&#x27; } } ]</code></p>
+<p>The following code is considered incorrect with the example override</p>
+<pre><code class="language-ts">class Animal {
+  constructor(readonly animalName: string) {}
+}
+</code></pre>
+<p>The following code patterns are considered correct with the example override</p>
+<pre><code class="language-ts">class Animal {
+  constructor(public readonly animalName: string) {}
+}
+
+class Animal {
+  constructor(public animalName: string) {}
+}
+
+class Animal {
+  constructor(animalName: string) {}
+}
+</code></pre>
+<p>e.g. <code>[ { accessibility: &#x27;off&#x27;, overrides: { parameterProperties: &#x27;no-public&#x27; } } ]</code></p>
+<p>The following code is considered incorrect with the example override</p>
+<pre><code class="language-ts">class Animal {
+  constructor(public readonly animalName: string) {}
+}
+</code></pre>
+<p>The following code is considered correct with the example override</p>
+<pre><code class="language-ts">class Animal {
+  constructor(public animalName: string) {}
+}
+</code></pre>
+<h4>Disable any checks on given member type</h4>
+<p>e.g. <code>[{ overrides: { accessors : &#x27;off&#x27; } } ]</code></p>
+<p>As no checks on the overridden member type are performed all permutations of visibility are permitted for that member type</p>
+<p>The follow pattern is considered incorrect for the given configuration</p>
+<pre><code class="language-ts">class Animal {
+  constructor(protected animalName) {}
+  public get name() {
+    return this.animalName;
+  }
+  get legs() {
+    return this.legCount;
+  }
+}
+</code></pre>
+<p>The following patterns are considered correct with the example override</p>
+<pre><code class="language-ts">class Animal {
+  public constructor(protected animalName) {}
+  public get name() {
+    return this.animalName;
+  }
+  get legs() {
+    return this.legCount;
+  }
+}
+</code></pre>
+<h3>Except specific methods</h3>
+<p>If you want to ignore some specific methods, you can do it by specifying method names. Note that this option does not care for the context, and will ignore every method with these names, which could lead to it missing some cases. You should use this sparingly.
+e.g. <code>[ { ignoredMethodNames: [&#x27;specificMethod&#x27;, &#x27;whateverMethod&#x27;] } ]</code></p>
+<pre><code class="language-ts">class Animal {
+  get specificMethod() {
+    console.log(&#x27;No error because you specified this method on option&#x27;);
+  }
+  get whateverMethod() {
+    console.log(&#x27;No error because you specified this method on option&#x27;);
+  }
+  public get otherMethod() {
+    console.log(&#x27;This method comply with this rule&#x27;);
+  }
+}
+</code></pre>
+<h2>When Not To Use It</h2>
+<p>If you think defaulting to public is a good default, then you should consider using the <code>no-public</code> setting. If you want to mix implicit and explicit public members then disable this rule.</p>
+<h2>Further Reading</h2>
+<ul>
+<li>TypeScript <a href="https://www.typescriptlang.org/docs/handbook/classes.html#public-private-and-protected-modifiers">Accessibility Modifiers</a></li>
+</ul>
+<h2>Related To</h2>
+<ul>
+<li>TSLint: <a href="http://palantir.github.io/tslint/rules/member-access/">member-access</a></li>
+</ul>
+<h2>Attributes</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->✅ Recommended</li>
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->🔧 Fixable</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->💭 Requires type information</li>
+</ul></div></main><footer class="jsx-cbfd42e26539136"><a href="https://cloud.zdns.cn" target="_blank" rel="noopener noreferrer" class="jsx-cbfd42e26539136">Powered by <img src="/zdns.svg" alt="zdns" class="jsx-cbfd42e26539136 logo"/></a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"rule":"# `explicit-member-accessibility`\n\nRequire explicit accessibility modifiers on class properties and methods.\n\nLeaving off accessibility modifier and making everything public can make\nyour interface hard to use by others.\nIf you make all internal pieces private or protected, your interface will\nbe easier to use.\n\n## Rule Details\n\nThis rule aims to make code more readable and explicit about who can use\nwhich properties.\n\n## Options\n\n```ts\ntype AccessibilityLevel =\n  | 'explicit' // require an accessor (including public)\n  | 'no-public' // don't require public\n  | 'off'; // don't check\n\ntype Options = {\n  accessibility?: AccessibilityLevel;\n  ignoredMethodNames?: string[];\n  overrides?: {\n    accessors?: AccessibilityLevel;\n    constructors?: AccessibilityLevel;\n    methods?: AccessibilityLevel;\n    properties?: AccessibilityLevel;\n    parameterProperties?: AccessibilityLevel;\n  };\n};\n\nconst defaultOptions: Options = {\n  accessibility: 'explicit',\n};\n```\n\n### Configuring in a mixed JS/TS codebase\n\nIf you are working on a codebase within which you lint non-TypeScript code (i.e. `.js`/`.jsx`), you should ensure that you should use [ESLint `overrides`](https://eslint.org/docs/user-guide/configuring#disabling-rules-only-for-a-group-of-files) to only enable the rule on `.ts`/`.tsx` files. If you don't, then you will get unfixable lint errors reported within `.js`/`.jsx` files.\n\n```jsonc\n{\n  \"rules\": {\n    // disable the rule for all files\n    \"@typescript-eslint/explicit-member-accessibility\": \"off\"\n  },\n  \"overrides\": [\n    {\n      // enable the rule specifically for TypeScript files\n      \"files\": [\"*.ts\", \"*.tsx\"],\n      \"rules\": {\n        \"@typescript-eslint/explicit-member-accessibility\": [\"error\"]\n      }\n    }\n  ]\n}\n```\n\n### `accessibility`\n\nThis rule in its default state requires no configuration and will enforce that every class member has an accessibility modifier. If you would like to allow for some implicit public members then you have the following options:\n\n```ts\n{\n  accessibility: 'explicit',\n  overrides: {\n    accessors: 'explicit',\n    constructors: 'no-public',\n    methods: 'explicit',\n    properties: 'off',\n    parameterProperties: 'explicit'\n  }\n}\n```\n\nNote the above is an example of a possible configuration you could use - it is not the default configuration.\n\nThe following patterns are considered incorrect code if no options are provided:\n\n```ts\nclass Animal {\n  constructor(name) {\n    // No accessibility modifier\n    this.animalName = name;\n  }\n  animalName: string; // No accessibility modifier\n  get name(): string {\n    // No accessibility modifier\n    return this.animalName;\n  }\n  set name(value: string) {\n    // No accessibility modifier\n    this.animalName = value;\n  }\n  walk() {\n    // method\n  }\n}\n```\n\nThe following patterns are considered correct with the default options `{ accessibility: 'explicit' }`:\n\n```ts\nclass Animal {\n  public constructor(public breed, name) {\n    // Parameter property and constructor\n    this.animalName = name;\n  }\n  private animalName: string; // Property\n  get name(): string {\n    // get accessor\n    return this.animalName;\n  }\n  set name(value: string) {\n    // set accessor\n    this.animalName = value;\n  }\n  public walk() {\n    // method\n  }\n}\n```\n\nThe following patterns are considered incorrect with the accessibility set to **no-public** `[{ accessibility: 'no-public' }]`:\n\n```ts\nclass Animal {\n  public constructor(public breed, name) {\n    // Parameter property and constructor\n    this.animalName = name;\n  }\n  public animalName: string; // Property\n  public get name(): string {\n    // get accessor\n    return this.animalName;\n  }\n  public set name(value: string) {\n    // set accessor\n    this.animalName = value;\n  }\n  public walk() {\n    // method\n  }\n}\n```\n\nThe following patterns are considered correct with the accessibility set to **no-public** `[{ accessibility: 'no-public' }]`:\n\n```ts\nclass Animal {\n  constructor(protected breed, name) {\n    // Parameter property and constructor\n    this.name = name;\n  }\n  private animalName: string; // Property\n  get name(): string {\n    // get accessor\n    return this.animalName;\n  }\n  private set name(value: string) {\n    // set accessor\n    this.animalName = value;\n  }\n  protected walk() {\n    // method\n  }\n}\n```\n\n### Overrides\n\nThere are three ways in which an override can be used.\n\n- To disallow the use of public on a given member.\n- To enforce explicit member accessibility when the root has allowed implicit public accessibility\n- To disable any checks on given member type\n\n#### Disallow the use of public on a given member\n\ne.g. `[ { overrides: { constructors: 'no-public' } } ]`\n\nThe following patterns are considered incorrect with the example override\n\n```ts\nclass Animal {\n  public constructor(protected animalName) {}\n  public get name() {\n    return this.animalName;\n  }\n}\n```\n\nThe following patterns are considered correct with the example override\n\n```ts\nclass Animal {\n  constructor(protected animalName) {}\n  public get name() {\n    return this.animalName;\n  }\n}\n```\n\n#### Require explicit accessibility for a given member\n\ne.g. `[ { accessibility: 'no-public', overrides: { properties: 'explicit' } } ]`\n\nThe following patterns are considered incorrect with the example override\n\n```ts\nclass Animal {\n  constructor(protected animalName) {}\n  get name() {\n    return this.animalName;\n  }\n  protected set name(value: string) {\n    this.animalName = value;\n  }\n  legs: number;\n  private hasFleas: boolean;\n}\n```\n\nThe following patterns are considered correct with the example override\n\n```ts\nclass Animal {\n  constructor(protected animalName) {}\n  get name() {\n    return this.animalName;\n  }\n  protected set name(value: string) {\n    this.animalName = value;\n  }\n  public legs: number;\n  private hasFleas: boolean;\n}\n```\n\ne.g. `[ { accessibility: 'off', overrides: { parameterProperties: 'explicit' } } ]`\n\nThe following code is considered incorrect with the example override\n\n```ts\nclass Animal {\n  constructor(readonly animalName: string) {}\n}\n```\n\nThe following code patterns are considered correct with the example override\n\n```ts\nclass Animal {\n  constructor(public readonly animalName: string) {}\n}\n\nclass Animal {\n  constructor(public animalName: string) {}\n}\n\nclass Animal {\n  constructor(animalName: string) {}\n}\n```\n\ne.g. `[ { accessibility: 'off', overrides: { parameterProperties: 'no-public' } } ]`\n\nThe following code is considered incorrect with the example override\n\n```ts\nclass Animal {\n  constructor(public readonly animalName: string) {}\n}\n```\n\nThe following code is considered correct with the example override\n\n```ts\nclass Animal {\n  constructor(public animalName: string) {}\n}\n```\n\n#### Disable any checks on given member type\n\ne.g. `[{ overrides: { accessors : 'off' } } ]`\n\nAs no checks on the overridden member type are performed all permutations of visibility are permitted for that member type\n\nThe follow pattern is considered incorrect for the given configuration\n\n```ts\nclass Animal {\n  constructor(protected animalName) {}\n  public get name() {\n    return this.animalName;\n  }\n  get legs() {\n    return this.legCount;\n  }\n}\n```\n\nThe following patterns are considered correct with the example override\n\n```ts\nclass Animal {\n  public constructor(protected animalName) {}\n  public get name() {\n    return this.animalName;\n  }\n  get legs() {\n    return this.legCount;\n  }\n}\n```\n\n### Except specific methods\n\nIf you want to ignore some specific methods, you can do it by specifying method names. Note that this option does not care for the context, and will ignore every method with these names, which could lead to it missing some cases. You should use this sparingly.\ne.g. `[ { ignoredMethodNames: ['specificMethod', 'whateverMethod'] } ]`\n\n```ts\nclass Animal {\n  get specificMethod() {\n    console.log('No error because you specified this method on option');\n  }\n  get whateverMethod() {\n    console.log('No error because you specified this method on option');\n  }\n  public get otherMethod() {\n    console.log('This method comply with this rule');\n  }\n}\n```\n\n## When Not To Use It\n\nIf you think defaulting to public is a good default, then you should consider using the `no-public` setting. If you want to mix implicit and explicit public members then disable this rule.\n\n## Further Reading\n\n- TypeScript [Accessibility Modifiers](https://www.typescriptlang.org/docs/handbook/classes.html#public-private-and-protected-modifiers)\n\n## Related To\n\n- TSLint: [member-access](http://palantir.github.io/tslint/rules/member-access/)\n\n## Attributes\n\n- [ ] ✅ Recommended\n- [x] 🔧 Fixable\n- [ ] 💭 Requires type information\n"},"__N_SSG":true},"page":"/[rule]","query":{"rule":"explicit-member-accessibility.md"},"buildId":"V190Mxkh11cN1_jT2mDz7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

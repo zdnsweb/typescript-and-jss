@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><meta name="theme-color" content="#1976d2"/><title class="jsx-cbfd42e26539136">Typescript and JSS</title><link rel="icon" href="/zdns.svg" class="jsx-cbfd42e26539136"/><meta name="next-head-count" content="5"/><meta name="theme-color" content="#90caf9"/><link rel="preload" href="/_next/static/css/ef46db3751d8e999.css" as="style"/><link rel="stylesheet" href="/_next/static/css/ef46db3751d8e999.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-fcec467324f41dbb.js" defer=""></script><script src="/_next/static/chunks/framework-e70c6273bfe3f237.js" defer=""></script><script src="/_next/static/chunks/main-7c9e8fd8226b6573.js" defer=""></script><script src="/_next/static/chunks/pages/_app-0617cd64ea924586.js" defer=""></script><script src="/_next/static/chunks/505-0c2bccf53cd8dae5.js" defer=""></script><script src="/_next/static/chunks/pages/%5Brule%5D-b74fec192cf33e56.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_buildManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_ssgManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_middlewareManifest.js" defer=""></script><style id="__jsx-4ab09977da39fd03">.container.jsx-cbfd42e26539136{min-height:100vh;padding:0 .5rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main.jsx-cbfd42e26539136{padding:5rem 0;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136{width:100%;height:100px;border-top:1px solid#eaeaea;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136 img.jsx-cbfd42e26539136{margin-left:.5rem}footer.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}a.jsx-cbfd42e26539136{color:inherit;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{color:#0070f3;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:hover,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:focus,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:active{text-decoration:underline}.title.jsx-cbfd42e26539136{margin:0;line-height:1.15;font-size:4rem}.title.jsx-cbfd42e26539136,.description.jsx-cbfd42e26539136{text-align:center}.description.jsx-cbfd42e26539136{line-height:1.5;font-size:1.5rem}code.jsx-cbfd42e26539136{background:#fafafa;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:.75rem;font-size:1.1rem;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}.grid.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:800px;margin-top:3rem}.card.jsx-cbfd42e26539136{margin:1rem;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;padding:1.5rem;text-align:left;color:inherit;text-decoration:none;border:1px solid#eaeaea;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-transition:color.15s ease,border-color.15s ease;-moz-transition:color.15s ease,border-color.15s ease;-o-transition:color.15s ease,border-color.15s ease;transition:color.15s ease,border-color.15s ease}.card.jsx-cbfd42e26539136:hover,.card.jsx-cbfd42e26539136:focus,.card.jsx-cbfd42e26539136:active{color:#0070f3;border-color:#0070f3}.card.jsx-cbfd42e26539136 h3.jsx-cbfd42e26539136{margin:0 0 1rem 0;font-size:1.5rem}.card.jsx-cbfd42e26539136 p.jsx-cbfd42e26539136{margin:0;font-size:1.25rem;line-height:1.5}.logo.jsx-cbfd42e26539136{height:1em}@media(max-width:600px){.grid.jsx-cbfd42e26539136{width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}}</style><style id="__jsx-5750d7069672f50d">html,body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}</style><style data-emotion="css "></style></head><body><div id="__next" data-reactroot=""><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><div class="jsx-cbfd42e26539136 container"><main class="jsx-cbfd42e26539136"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-aoeo82"><h1><code>return-await</code></h1>
+<p>Enforces consistent returning of awaited values.</p>
+<p>Returning an awaited promise can make sense for better stack trace information as well as for consistent error handling (returned promises will not be caught in an async function try/catch).</p>
+<h2>Rule Details</h2>
+<p>This rule builds on top of the <a href="https://eslint.org/docs/rules/no-return-await"><code>eslint/no-return-await</code></a> rule.
+It expands upon the base rule to add support for optionally requiring <code>return await</code> in certain cases.</p>
+<h2>How to Use</h2>
+<pre><code class="language-jsonc">{
+  // note you must disable the base rule as it can report incorrect errors
+  &quot;no-return-await&quot;: &quot;off&quot;,
+  &quot;@typescript-eslint/return-await&quot;: &quot;error&quot;
+}
+</code></pre>
+<h2>Options</h2>
+<pre><code class="language-ts">type Options = &#x27;in-try-catch&#x27; | &#x27;always&#x27; | &#x27;never&#x27;;
+
+const defaultOptions: Options = &#x27;in-try-catch&#x27;;
+</code></pre>
+<h3><code>in-try-catch</code></h3>
+<p>Requires that a returned promise must be <code>await</code>ed in <code>try-catch-finally</code> blocks, and disallows it elsewhere.
+Specifically:</p>
+<ul>
+<li>if you <code>return</code> a promise within a <code>try</code>, then it must be <code>await</code>ed.</li>
+<li>if you <code>return</code> a promise within a <code>catch</code>, and there <strong><em>is no</em></strong> <code>finally</code>, then it <strong><em>must not</em></strong> be <code>await</code>ed.</li>
+<li>if you <code>return</code> a promise within a <code>catch</code>, and there <strong><em>is a</em></strong> <code>finally</code>, then it <strong><em>must</em></strong> be <code>await</code>ed.</li>
+<li>if you <code>return</code> a promise within a <code>finally</code>, then it <strong><em>must not</em></strong> be <code>await</code>ed.</li>
+</ul>
+<p>Examples of code with <code>in-try-catch</code>:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h4>❌ Incorrect</h4>
+<pre><code class="language-ts">async function invalidInTryCatch1() {
+  try {
+    return Promise.resolve(&#x27;try&#x27;);
+  } catch (e) {}
+}
+
+async function invalidInTryCatch2() {
+  try {
+    throw new Error(&#x27;error&#x27;);
+  } catch (e) {
+    return await Promise.resolve(&#x27;catch&#x27;);
+  }
+}
+
+async function invalidInTryCatch3() {
+  try {
+    throw new Error(&#x27;error&#x27;);
+  } catch (e) {
+    return Promise.resolve(&#x27;catch&#x27;);
+  } finally {
+    console.log(&#x27;cleanup&#x27;);
+  }
+}
+
+async function invalidInTryCatch4() {
+  try {
+    throw new Error(&#x27;error&#x27;);
+  } catch (e) {
+    throw new Error(&#x27;error2&#x27;);
+  } finally {
+    return await Promise.resolve(&#x27;finally&#x27;);
+  }
+}
+
+async function invalidInTryCatch5() {
+  return await Promise.resolve(&#x27;try&#x27;);
+}
+
+async function invalidInTryCatch6() {
+  return await &#x27;value&#x27;;
+}
+</code></pre>
+<h4>✅ Correct</h4>
+<pre><code class="language-ts">async function validInTryCatch1() {
+  try {
+    return await Promise.resolve(&#x27;try&#x27;);
+  } catch (e) {}
+}
+
+async function validInTryCatch2() {
+  try {
+    throw new Error(&#x27;error&#x27;);
+  } catch (e) {
+    return Promise.resolve(&#x27;catch&#x27;);
+  }
+}
+
+async function validInTryCatch3() {
+  try {
+    throw new Error(&#x27;error&#x27;);
+  } catch (e) {
+    return await Promise.resolve(&#x27;catch&#x27;);
+  } finally {
+    console.log(&#x27;cleanup&#x27;);
+  }
+}
+
+async function validInTryCatch4() {
+  try {
+    throw new Error(&#x27;error&#x27;);
+  } catch (e) {
+    throw new Error(&#x27;error2&#x27;);
+  } finally {
+    return Promise.resolve(&#x27;finally&#x27;);
+  }
+}
+
+async function validInTryCatch5() {
+  return Promise.resolve(&#x27;try&#x27;);
+}
+
+async function validInTryCatch6() {
+  return &#x27;value&#x27;;
+}
+</code></pre>
+<h3><code>always</code></h3>
+<p>Requires that all returned promises are <code>await</code>ed.</p>
+<p>Examples of code with <code>always</code>:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h4>❌ Incorrect</h4>
+<pre><code class="language-ts">async function invalidAlways1() {
+  try {
+    return Promise.resolve(&#x27;try&#x27;);
+  } catch (e) {}
+}
+
+async function invalidAlways2() {
+  return Promise.resolve(&#x27;try&#x27;);
+}
+
+async function invalidAlways3() {
+  return await &#x27;value&#x27;;
+}
+</code></pre>
+<h4>✅ Correct</h4>
+<pre><code class="language-ts">async function validAlways1() {
+  try {
+    return await Promise.resolve(&#x27;try&#x27;);
+  } catch (e) {}
+}
+
+async function validAlways2() {
+  return await Promise.resolve(&#x27;try&#x27;);
+}
+
+async function validAlways3() {
+  return &#x27;value&#x27;;
+}
+</code></pre>
+<h3><code>never</code></h3>
+<p>Disallows all <code>await</code>ing any returned promises.</p>
+<p>Examples of code with <code>never</code>:</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h4>❌ Incorrect</h4>
+<pre><code class="language-ts">async function invalidNever1() {
+  try {
+    return await Promise.resolve(&#x27;try&#x27;);
+  } catch (e) {}
+}
+
+async function invalidNever2() {
+  return await Promise.resolve(&#x27;try&#x27;);
+}
+
+async function invalidNever3() {
+  return await &#x27;value&#x27;;
+}
+</code></pre>
+<h4>✅ Correct</h4>
+<pre><code class="language-ts">async function validNever1() {
+  try {
+    return Promise.resolve(&#x27;try&#x27;);
+  } catch (e) {}
+}
+
+async function validNever2() {
+  return Promise.resolve(&#x27;try&#x27;);
+}
+
+async function validNever3() {
+  return &#x27;value&#x27;;
+}
+</code></pre>
+<h2>Attributes</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->✅ Recommended</li>
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->🔧 Fixable</li>
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->💭 Requires type information</li>
+</ul></div></main><footer class="jsx-cbfd42e26539136"><a href="https://cloud.zdns.cn" target="_blank" rel="noopener noreferrer" class="jsx-cbfd42e26539136">Powered by <img src="/zdns.svg" alt="zdns" class="jsx-cbfd42e26539136 logo"/></a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"rule":"# `return-await`\n\nEnforces consistent returning of awaited values.\n\nReturning an awaited promise can make sense for better stack trace information as well as for consistent error handling (returned promises will not be caught in an async function try/catch).\n\n## Rule Details\n\nThis rule builds on top of the [`eslint/no-return-await`](https://eslint.org/docs/rules/no-return-await) rule.\nIt expands upon the base rule to add support for optionally requiring `return await` in certain cases.\n\n## How to Use\n\n```jsonc\n{\n  // note you must disable the base rule as it can report incorrect errors\n  \"no-return-await\": \"off\",\n  \"@typescript-eslint/return-await\": \"error\"\n}\n```\n\n## Options\n\n```ts\ntype Options = 'in-try-catch' | 'always' | 'never';\n\nconst defaultOptions: Options = 'in-try-catch';\n```\n\n### `in-try-catch`\n\nRequires that a returned promise must be `await`ed in `try-catch-finally` blocks, and disallows it elsewhere.\nSpecifically:\n\n- if you `return` a promise within a `try`, then it must be `await`ed.\n- if you `return` a promise within a `catch`, and there **_is no_** `finally`, then it **_must not_** be `await`ed.\n- if you `return` a promise within a `catch`, and there **_is a_** `finally`, then it **_must_** be `await`ed.\n- if you `return` a promise within a `finally`, then it **_must not_** be `await`ed.\n\nExamples of code with `in-try-catch`:\n\n\u003c!--tabs--\u003e\n\n#### ❌ Incorrect\n\n```ts\nasync function invalidInTryCatch1() {\n  try {\n    return Promise.resolve('try');\n  } catch (e) {}\n}\n\nasync function invalidInTryCatch2() {\n  try {\n    throw new Error('error');\n  } catch (e) {\n    return await Promise.resolve('catch');\n  }\n}\n\nasync function invalidInTryCatch3() {\n  try {\n    throw new Error('error');\n  } catch (e) {\n    return Promise.resolve('catch');\n  } finally {\n    console.log('cleanup');\n  }\n}\n\nasync function invalidInTryCatch4() {\n  try {\n    throw new Error('error');\n  } catch (e) {\n    throw new Error('error2');\n  } finally {\n    return await Promise.resolve('finally');\n  }\n}\n\nasync function invalidInTryCatch5() {\n  return await Promise.resolve('try');\n}\n\nasync function invalidInTryCatch6() {\n  return await 'value';\n}\n```\n\n#### ✅ Correct\n\n```ts\nasync function validInTryCatch1() {\n  try {\n    return await Promise.resolve('try');\n  } catch (e) {}\n}\n\nasync function validInTryCatch2() {\n  try {\n    throw new Error('error');\n  } catch (e) {\n    return Promise.resolve('catch');\n  }\n}\n\nasync function validInTryCatch3() {\n  try {\n    throw new Error('error');\n  } catch (e) {\n    return await Promise.resolve('catch');\n  } finally {\n    console.log('cleanup');\n  }\n}\n\nasync function validInTryCatch4() {\n  try {\n    throw new Error('error');\n  } catch (e) {\n    throw new Error('error2');\n  } finally {\n    return Promise.resolve('finally');\n  }\n}\n\nasync function validInTryCatch5() {\n  return Promise.resolve('try');\n}\n\nasync function validInTryCatch6() {\n  return 'value';\n}\n```\n\n### `always`\n\nRequires that all returned promises are `await`ed.\n\nExamples of code with `always`:\n\n\u003c!--tabs--\u003e\n\n#### ❌ Incorrect\n\n```ts\nasync function invalidAlways1() {\n  try {\n    return Promise.resolve('try');\n  } catch (e) {}\n}\n\nasync function invalidAlways2() {\n  return Promise.resolve('try');\n}\n\nasync function invalidAlways3() {\n  return await 'value';\n}\n```\n\n#### ✅ Correct\n\n```ts\nasync function validAlways1() {\n  try {\n    return await Promise.resolve('try');\n  } catch (e) {}\n}\n\nasync function validAlways2() {\n  return await Promise.resolve('try');\n}\n\nasync function validAlways3() {\n  return 'value';\n}\n```\n\n### `never`\n\nDisallows all `await`ing any returned promises.\n\nExamples of code with `never`:\n\n\u003c!--tabs--\u003e\n\n#### ❌ Incorrect\n\n```ts\nasync function invalidNever1() {\n  try {\n    return await Promise.resolve('try');\n  } catch (e) {}\n}\n\nasync function invalidNever2() {\n  return await Promise.resolve('try');\n}\n\nasync function invalidNever3() {\n  return await 'value';\n}\n```\n\n#### ✅ Correct\n\n```ts\nasync function validNever1() {\n  try {\n    return Promise.resolve('try');\n  } catch (e) {}\n}\n\nasync function validNever2() {\n  return Promise.resolve('try');\n}\n\nasync function validNever3() {\n  return 'value';\n}\n```\n\n## Attributes\n\n- [ ] ✅ Recommended\n- [x] 🔧 Fixable\n- [x] 💭 Requires type information\n"},"__N_SSG":true},"page":"/[rule]","query":{"rule":"return-await.md"},"buildId":"V190Mxkh11cN1_jT2mDz7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

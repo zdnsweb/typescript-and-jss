@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><meta name="theme-color" content="#1976d2"/><title class="jsx-cbfd42e26539136">Typescript and JSS</title><link rel="icon" href="/zdns.svg" class="jsx-cbfd42e26539136"/><meta name="next-head-count" content="5"/><meta name="theme-color" content="#90caf9"/><link rel="preload" href="/_next/static/css/ef46db3751d8e999.css" as="style"/><link rel="stylesheet" href="/_next/static/css/ef46db3751d8e999.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-fcec467324f41dbb.js" defer=""></script><script src="/_next/static/chunks/framework-e70c6273bfe3f237.js" defer=""></script><script src="/_next/static/chunks/main-7c9e8fd8226b6573.js" defer=""></script><script src="/_next/static/chunks/pages/_app-0617cd64ea924586.js" defer=""></script><script src="/_next/static/chunks/505-0c2bccf53cd8dae5.js" defer=""></script><script src="/_next/static/chunks/pages/%5Brule%5D-b74fec192cf33e56.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_buildManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_ssgManifest.js" defer=""></script><script src="/_next/static/V190Mxkh11cN1_jT2mDz7/_middlewareManifest.js" defer=""></script><style id="__jsx-4ab09977da39fd03">.container.jsx-cbfd42e26539136{min-height:100vh;padding:0 .5rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main.jsx-cbfd42e26539136{padding:5rem 0;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136{width:100%;height:100px;border-top:1px solid#eaeaea;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.jsx-cbfd42e26539136 img.jsx-cbfd42e26539136{margin-left:.5rem}footer.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}a.jsx-cbfd42e26539136{color:inherit;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136{color:#0070f3;text-decoration:none}.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:hover,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:focus,.title.jsx-cbfd42e26539136 a.jsx-cbfd42e26539136:active{text-decoration:underline}.title.jsx-cbfd42e26539136{margin:0;line-height:1.15;font-size:4rem}.title.jsx-cbfd42e26539136,.description.jsx-cbfd42e26539136{text-align:center}.description.jsx-cbfd42e26539136{line-height:1.5;font-size:1.5rem}code.jsx-cbfd42e26539136{background:#fafafa;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:.75rem;font-size:1.1rem;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}.grid.jsx-cbfd42e26539136{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:800px;margin-top:3rem}.card.jsx-cbfd42e26539136{margin:1rem;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;padding:1.5rem;text-align:left;color:inherit;text-decoration:none;border:1px solid#eaeaea;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-transition:color.15s ease,border-color.15s ease;-moz-transition:color.15s ease,border-color.15s ease;-o-transition:color.15s ease,border-color.15s ease;transition:color.15s ease,border-color.15s ease}.card.jsx-cbfd42e26539136:hover,.card.jsx-cbfd42e26539136:focus,.card.jsx-cbfd42e26539136:active{color:#0070f3;border-color:#0070f3}.card.jsx-cbfd42e26539136 h3.jsx-cbfd42e26539136{margin:0 0 1rem 0;font-size:1.5rem}.card.jsx-cbfd42e26539136 p.jsx-cbfd42e26539136{margin:0;font-size:1.25rem;line-height:1.5}.logo.jsx-cbfd42e26539136{height:1em}@media(max-width:600px){.grid.jsx-cbfd42e26539136{width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}}</style><style id="__jsx-5750d7069672f50d">html,body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}</style><style data-emotion="css "></style></head><body><div id="__next" data-reactroot=""><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><div class="jsx-cbfd42e26539136 container"><main class="jsx-cbfd42e26539136"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-aoeo82"><h1><code>no-explicit-any</code></h1>
+<p>Disallow usage of the <code>any</code> type.</p>
+<p>Using the <code>any</code> type defeats the purpose of using TypeScript.
+When <code>any</code> is used, all compiler type checks around that value are ignored.</p>
+<h2>Rule Details</h2>
+<p>This rule doesn&#x27;t allow <code>any</code> types to be defined.
+It aims to keep TypeScript maximally useful.
+TypeScript has a compiler flag for <code>--noImplicitAny</code> that will prevent
+an <code>any</code> type from being implied by the compiler, but doesn&#x27;t prevent
+<code>any</code> from being explicitly used.</p>
+<!-- -->&lt;!--tabs--&gt;<!-- -->
+<h3>❌ Incorrect</h3>
+<pre><code class="language-ts">const age: any = &#x27;seventeen&#x27;;
+</code></pre>
+<pre><code class="language-ts">const ages: any[] = [&#x27;seventeen&#x27;];
+</code></pre>
+<pre><code class="language-ts">const ages: Array&lt;any&gt; = [&#x27;seventeen&#x27;];
+</code></pre>
+<pre><code class="language-ts">function greet(): any {}
+</code></pre>
+<pre><code class="language-ts">function greet(): any[] {}
+</code></pre>
+<pre><code class="language-ts">function greet(): Array&lt;any&gt; {}
+</code></pre>
+<pre><code class="language-ts">function greet(): Array&lt;Array&lt;any&gt;&gt; {}
+</code></pre>
+<pre><code class="language-ts">function greet(param: Array&lt;any&gt;): string {}
+</code></pre>
+<pre><code class="language-ts">function greet(param: Array&lt;any&gt;): Array&lt;any&gt; {}
+</code></pre>
+<h3>✅ Correct</h3>
+<pre><code class="language-ts">const age: number = 17;
+</code></pre>
+<pre><code class="language-ts">const ages: number[] = [17];
+</code></pre>
+<pre><code class="language-ts">const ages: Array&lt;number&gt; = [17];
+</code></pre>
+<pre><code class="language-ts">function greet(): string {}
+</code></pre>
+<pre><code class="language-ts">function greet(): string[] {}
+</code></pre>
+<pre><code class="language-ts">function greet(): Array&lt;string&gt; {}
+</code></pre>
+<pre><code class="language-ts">function greet(): Array&lt;Array&lt;string&gt;&gt; {}
+</code></pre>
+<pre><code class="language-ts">function greet(param: Array&lt;string&gt;): string {}
+</code></pre>
+<pre><code class="language-ts">function greet(param: Array&lt;string&gt;): Array&lt;string&gt; {}
+</code></pre>
+<h2>Options</h2>
+<p>The rule accepts an options object with the following properties:</p>
+<pre><code class="language-ts">type Options = {
+  // if true, auto-fixing will be made available in which the &quot;any&quot; type is converted to an &quot;unknown&quot; type
+  fixToUnknown: boolean;
+  // specify if arrays from the rest operator are considered okay
+  ignoreRestArgs: boolean;
+};
+
+const defaults = {
+  fixToUnknown: false,
+  ignoreRestArgs: false,
+};
+</code></pre>
+<h3><code>ignoreRestArgs</code></h3>
+<p>A boolean to specify if arrays from the rest operator are considered okay. <code>false</code> by default.</p>
+<p>Examples of <strong>incorrect</strong> code for the <code>{ &quot;ignoreRestArgs&quot;: false }</code> option:</p>
+<pre><code class="language-ts">/*eslint @typescript-eslint/no-explicit-any: [&quot;error&quot;, { &quot;ignoreRestArgs&quot;: false }]*/
+
+function foo1(...args: any[]): void {}
+function foo2(...args: readonly any[]): void {}
+function foo3(...args: Array&lt;any&gt;): void {}
+function foo4(...args: ReadonlyArray&lt;any&gt;): void {}
+
+declare function bar(...args: any[]): void;
+
+const baz = (...args: any[]) =&gt; {};
+const qux = function (...args: any[]) {};
+
+type Quux = (...args: any[]) =&gt; void;
+type Quuz = new (...args: any[]) =&gt; void;
+
+interface Grault {
+  (...args: any[]): void;
+}
+interface Corge {
+  new (...args: any[]): void;
+}
+interface Garply {
+  f(...args: any[]): void;
+}
+</code></pre>
+<p>Examples of <strong>correct</strong> code for the <code>{ &quot;ignoreRestArgs&quot;: true }</code> option:</p>
+<pre><code class="language-ts">/*eslint @typescript-eslint/no-explicit-any: [&quot;error&quot;, { &quot;ignoreRestArgs&quot;: true }]*/
+
+function foo1(...args: any[]): void {}
+function foo2(...args: readonly any[]): void {}
+function foo3(...args: Array&lt;any&gt;): void {}
+function foo4(...args: ReadonlyArray&lt;any&gt;): void {}
+
+declare function bar(...args: any[]): void;
+
+const baz = (...args: any[]) =&gt; {};
+const qux = function (...args: any[]) {};
+
+type Quux = (...args: any[]) =&gt; void;
+type Quuz = new (...args: any[]) =&gt; void;
+
+interface Grault {
+  (...args: any[]): void;
+}
+interface Corge {
+  new (...args: any[]): void;
+}
+interface Garply {
+  f(...args: any[]): void;
+}
+</code></pre>
+<h2>When Not To Use It</h2>
+<p>If an unknown type or a library without typings is used
+and you want to be able to specify <code>any</code>.</p>
+<h2>Further Reading</h2>
+<ul>
+<li>TypeScript <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html#any">any type</a></li>
+</ul>
+<h2>Related To</h2>
+<ul>
+<li>TSLint: <a href="https://palantir.github.io/tslint/rules/no-any/">no-any</a></li>
+</ul>
+<h2>Attributes</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->✅ Recommended</li>
+<li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <!-- -->🔧 Fixable</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->💭 Requires type information</li>
+</ul></div></main><footer class="jsx-cbfd42e26539136"><a href="https://cloud.zdns.cn" target="_blank" rel="noopener noreferrer" class="jsx-cbfd42e26539136">Powered by <img src="/zdns.svg" alt="zdns" class="jsx-cbfd42e26539136 logo"/></a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"rule":"# `no-explicit-any`\n\nDisallow usage of the `any` type.\n\nUsing the `any` type defeats the purpose of using TypeScript.\nWhen `any` is used, all compiler type checks around that value are ignored.\n\n## Rule Details\n\nThis rule doesn't allow `any` types to be defined.\nIt aims to keep TypeScript maximally useful.\nTypeScript has a compiler flag for `--noImplicitAny` that will prevent\nan `any` type from being implied by the compiler, but doesn't prevent\n`any` from being explicitly used.\n\n\u003c!--tabs--\u003e\n\n### ❌ Incorrect\n\n```ts\nconst age: any = 'seventeen';\n```\n\n```ts\nconst ages: any[] = ['seventeen'];\n```\n\n```ts\nconst ages: Array\u003cany\u003e = ['seventeen'];\n```\n\n```ts\nfunction greet(): any {}\n```\n\n```ts\nfunction greet(): any[] {}\n```\n\n```ts\nfunction greet(): Array\u003cany\u003e {}\n```\n\n```ts\nfunction greet(): Array\u003cArray\u003cany\u003e\u003e {}\n```\n\n```ts\nfunction greet(param: Array\u003cany\u003e): string {}\n```\n\n```ts\nfunction greet(param: Array\u003cany\u003e): Array\u003cany\u003e {}\n```\n\n### ✅ Correct\n\n```ts\nconst age: number = 17;\n```\n\n```ts\nconst ages: number[] = [17];\n```\n\n```ts\nconst ages: Array\u003cnumber\u003e = [17];\n```\n\n```ts\nfunction greet(): string {}\n```\n\n```ts\nfunction greet(): string[] {}\n```\n\n```ts\nfunction greet(): Array\u003cstring\u003e {}\n```\n\n```ts\nfunction greet(): Array\u003cArray\u003cstring\u003e\u003e {}\n```\n\n```ts\nfunction greet(param: Array\u003cstring\u003e): string {}\n```\n\n```ts\nfunction greet(param: Array\u003cstring\u003e): Array\u003cstring\u003e {}\n```\n\n## Options\n\nThe rule accepts an options object with the following properties:\n\n```ts\ntype Options = {\n  // if true, auto-fixing will be made available in which the \"any\" type is converted to an \"unknown\" type\n  fixToUnknown: boolean;\n  // specify if arrays from the rest operator are considered okay\n  ignoreRestArgs: boolean;\n};\n\nconst defaults = {\n  fixToUnknown: false,\n  ignoreRestArgs: false,\n};\n```\n\n### `ignoreRestArgs`\n\nA boolean to specify if arrays from the rest operator are considered okay. `false` by default.\n\nExamples of **incorrect** code for the `{ \"ignoreRestArgs\": false }` option:\n\n```ts\n/*eslint @typescript-eslint/no-explicit-any: [\"error\", { \"ignoreRestArgs\": false }]*/\n\nfunction foo1(...args: any[]): void {}\nfunction foo2(...args: readonly any[]): void {}\nfunction foo3(...args: Array\u003cany\u003e): void {}\nfunction foo4(...args: ReadonlyArray\u003cany\u003e): void {}\n\ndeclare function bar(...args: any[]): void;\n\nconst baz = (...args: any[]) =\u003e {};\nconst qux = function (...args: any[]) {};\n\ntype Quux = (...args: any[]) =\u003e void;\ntype Quuz = new (...args: any[]) =\u003e void;\n\ninterface Grault {\n  (...args: any[]): void;\n}\ninterface Corge {\n  new (...args: any[]): void;\n}\ninterface Garply {\n  f(...args: any[]): void;\n}\n```\n\nExamples of **correct** code for the `{ \"ignoreRestArgs\": true }` option:\n\n```ts\n/*eslint @typescript-eslint/no-explicit-any: [\"error\", { \"ignoreRestArgs\": true }]*/\n\nfunction foo1(...args: any[]): void {}\nfunction foo2(...args: readonly any[]): void {}\nfunction foo3(...args: Array\u003cany\u003e): void {}\nfunction foo4(...args: ReadonlyArray\u003cany\u003e): void {}\n\ndeclare function bar(...args: any[]): void;\n\nconst baz = (...args: any[]) =\u003e {};\nconst qux = function (...args: any[]) {};\n\ntype Quux = (...args: any[]) =\u003e void;\ntype Quuz = new (...args: any[]) =\u003e void;\n\ninterface Grault {\n  (...args: any[]): void;\n}\ninterface Corge {\n  new (...args: any[]): void;\n}\ninterface Garply {\n  f(...args: any[]): void;\n}\n```\n\n## When Not To Use It\n\nIf an unknown type or a library without typings is used\nand you want to be able to specify `any`.\n\n## Further Reading\n\n- TypeScript [any type](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)\n\n## Related To\n\n- TSLint: [no-any](https://palantir.github.io/tslint/rules/no-any/)\n\n## Attributes\n\n- [x] ✅ Recommended\n- [x] 🔧 Fixable\n- [ ] 💭 Requires type information\n"},"__N_SSG":true},"page":"/[rule]","query":{"rule":"no-explicit-any.md"},"buildId":"V190Mxkh11cN1_jT2mDz7","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
