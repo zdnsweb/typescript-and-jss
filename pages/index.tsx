@@ -1,19 +1,22 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Button from '@mui/material/Button';
+import ReactMarkdown from 'react-markdown';
+import fs from 'fs/promises';
+import * as path from 'path';
 
-export default function Home() {
+export default function Home({ rules }) {
   return (
     <div className="container">
       <Head>
-        <title>ZDNS Github Info</title>
+        <title>Typescript and JSS</title>
         <link rel="icon" href="/zdns.svg" />
       </Head>
 
       <main>
-        <Button key={'repos'} color="inherit">
-          <Link href={'/repos'}>{'REPOS'}</Link>
-        </Button>
+        <ReactMarkdown>
+          {rules}
+        </ReactMarkdown>
       </main>
 
       <footer>
@@ -169,3 +172,17 @@ export default function Home() {
     </div>
   );
 }
+
+export async function getStaticProps() {
+  const f = path.join(__dirname, '..', 'docs', 'rules', 'README.md');
+  const data = await fs.readFile(f);
+
+  return {
+    props: {
+      rules: data.toString(),
+    },
+  };
+}
+
+
+
