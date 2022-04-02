@@ -16,7 +16,7 @@ export const lightTheme = createTheme({
 });
 
 const getTheme = (name) => {
-  switch(name) {
+  switch (name) {
     case 'light':
       return lightTheme;
     case 'dark':
@@ -27,4 +27,3 @@ const getTheme = (name) => {
 };
 
 export default getTheme;
-

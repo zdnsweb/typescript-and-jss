@@ -3,8 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "NODE_ENV=production next build && next export -o build && touch build/.nojekyll",
-    "format": "gsmlg-scripts format pages",
-    "lint": "gsmlg-scripts lint pages",
+    "format": "gsmlg-scripts format pages src",
+    "lint": "gsmlg-scripts lint pages src",
     "start": "next start"
   },
   "dependencies": {

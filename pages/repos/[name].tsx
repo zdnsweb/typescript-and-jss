@@ -1,12 +1,10 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import Link from 'next/link';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
-const PagePaper = styled(Paper)(({
-  theme
-}) => ({
+const PagePaper = styled(Paper)(({ theme }) => ({
   flex: 1,
   padding: theme.spacing(3),
   margin: theme.spacing(3),
@@ -33,12 +31,10 @@ export default function Repos({ repo }) {
         </PagePaper>
       </main>
 
-      <style jsx>{`
-      `}</style>
+      <style jsx>{``}</style>
     </div>
-  )
+  );
 }
-
 
 export async function getStaticPaths() {
   const resp = await fetch('https://api.github.com/orgs/zdnsweb/repos');
@@ -53,11 +49,11 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: { name }}) {
+export async function getStaticProps({ params: { name } }) {
   const resp = await fetch(`https://api.github.com/repos/zdnsweb/${name}`);
 
   const repo = await resp.json();
-  
+
   return {
     props: {
       repo,
