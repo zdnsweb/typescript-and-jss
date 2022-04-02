@@ -6,6 +6,9 @@ import fs from 'fs/promises';
 import * as path from 'path';
 import getConfig from 'next/config';
 import Paper from '@mui/material/Paper';
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react';
+
 
 export default function Rule({ rule }) {
   return (
@@ -15,8 +18,24 @@ export default function Rule({ rule }) {
         <link rel="icon" href="/zdns.svg" />
       </Head>
 
-      <main>
-        <Paper>
+      <main css={
+        css`
+          background-color: black;
+          color: white;
+        `
+      }>
+        <Paper css={
+          css`
+            background-color: black;
+            color: white;
+            padding-left: 2em;
+            padding-right: 2em;
+            a {
+              text-decoration: none;
+              color: yellow;
+            }
+          `
+        }>
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
             {rule}
           </ReactMarkdown>

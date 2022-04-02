@@ -5,7 +5,12 @@ import remarkGfm from 'remark-gfm'
 import fs from 'fs/promises';
 import * as path from 'path';
 import getConfig from 'next/config';
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
 import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
+import AppBar from '@mui/material/AppBar';
+import Typography from '@mui/material/Typography';
 
 export default function Home({ rules }) {
   return (
@@ -14,12 +19,133 @@ export default function Home({ rules }) {
         <title>Typescript and JSS</title>
         <link rel="icon" href="/zdns.svg" />
       </Head>
+      <AppBar color={'primary'}>
+        <Typography align={'center'} component={'h3'}>
+        TypeScript and JSS
+        </Typography>
+      </AppBar>
+      <main
+        css={css`
+          width: 100%;
+          min-height: 100%;
+        `}
+      >
+        <Paper
+          elevation={3}
+          css={css`
+          width: 100%;
+          min-height: 100%;
+          padding: 1em 2em;
+          h1 {
+            font-size: 48px;
+          }
+          h2 {
+            font-size: 32px;
+          }
+          a {
+            text-decoration: none;
+            color: green;
+          }
+        `}>
+          <Typography align={'left'} component={'h1'}>
+            TypeScript
+          </Typography>
+          <Typography align={'left'} component={'h2'}>
+            Configuration
+          </Typography>
+          <Typography align={'left'} component={'p'}>
+            Fist, add to package.json
+            <pre>{
+              `npm install typescript`
+            }
+            </pre>
+            根据需要添加自己需要的类型.
+            <pre>{
+              `npm install typescript @types/node @types/react`
+            }
+            </pre>
+          </Typography>
+          <Typography align={'left'} component={'p'}>
+            配置<i>tsconfig.json</i>
+            <code>
+              <pre>
+              {`{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "es2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noImplicitAny": false,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "src/type-define.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+`}
+              </pre>
+            </code>
+          </Typography>
+          <Typography align={'left'} component={'h2'}>
+            代码规范
+          </Typography>
+          <Typography align={'left'} component={'p'}>
+            满足lint rules
+            <Button key={'rules'} color="inherit">
+              <Link href={'/README.md'}>{'Rules'}</Link>
+            </Button>
+          </Typography>
+          <Typography align={'left'} component={'h1'}>
+            JSS
+          </Typography>
+          <Typography align={'left'} component={'p'}>
+          安装:
+          <code>
+            <pre>
+            {`npm install @emotion/react @emotion/server @emotion/styled`}
+            </pre>
+          </code>
+          </Typography>
+          <Typography align={'left'} component={'p'}>
+          使用:
+          <code>
+            <pre>
+            {`/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
 
-      <main>
-        <Paper>
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
-            {rules}
-          </ReactMarkdown>
+...
+
+<div css={css\`
+color: red;
+background-color: black;
+  \`}>
+</div>
+`}
+            </pre>
+          </code>
+          这里css内容即为原生css内容, 使用css一致的规则.
+          </Typography>
         </Paper>
       </main>
 
