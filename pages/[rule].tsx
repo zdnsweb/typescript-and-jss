@@ -7,7 +7,7 @@ import * as path from 'path';
 import getConfig from 'next/config';
 import Paper from '@mui/material/Paper';
 
-export default function Home({ rules }) {
+export default function Rule({ rule }) {
   return (
     <div className="container">
       <Head>
@@ -18,7 +18,7 @@ export default function Home({ rules }) {
       <main>
         <Paper>
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
-            {rules}
+            {rule}
           </ReactMarkdown>
         </Paper>
       </main>
@@ -177,14 +177,27 @@ export default function Home({ rules }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticPaths() {
   const {serverRuntimeConfig} = getConfig();
-  const f = path.join(serverRuntimeConfig.PROJECT_ROOT, 'docs', 'rules', 'README.md');
+  const f = path.join(serverRuntimeConfig.PROJECT_ROOT, 'docs', 'rules');
+  const files = await fs.readdir(f);
+  const paths = files.map((f) => ({
+    params: { rule: f },
+  }));
+  return {
+    paths: paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({params: { rule }}) {
+  const {serverRuntimeConfig} = getConfig();
+  const f = path.join(serverRuntimeConfig.PROJECT_ROOT, 'docs', 'rules', rule);
   const data = await fs.readFile(f);
 
   return {
     props: {
-      rules: data.toString(),
+      rule: data.toString(),
     },
   };
 }

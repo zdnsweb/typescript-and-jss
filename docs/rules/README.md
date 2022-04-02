@@ -1,18 +1,3 @@
----
-title: Overview
-sidebar_label: Overview
-pagination_next: null
-pagination_prev: null
-slug: /
----
-
-`@typescript-eslint/eslint-plugin` comes with two rulesets you can extend from to pull in the recommended starting rules:
-
-- `'plugin:@typescript-eslint/recommended'`: recommended rules for code correctness that you can drop in without additional configuration.
-  See [Linting](https://typescript-eslint.io/docs/linting) for more details.
-- `'plugin:@typescript-eslint/recommended-requiring-type-checking'` additional recommended rules that require type information.
-  See [Linting](https://typescript-eslint.io/docs/linting/type-linting) for more details.
-
 ## Supported Rules
 
 <!-- begin base rule list -->
